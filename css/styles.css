@@ -39,6 +39,14 @@ body {
     /* This is changed after the loading screen disappears */
 }
 
+.alignCenter {
+    text-align: center;
+}
+
+.alignRight {
+    left: 100%;
+}
+
 
 /* Animations */
 
@@ -175,6 +183,25 @@ body {
     .col-12 {
         width: 100%;
     }
+}
+
+
+/* Navbar */
+
+nav {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+}
+
+#nav {
+    padding: 20px;
+}
+
+#nav a {
+    position: relative;
+    text-decoration: none;
 }
 
 
