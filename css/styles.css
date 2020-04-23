@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+/* 
+styles.css © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
+code snippets taken from: https://w3schools.com/
+and: https://github.com/jhay0112/jhay0112.github.io
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Ubuntu:wght@300&display=swap');
+* {
+    color: #242424;
+    background-color: #f2f2f2;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Questrial', sans-serif;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* This is changed after the loading screen disappears */
+}
+
+
+/* Animations */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        display: none;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        z-index: 1;
+        display: none;
+    }
+}
+
+@keyframes slideOutBottom {
+    from {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    to {
+        position: fixed;
+        top: 100vh;
+        left: 0;
+    }
+}
+
+
+/* Loading */
+
+#loadingScreen {
+    background-color: #f2f2f2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+#spinner {
+    animation: spin 1s infinite linear;
+    position: relative;
+    top: 50vh;
+    left: 50vw;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    margin-top: -25px;
+    margin-left: -110px;
+    /* Negative margin for centering minus the width of the logo divided by two
+    this fixes a weird where the spinner is offset by half the width of the logo */
+}
+
+#logo {
+    position: relative;
+    top: 40vh;
+    left: 50vw;
+    height: 200px;
+    width: 170px;
+    padding: 0;
+    margin-top: -100px;
+    margin-left: -85px;
+}
+
+
+/* Responsive */
+
+
+/* Mobile */
+
+[class*="col-"] {
+    width: 100%;
+    float: left;
+    padding: 10px;
+}
+
+
+/* Desktop */
+
+@media only screen and (min-width: 768px) {
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+}
+
+
+/* Main */
+
+main {
+    padding: 20px;
+}
+
+#main {
+    padding-bottom: 30vh;
+}
+
+
+/* Horizontal Line */
+
+hr {
+    width: 100%;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+}
