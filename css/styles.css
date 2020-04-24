@@ -4,6 +4,7 @@
 styles.css © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
 code snippets taken from: https://w3schools.com/
 and: https://github.com/jhay0112/jhay0112.github.io
+go visit: https://jordanhay.tk/
  */
 
 
@@ -202,25 +203,46 @@ body {
     .desktopOnly {
         display: inline-block;
     }
+    #main {
+        padding-top: 50px;
+    }
+    header {
+        padding-top: 30px;
+    }
+    #bigHeader {
+        padding-top: 0;
+    }
 }
 
 
 /* Navbar */
 
-nav {
+#navbar {
     background-color: #f2f2f2;
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100vw;
+    transition: top 0.3s;
 }
 
 #nav {
-    padding: 20px;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #nav a {
-    position: relative;
+    float: left;
+    display: block;
+    color: #242424;
+    text-align: center;
+    padding: 15px;
     text-decoration: none;
+}
+
+#nav a:hover {
+    background-color: #242424;
+    color: #f2f2f2;
 }
 
 

@@ -24,3 +24,14 @@ async function exitLoadingScreen() {
     // await sleep(1000);
     // loadingScreen.style.animation = "slideOutBottom 0.1s forwards"
 }
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+    } else {
+        document.getElementById("navbar").style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+}
