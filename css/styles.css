@@ -43,14 +43,6 @@ body {
     /* This is changed after the loading screen disappears */
 }
 
-.alignCenter {
-    text-align: center;
-}
-
-.alignRight {
-    right: 0;
-}
-
 
 /* Animations */
 
@@ -153,8 +145,21 @@ body {
     display: inline-block;
 }
 
+.tabletAbove {
+    display: none;
+}
+
 .desktopOnly {
     display: none;
+}
+
+
+/* Tablet */
+
+@media only screen and (min-width: 500px) {
+    .tabletAbove {
+        display: inline-block;
+    }
 }
 
 
@@ -233,7 +238,6 @@ body {
 
 #nav a {
     float: left;
-    display: block;
     color: #242424;
     text-align: center;
     padding: 15px;
