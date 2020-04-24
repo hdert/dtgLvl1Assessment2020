@@ -47,7 +47,7 @@ body {
 }
 
 .alignRight {
-    left: 100%;
+    right: 0;
 }
 
 
@@ -88,11 +88,13 @@ body {
         position: fixed;
         top: 0;
         left: 0;
+        opacity: 0;
     }
     to {
         position: fixed;
         top: 100vh;
         left: 0;
+        opacity: 0;
     }
 }
 
@@ -146,6 +148,14 @@ body {
     padding: 10px;
 }
 
+.mobileOnly {
+    display: inline-block;
+}
+
+.desktopOnly {
+    display: none;
+}
+
 
 /* Desktop */
 
@@ -185,6 +195,12 @@ body {
     }
     .col-12 {
         width: 100%;
+    }
+    .mobileOnly {
+        display: none;
+    }
+    .desktopOnly {
+        display: inline-block;
     }
 }
 
