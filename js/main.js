@@ -4,6 +4,8 @@ code snippets taken from: https://w3schools.com/
 and: https://github.com/jhay0112/jhay0112.github.io
 */
 
+// SPDX-License-Identifier: BSD-3-Clause
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
