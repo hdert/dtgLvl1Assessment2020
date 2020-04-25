@@ -25,6 +25,10 @@ async function exitLoadingScreen() {
     // loadingScreen.style.animation = "slideOutBottom 0.1s forwards"
 }
 
+async function openMobileMenu() {
+
+}
+
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
