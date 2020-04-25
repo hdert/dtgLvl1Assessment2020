@@ -303,6 +303,7 @@ a#menuClose {
     text-align: center;
     padding: 15px;
     text-decoration: none;
+    transition: 0.5s;
 }
 
 #nav a:hover,
