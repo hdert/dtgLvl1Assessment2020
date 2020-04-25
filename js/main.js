@@ -17,12 +17,19 @@ async function exitLoadingScreen() {
 
     loadingLogo.style.animation = "fadeOut 0.5s 1s forwards ease";
     loadingSpinner.style.animation = "spin 1s infinite linear, fadeOut 2s forwards";
-    loadingScreen.style.animation = "fadeOut 1.3s 1.5s forwards ease-out, slideOutBottom 1.3s 1.5s forwards ease-out";
+    loadingScreen.style.animation = "slideOutBottom 1.3s 1.5s forwards ease-out";
     await sleep(1200);
     document.body.style.overflowY = "auto";
     /* this makes it so that the scrollbar doesn't show until the loading animation is near complete */
     // await sleep(1000);
-    // loadingScreen.style.animation = "slideOutBottom 0.1s forwards"
+}
+
+async function openMenu() {
+    document.getElementById("menu").style.width = "100vw";
+}
+
+async function closeMenu() {
+    document.getElementById("menu").style.width = "0vw";
 }
 
 var prevScrollpos = window.pageYOffset;

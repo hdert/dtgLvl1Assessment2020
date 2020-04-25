@@ -81,7 +81,7 @@ body {
         position: fixed;
         top: 0;
         left: 0;
-        opacity: 0;
+        opacity: 1;
     }
     to {
         position: fixed;
@@ -153,12 +153,20 @@ body {
     display: none;
 }
 
+#menuOpen {
+    display: block;
+}
+
 
 /* Tablet */
 
 @media only screen and (min-width: 500px) {
     .tabletAbove {
         display: inline-block;
+    }
+    #menuOpen,
+    #menuOpen i {
+        display: none;
     }
 }
 
@@ -220,6 +228,59 @@ body {
 }
 
 
+/* Menu */
+
+#menu {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#menuContent {
+    position: relative;
+    top: 25vh;
+    width: 100vw;
+    text-align: center;
+    margin-top: 30px;
+    background-color: transparent;
+}
+
+#menu a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #f2f2f2;
+    display: block;
+    transition: 0.3s;
+    background-color: transparent;
+}
+
+#menu a:hover,
+#menu a:focus {
+    background-color: #f6e44a;
+    color: #242424;
+}
+
+#menu #menuClose {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 35px;
+}
+
+a#menuClose {
+    padding: 0px 10px;
+}
+
+
 /* Navbar */
 
 #navbar {
@@ -244,9 +305,19 @@ body {
     text-decoration: none;
 }
 
-#nav a:hover {
+#nav a:hover,
+#nav a:focus {
     background-color: #242424;
     color: #f2f2f2;
+}
+
+a#menuOpen {
+    float: right;
+}
+
+a#menuOpen i {
+    background-color: inherit;
+    color: inherit;
 }
 
 
