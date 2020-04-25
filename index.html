@@ -28,6 +28,20 @@
 
     </div>
 
+    <div id="menu" onclick="closeMenu()">
+
+        <a href="#" id="menuClose" onclick="event.preventDefault();closeMenu();">&times;</a>
+
+        <div id="menuContent">
+
+            <a href="#unix" onclick="closeMenu();">Unix</a>
+            <a href="#gnuAndLinux" onclick="closeMenu();">GNU and Linux</a>
+            <a href="#shinyShinyDistros" onclick="closeMenu();">Shiny, Shiny Distros</a>
+
+        </div>
+
+    </div>
+
     <div id="navbar">
 
         <div class="col-2 desktopOnly"></div>
@@ -37,8 +51,8 @@
             <a href="#unix">Unix</a>
             <a href="#gnuAndLinux" class="tabletAbove">GNU and Linux</a>
             <a href="#shinyShinyDistros" class="tabletAbove">Shiny, Shiny Distros</a>
-            <a href="#" onclick="event.preventDefault();openMobileMenu();" id="menu">
-                <i class="fa fa-bars mobileOnly"></i>
+            <a href="#" onclick="event.preventDefault();openMenu();" id="menuOpen" class="mobileOnly">
+                <i class="fa fa-bars"></i>
             </a>
 
         </div>
