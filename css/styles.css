@@ -410,7 +410,6 @@ footer {
 /* 404 */
 
 a.no {
-    text-decoration: none;
     font-family: 'Questrial', sans-serif;
     font-size: 100px;
     -webkit-transition: 0.5s;
