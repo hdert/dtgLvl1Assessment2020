@@ -1,7 +1,8 @@
 /*
 main.js © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
-code snippets taken from: https://w3schools.com/
-and: https://github.com/jhay0112/jhay0112.github.io
+code snippets taken from: https://www.w3schools.com/
+and: https://github.com/jhay0112/jhay0112.github.io/
+go visit: https://jordanhay.tk/
 */
 
 // SPDX-License-Identifier: BSD-3-Clause
@@ -20,8 +21,7 @@ async function exitLoadingScreen() {
     loadingScreen.style.animation = "slideOutBottom 1.3s 1.5s forwards ease-out";
     await sleep(1200);
     document.body.style.overflowY = "auto";
-    /* this makes it so that the scrollbar doesn't show until the loading animation is near complete */
-    // await sleep(1000);
+    /* This makes it so that the scrollbar doesn't show until the loading animation is near complete. */
 }
 
 async function openMenu() {

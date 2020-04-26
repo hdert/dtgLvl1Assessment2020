@@ -2,8 +2,8 @@
 
 /* 
 styles.css © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
-code snippets taken from: https://w3schools.com/
-and: https://github.com/jhay0112/jhay0112.github.io
+code snippets taken from: https://www.w3schools.com/
+and: https://github.com/jhay0112/jhay0112.github.io/
 go visit: https://jordanhay.tk/
  */
 
@@ -44,7 +44,7 @@ html {
 body {
     overflow-x: hidden;
     overflow-y: hidden;
-    /* This is changed after the loading screen disappears */
+    /* This is changed after the loading screen disappears. */
 }
 
 
@@ -168,8 +168,8 @@ body {
     padding: 0;
     margin-top: -25px;
     margin-left: -110px;
-    /* Negative margin for centering minus the width of the logo divided by two
-    this fixes a weird where the spinner is offset by half the width of the logo */
+    /* Negative margin for centering, equation: minus the width of the logo divided by two.
+    This fixes a problem where the spinner is offset by half the width of the logo. */
 }
 
 #logo {
