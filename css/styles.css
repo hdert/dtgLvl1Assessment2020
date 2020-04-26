@@ -148,7 +148,6 @@ body {
 /* Loading */
 
 #loadingScreen {
-    background-color: #f2f2f2;
     position: fixed;
     top: 0;
     left: 0;
@@ -342,7 +341,6 @@ a#menuClose {
 /* Navbar */
 
 #navbar {
-    background-color: #f2f2f2;
     position: fixed;
     top: 0;
     width: 100vw;
@@ -406,4 +404,24 @@ hr {
 
 footer {
     text-align: center;
+}
+
+
+/* 404 */
+
+a.no {
+    text-decoration: none;
+    font-family: 'Questrial', sans-serif;
+    font-size: 100px;
+    transition: 0.5s;
+}
+
+a.no:hover,
+a.no:focus {
+    background-color: #f6e44a;
+}
+
+section.no {
+    text-align: center;
+    padding-bottom: 30px;
 }
