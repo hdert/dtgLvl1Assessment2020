@@ -382,6 +382,22 @@ a#menuOpen i {
 }
 
 
+/* Progress Bar */
+
+#progressContainer {
+    width: 100vw;
+    height: 8px;
+    padding: 0;
+    background-color: #242424;
+}
+
+#progressBar {
+    width: 0vw;
+    height: 8px;
+    background-color: #f6e44a;
+}
+
+
 /* Main */
 
 main {

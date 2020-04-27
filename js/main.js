@@ -24,16 +24,19 @@ async function exitLoadingScreen() {
     /* This makes it so that the scrollbar doesn't show until the loading animation is near complete. */
 }
 
-async function openMenu() {
+/* Menu */
+
+function openMenu() {
     document.getElementById("menu").style.width = "100vw";
 }
 
-async function closeMenu() {
+function closeMenu() {
     document.getElementById("menu").style.width = "0vw";
 }
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
+/* Scroll functions */
+
+function navbarHide() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
@@ -41,4 +44,18 @@ window.onscroll = function() {
         document.getElementById("navbar").style.top = "-50px";
     }
     prevScrollpos = currentScrollPos;
+}
+
+function scrollIndicatorUpdate() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.width = scrolled + "%";
+}
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    navbarHide();
+    scrollIndicatorUpdate();
+    backToTopButtonUpdate();
 }
