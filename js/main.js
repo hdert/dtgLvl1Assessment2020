@@ -70,7 +70,7 @@ function backToTopButtonUpdate() {
 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
+    backToTopButtonUpdate();
     navbarHide();
     scrollIndicatorUpdate();
-    backToTopButtonUpdate();
 }

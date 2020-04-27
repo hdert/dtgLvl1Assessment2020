@@ -403,30 +403,28 @@ a#menuOpen i {
 button#backToTopButton {
     background-color: #242424;
     color: #f2f2f2;
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+    border: 3px solid #242424;
     outline: none;
     text-align: center;
     font-size: 17pt;
     position: fixed;
-    display: inline-block;
     bottom: 30px;
     right: 30px;
     margin: 0;
     margin-left: -25px;
     padding: 0;
     z-index: 3;
-    animation: fadeOut 0s forwards;
+    animation: fadeOut 0.5s forwards;
     -webkit-transition: 0.3s ease all;
     -o-transition: 0.3s ease all;
     transition: 0.3s ease all;
     cursor: pointer;
 }
 
-#backToTopButton:hover,
-#backToTopButton:focus {
+#backToTopButton:hover {
     background-color: #f6e44a;
     color: #242424;
 }
