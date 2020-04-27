@@ -36,6 +36,11 @@ function closeMenu() {
 
 /* Scroll functions */
 
+function goToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For others
+}
+
 function navbarHide() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
@@ -53,9 +58,19 @@ function scrollIndicatorUpdate() {
     document.getElementById("progressBar").style.width = scrolled + "%";
 }
 
+function backToTopButtonUpdate() {
+    var backToTopButton = document.getElementById("backToTopButton");
+
+    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+        backToTopButton.style.animation = "fadeIn ease 0.3s"
+    } else {
+        backToTopButton.style.animation = "fadeOut ease 0.3s forwards"
+    }
+}
+
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
+    backToTopButtonUpdate();
     navbarHide();
     scrollIndicatorUpdate();
-    backToTopButtonUpdate();
 }
