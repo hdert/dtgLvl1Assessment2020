@@ -23,6 +23,8 @@ go visit: https://jordanhay.tk/
     font-family: 'Ubuntu', sans-serif;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    font-weight: normal;
+    /* Makes header text look the same between gecko and blink */
 }
 
 h1,
