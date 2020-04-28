@@ -43,6 +43,10 @@ function goToTop() {
 
 function navbarHide() {
     var currentScrollPos = window.pageYOffset;
+    if (window.pageYOffset <= 0) {
+        document.getElementById("navbar").style.top = "0";
+        return;
+    }
     if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
     } else {
