@@ -441,6 +441,31 @@ button#backToTopButton {
 }
 
 
+/* Img */
+
+#bigHeader {
+    background-image: url(../img/100px-Tux.svg.png);
+    height: 400px;
+    background-position: center;
+    background-repeat: space;
+}
+
+
+/* Header */
+
+header h1,
+header h2,
+header p {
+    text-align: center;
+}
+
+#wordContainer {
+    display: inline-block;
+    text-align: center;
+    top: 50%;
+}
+
+
 /* Main */
 
 main {
