@@ -13,6 +13,9 @@ go visit: https://jordanhay.tk/
 
 /* SPDX-License-Identifier: BSD-3-Clause */
 
+
+/* Defaults */
+
 @import url('https://fonts.googleapis.com/css2?family=Questrial&family=Ubuntu:wght@300&display=swap');
 * {
     color: #242424;
@@ -145,44 +148,6 @@ body {
 }
 
 
-/* Loading */
-
-#loadingScreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
-}
-
-#spinner {
-    -webkit-animation: spin 1s infinite linear;
-    animation: spin 1s infinite linear;
-    position: relative;
-    top: 50vh;
-    left: 50vw;
-    height: 50px;
-    width: 50px;
-    padding: 0;
-    margin-top: -25px;
-    margin-left: -110px;
-    /* Negative margin for centering, equation: minus the width of the logo divided by two.
-    This fixes a problem where the spinner is offset by half the width of the logo. */
-}
-
-#logo {
-    position: relative;
-    top: 40vh;
-    left: 50vw;
-    height: 200px;
-    width: 170px;
-    padding: 0;
-    margin-top: -100px;
-    margin-left: -85px;
-}
-
-
 /* Responsive */
 
 
@@ -281,6 +246,45 @@ body {
 }
 
 
+/* Loading Screen */
+
+#loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+#spinner {
+    background-color: transparent;
+    -webkit-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear;
+    position: relative;
+    top: 50vh;
+    left: 50vw;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    margin-top: -25px;
+    margin-left: -110px;
+    /* Negative margin for centering, equation: minus the width of the logo divided by two.
+    This fixes a problem where the spinner is offset by half the width of the logo. */
+}
+
+#logo {
+    position: relative;
+    top: 40vh;
+    left: 50vw;
+    height: 200px;
+    width: 170px;
+    padding: 0;
+    margin-top: -100px;
+    margin-left: -85px;
+}
+
+
 /* Menu */
 
 #menu {
@@ -368,8 +372,8 @@ a#menuClose {
 
 #nav a:hover,
 #nav a:focus {
-    background-color: #242424;
-    color: #f2f2f2;
+    background-color: #f6e44a;
+    color: #242424;
 }
 
 a#menuOpen {
@@ -379,6 +383,13 @@ a#menuOpen {
 a#menuOpen i {
     background-color: inherit;
     color: inherit;
+}
+
+#navbar img#navbarTux {
+    float: left;
+    height: 49px;
+    padding: 8px;
+    background-color: transparent;
 }
 
 
@@ -406,7 +417,7 @@ button#backToTopButton {
     height: 40px;
     width: 40px;
     border-radius: 25px;
-    border: 3px solid #242424;
+    border: none;
     outline: none;
     text-align: center;
     font-size: 17pt;
@@ -438,13 +449,6 @@ main {
 
 #main {
     padding-bottom: 30vh;
-}
-
-
-/* Horizontal Line */
-
-hr {
-    width: 100%;
 }
 
 
