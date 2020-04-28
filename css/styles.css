@@ -430,6 +430,7 @@ button#backToTopButton {
     margin-left: -25px;
     padding: 0;
     z-index: 3;
+    -webkit-animation: fadeOut 0.5s forwards;
     animation: fadeOut 0.5s forwards;
     -webkit-transition: 0.3s ease all;
     -o-transition: 0.3s ease all;
