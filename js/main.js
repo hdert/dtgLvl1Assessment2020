@@ -22,7 +22,7 @@ async function exitLoadingScreen() {
     loadingSpinner.style.animation = "spin 1s infinite linear, fadeOut 2s forwards";
     loadingScreen.style.animation = "slideOutBottom 1.3s 1.5s forwards ease-out";
     await sleep(1200);
-    document.getElementById("wrapper").style.overflowY = "auto";
+    wrapper.style.overflowY = "auto";
     /* This makes it so that the scrollbar doesn't show until the loading animation is near complete. */
 }
 
