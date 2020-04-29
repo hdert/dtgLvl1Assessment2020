@@ -361,6 +361,7 @@ a#menuClose {
     position: fixed;
     top: 0;
     width: 100vw;
+    z-index: 4;
     -webkit-transition: top 0.3s;
     -o-transition: top 0.3s;
     transition: top 0.3s;
@@ -452,6 +453,37 @@ button#backToTopButton {
 #backToTopButton:hover {
     background-color: #f6e44a;
     color: #242424;
+}
+
+
+/* Img */
+
+#bigHeader {
+    background-image: url(../img/100px-Tux-opaque.svg.png);
+    height: 300px;
+    background-position: center;
+    background-repeat: space;
+}
+
+
+/* Header */
+
+header h1,
+header h2,
+header p {
+    padding: 15px;
+    border: 2px solid #242424;
+    font-size: 53px;
+    margin: 0;
+}
+
+.wordContainer {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
 }
 
 
