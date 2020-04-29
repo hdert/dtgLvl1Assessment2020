@@ -30,140 +30,144 @@
 
 <body onload="exitLoadingScreen();">
 
-    <div id="loadingScreen">
+    <div id="wrapper">
 
-        <img id="logo" src="img/869px-Tux.svg.png" alt="Loading page logo">
-        <img id="spinner" src="img/Spinner.png" alt="Loading page spinner">
+        <div id="loadingScreen">
+
+            <img id="logo" src="img/869px-Tux.svg.png" alt="Loading page logo">
+            <img id="spinner" src="img/Spinner.png" alt="Loading page spinner">
+
+        </div>
+
+        <div id="menu" onclick="closeMenu()">
+
+            <a href="#" id="menuClose" onclick="event.preventDefault();closeMenu();">&times;</a>
+
+            <div id="menuContent">
+
+                <a href="#unix" onclick="closeMenu();">Unix</a>
+                <a href="#gnuAndLinux" onclick="closeMenu();">GNU and Linux</a>
+                <a href="#shinyShinyDistros" onclick="closeMenu();">Shiny, Shiny Distros</a>
+
+            </div>
+
+        </div>
+
+        <div id="navbar">
+
+            <div class="col-2 desktopOnly"></div>
+
+            <div class="col-8" id="nav">
+
+                <img src="img/100px-Tux.svg.png" class="tabletAbove" id="navbarTux">
+                <a href="#unix">Unix</a>
+                <a href="#gnuAndLinux" class="tabletAbove">GNU and Linux</a>
+                <a href="#shinyShinyDistros" class="tabletAbove">Shiny, Shiny Distros</a>
+                <a href="#" onclick="event.preventDefault();openMenu();" id="menuOpen" class="mobileOnly">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+            </div>
+
+            <div class="col-2 desktopOnly"></div>
+
+            <div class="col-12" id="progressContainer">
+
+                <div id="progressBar"></div>
+
+            </div>
+
+        </div>
+
+        <button onclick="goToTop();" class="fa fa-angle-double-up" id="backToTopButton" title="Go to the top of the page"></button>
+
+        <main>
+
+            <div class="col-2 desktopOnly"></div>
+
+            <div class="col-8" id="main">
+
+                <header id="bigHeader">
+
+                    <p>banner tux over and over again centered no clip img</p>
+                    <h1>The History of Linux</h1>
+
+                </header>
+
+                <hr>
+
+                <header id="unix">
+
+                    <p>banner img</p>
+                    <h2>UNIX</h2>
+
+                </header>
+
+                <hr>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis nisi vel dignissim consectetur. Fusce ullamcorper nec sapien non varius. Quisque efficitur rutrum ante nec feugiat. Nulla erat tortor, hendrerit nec viverra sed, luctus tempor ex. Sed
+                    volutpat leo varius diam ornare imperdiet. Cras varius nulla ac tortor placerat bibendum. Suspendisse feugiat ante a nisi consequat, eu tincidunt elit gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                    cubilia curae; Etiam finibus orci sed lectus malesuada pellentesque. Mauris eleifend sit amet lectus a elementum. Duis et fringilla libero. Phasellus varius purus ac finibus congue. Curabitur ullamcorper libero vel sodales ultricies.
+                    Aliquam consequat dolor id ipsum consectetur pretium. Nunc viverra iaculis nisl. Mauris sed bibendum mauris.
+                </p>
+
+                <p>
+                    Nunc blandit <br>ligula nulla, id iaculis dolor cursus id. Etiam viverra eros porttitor, vehicula mauris id, consecte<br>tur leo. Nullam a tortor eu libero gravida hendrerit. Nulla blandit scelerisque sapien sed semper. Aliquam erat
+                    volutpat. Proin porta risus id iaculis rutrum. Ut sed eros quis m<br>etus gravida semp<br>er. Mauris nec arcu non odio volutpat<br> auctor sit amet a massa. Vestibulum et finibus sapien. In pharetra, tortor vel sodales ultrices, augue
+                    dui tincidunt enim, ut suscipit urna leo quis null<br>a.
+                </p>
+
+                <header id="gnuAndLinux">
+
+                    <p>banner img</p>
+                    <h2>GNU and Linux</h2>
+
+                </header>
+
+                <hr>
+
+                <p>
+                    Vivamus eget <br>neque ipsum. Class aptent<br> taciti sociosqu ad litora torquent per conubia nostra, per inceptos him<br>enaeos. Cras commodo lectus eros, ut ultricies sapien mollis viverra. Ut rhoncus vulputate orci sit amet feugiat.
+                    Donec consequat fringilla facilisis. Duis lacus ligula, vene<br>natis quis malesuada vel, varius id ne<br>que. Vivamus sed purus elit.
+                </p>
+
+                <p>
+                    Cras fer<br>mentum urna vestibulum blandit suscipit. Pellentesque ac tellus consequat, posuere metus in, condiment<br>um orci. Cras bibendum tristique arcu, id lacinia diam imperdiet ut. Duis tincidunt fringilla tellus et porta. Integer
+                    mattis purus et consectetur imperdiet. Etiam et feugia<br>t libero. Praesent se<br>d lorem eu nibh ornare mattis. Cras in aliquam tellus. Ut tellus arcu, porta nec convallis non, dignissim vel turpis. Pellentesque habitant morbi tristique
+                    senectus et netus et malesuada fames ac turpis eges<br>tas. Aenean molestie lorem nisl, ac fermentum <br>arcu faucibus at.
+                </p>
+
+                <header id="shinyShinyDistros">
+
+                    <p>banner big distros img</p>
+                    <h2>Shiny, Shiny Distros</h2>
+
+                </header>
+
+                <hr>
+
+                <p>
+                    In nec vest<br>ibulum ex, nec ornare dui. Donec neque dui, porttitor eu pharetra sit amet, ma<br>ximus quis odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sit amet pretium turpis.
+                    Vestibulum volutpat nisl nunc, eu auctor nunc po<br>rta a. Cras rhoncus ef<br>ficitur mi blandit ultricies. Cras viverra au<br>gue sit amet facilisis ullamcorper. Quisque venenatis ligula et risus efficitur sodales. Curabitur sit amet
+                    lorem orci. Etiam ultricies sapien sit amet sem cursus faucibus. Curabitur<br> molestie elit leo, consectetur l<br>obortis ex auctor nec. Sed viverra <br>aliquam turpis at maximus. Pellentesque consectetur velit sed tellus auctor vestibulum.
+                    Sed metus massa, elementum sodales arcu ac, sodales porta eros.<br>
+                </p>
+
+                <footer>
+
+                    <small>Page design and layout by <a href="https://www.hdert.tk/" target="_blank">Justin Muirhead</a>. &copy; Copyright 2020 Justin Muirhead under the BSD 3-Clause License</small>
+
+                </footer>
+
+            </div>
+
+            <div class="col-2 desktopOnly"></div>
+
+        </main>
+        <script src="js/main.js"></script>
 
     </div>
-
-    <div id="menu" onclick="closeMenu()">
-
-        <a href="#" id="menuClose" onclick="event.preventDefault();closeMenu();">&times;</a>
-
-        <div id="menuContent">
-
-            <a href="#unix" onclick="closeMenu();">Unix</a>
-            <a href="#gnuAndLinux" onclick="closeMenu();">GNU and Linux</a>
-            <a href="#shinyShinyDistros" onclick="closeMenu();">Shiny, Shiny Distros</a>
-
-        </div>
-
-    </div>
-
-    <div id="navbar">
-
-        <div class="col-2 desktopOnly"></div>
-
-        <div class="col-8" id="nav">
-
-            <img src="img/100px-Tux.svg.png" class="tabletAbove" id="navbarTux">
-            <a href="#unix">Unix</a>
-            <a href="#gnuAndLinux" class="tabletAbove">GNU and Linux</a>
-            <a href="#shinyShinyDistros" class="tabletAbove">Shiny, Shiny Distros</a>
-            <a href="#" onclick="event.preventDefault();openMenu();" id="menuOpen" class="mobileOnly">
-                <i class="fa fa-bars"></i>
-            </a>
-
-        </div>
-
-        <div class="col-2 desktopOnly"></div>
-
-        <div class="col-12" id="progressContainer">
-
-            <div id="progressBar"></div>
-
-        </div>
-
-    </div>
-
-    <button onclick="goToTop();" class="fa fa-angle-double-up" id="backToTopButton" title="Go to the top of the page"></button>
-
-    <main>
-
-        <div class="col-2 desktopOnly"></div>
-
-        <div class="col-8" id="main">
-
-            <header id="bigHeader">
-
-                <p>banner tux over and over again centered no clip img</p>
-                <h1>The History of Linux</h1>
-
-            </header>
-
-            <hr>
-
-            <header id="unix">
-
-                <p>banner img</p>
-                <h2>UNIX</h2>
-
-            </header>
-
-            <hr>
-
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis nisi vel dignissim consectetur. Fusce ullamcorper nec sapien non varius. Quisque efficitur rutrum ante nec feugiat. Nulla erat tortor, hendrerit nec viverra sed, luctus tempor ex. Sed
-                volutpat leo varius diam ornare imperdiet. Cras varius nulla ac tortor placerat bibendum. Suspendisse feugiat ante a nisi consequat, eu tincidunt elit gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                curae; Etiam finibus orci sed lectus malesuada pellentesque. Mauris eleifend sit amet lectus a elementum. Duis et fringilla libero. Phasellus varius purus ac finibus congue. Curabitur ullamcorper libero vel sodales ultricies. Aliquam consequat
-                dolor id ipsum consectetur pretium. Nunc viverra iaculis nisl. Mauris sed bibendum mauris.
-            </p>
-
-            <p>
-                Nunc blandit <br>ligula nulla, id iaculis dolor cursus id. Etiam viverra eros porttitor, vehicula mauris id, consecte<br>tur leo. Nullam a tortor eu libero gravida hendrerit. Nulla blandit scelerisque sapien sed semper. Aliquam erat volutpat.
-                Proin porta risus id iaculis rutrum. Ut sed eros quis m<br>etus gravida semp<br>er. Mauris nec arcu non odio volutpat<br> auctor sit amet a massa. Vestibulum et finibus sapien. In pharetra, tortor vel sodales ultrices, augue dui tincidunt
-                enim, ut suscipit urna leo quis null<br>a.
-            </p>
-
-            <header id="gnuAndLinux">
-
-                <p>banner img</p>
-                <h2>GNU and Linux</h2>
-
-            </header>
-
-            <hr>
-
-            <p>
-                Vivamus eget <br>neque ipsum. Class aptent<br> taciti sociosqu ad litora torquent per conubia nostra, per inceptos him<br>enaeos. Cras commodo lectus eros, ut ultricies sapien mollis viverra. Ut rhoncus vulputate orci sit amet feugiat.
-                Donec consequat fringilla facilisis. Duis lacus ligula, vene<br>natis quis malesuada vel, varius id ne<br>que. Vivamus sed purus elit.
-            </p>
-
-            <p>
-                Cras fer<br>mentum urna vestibulum blandit suscipit. Pellentesque ac tellus consequat, posuere metus in, condiment<br>um orci. Cras bibendum tristique arcu, id lacinia diam imperdiet ut. Duis tincidunt fringilla tellus et porta. Integer
-                mattis purus et consectetur imperdiet. Etiam et feugia<br>t libero. Praesent se<br>d lorem eu nibh ornare mattis. Cras in aliquam tellus. Ut tellus arcu, porta nec convallis non, dignissim vel turpis. Pellentesque habitant morbi tristique
-                senectus et netus et malesuada fames ac turpis eges<br>tas. Aenean molestie lorem nisl, ac fermentum <br>arcu faucibus at.
-            </p>
-
-            <header id="shinyShinyDistros">
-
-                <p>banner big distros img</p>
-                <h2>Shiny, Shiny Distros</h2>
-
-            </header>
-
-            <hr>
-
-            <p>
-                In nec vest<br>ibulum ex, nec ornare dui. Donec neque dui, porttitor eu pharetra sit amet, ma<br>ximus quis odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sit amet pretium turpis. Vestibulum
-                volutpat nisl nunc, eu auctor nunc po<br>rta a. Cras rhoncus ef<br>ficitur mi blandit ultricies. Cras viverra au<br>gue sit amet facilisis ullamcorper. Quisque venenatis ligula et risus efficitur sodales. Curabitur sit amet lorem orci.
-                Etiam ultricies sapien sit amet sem cursus faucibus. Curabitur<br> molestie elit leo, consectetur l<br>obortis ex auctor nec. Sed viverra <br>aliquam turpis at maximus. Pellentesque consectetur velit sed tellus auctor vestibulum. Sed metus
-                massa, elementum sodales arcu ac, sodales porta eros.<br>
-            </p>
-
-            <footer>
-
-                <small>Page design and layout by <a href="https://www.hdert.tk/" target="_blank">Justin Muirhead</a>. &copy; Copyright 2020 Justin Muirhead under the BSD 3-Clause License</small>
-
-            </footer>
-
-        </div>
-
-        <div class="col-2 desktopOnly"></div>
-
-    </main>
-    <script src="js/main.js"></script>
 
 </body>
 
