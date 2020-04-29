@@ -42,9 +42,9 @@ function goToTop() {
 }
 
 function navbarHide() {
-    var currentScrollPos = window.pageYOffset;
+    var currentScrollPos = document.body.scrollTop || document.documentElement.scrollTop;
 
-    if (window.pageYOffset <= 0) {
+    if (currentScrollPos <= 0) {
         document.getElementById("navbar").style.top = "0";
         return;
     }
