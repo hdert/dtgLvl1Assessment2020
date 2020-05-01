@@ -399,11 +399,20 @@ a#menuOpen i {
     color: inherit;
 }
 
-#navbar img#navbarTux {
+#navbar button#navbarTux {
     float: left;
+    background-image: url(../img/100px-Tux.svg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     height: 49px;
+    min-width: 24px;
+    width: 50px;
     padding: 8px;
+    border: none;
+    outline: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 
@@ -522,7 +531,7 @@ a.no:focus {
     background-color: #f6e44a;
 }
 
-section.no {
+div.no {
     text-align: center;
     padding-bottom: 30px;
 }
