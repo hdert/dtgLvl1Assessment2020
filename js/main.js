@@ -7,20 +7,17 @@ go visit: https://jordanhay.tk/
 
 // SPDX-License-Identifier: BSD-3-Clause
 
-wrapper = document.getElementById("wrapper");
+var wrapper = document.getElementById("wrapper");
+var prevScrollpos = window.pageYOffset;
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function exitLoadingScreen() {
-    loadingScreen = document.getElementById("loadingScreen");
-    loadingSpinner = document.getElementById("spinner");
-    loadingLogo = document.getElementById("logo");
-
-    loadingLogo.style.animation = "fadeOut 0.5s 1s forwards ease";
-    loadingSpinner.style.animation = "spin 1s infinite linear, fadeOut 2s forwards";
-    loadingScreen.style.animation = "slideOutBottom 1.3s 1.5s forwards ease-out";
+    document.getElementById("logo").style.animation = "fadeOut 0.5s 1s forwards ease";
+    document.getElementById("spinner").style.animation = "spin 1s infinite linear, fadeOut 2s forwards";
+    document.getElementById("loadingScreen").style.animation = "slideOutBottom 1.3s 1.5s forwards ease-out";
     await sleep(1200);
     wrapper.style.overflowY = "auto";
     /* This makes it so that the scrollbar doesn't show until the loading animation is near complete. */
@@ -65,16 +62,13 @@ function scrollIndicatorUpdate() {
 }
 
 function backToTopButtonUpdate() {
-    var backToTopButton = document.getElementById("backToTopButton");
-
     if (wrapper.scrollTop > 250) {
-        backToTopButton.style.animation = "fadeIn ease 0.3s"
+        document.getElementById("backToTopButton").style.animation = "fadeIn ease 0.3s"
     } else {
-        backToTopButton.style.animation = "fadeOut ease 0.3s forwards"
+        document.getElementById("backToTopButton").style.animation = "fadeOut ease 0.3s forwards"
     }
 }
 
-var prevScrollpos = window.pageYOffset;
 wrapper.onscroll = function() {
     backToTopButtonUpdate();
     navbarHide();
