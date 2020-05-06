@@ -7,8 +7,10 @@ go visit: https://jordanhay.tk/
 
 // SPDX-License-Identifier: BSD-3-Clause
 
-var wrapper = document.getElementById("wrapper");
-var prevScrollpos = window.pageYOffset;
+"use strict";
+
+var WRAPPER = document.getElementById("wrapper");
+var PREVSCROLLPOS = window.pageYOffset;
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -19,7 +21,7 @@ async function exitLoadingScreen() {
     document.getElementById("spinner").style.animation = "spin 1s infinite linear, fadeOut 2s forwards";
     document.getElementById("loadingScreen").style.animation = "slideOutBottom 1.3s 1.5s forwards ease-out";
     await sleep(1200);
-    wrapper.style.overflowY = "auto";
+    WRAPPER.style.overflowY = "auto";
     /* This makes it so that the scrollbar doesn't show until the loading animation is near complete. */
 }
 
@@ -36,40 +38,40 @@ function closeMenu() {
 /* Scroll functions */
 
 function goToTop() {
-    wrapper.scrollTop = 0; // For Safari
+    WRAPPER.scrollTop = 0; // For Safari
 }
 
 function navbarHide() {
-    var currentScrollPos = wrapper.scrollTop;
+    var currentScrollPos = WRAPPER.scrollTop;
 
     if (currentScrollPos <= 0) {
         document.getElementById("navbar").style.top = "0";
         return;
     }
-    if (prevScrollpos > currentScrollPos) {
+    if (PREVSCROLLPOS > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
     } else {
         document.getElementById("navbar").style.top = "-50px";
     }
-    prevScrollpos = currentScrollPos;
+    PREVSCROLLPOS = currentScrollPos;
 }
 
 function scrollIndicatorUpdate() {
-    var winScroll = wrapper.scrollTop;
-    var height = wrapper.scrollHeight - document.documentElement.clientHeight;
+    var winScroll = WRAPPER.scrollTop;
+    var height = WRAPPER.scrollHeight - document.documentElement.clientHeight;
     var scrolled = (winScroll / height) * 100;
     document.getElementById("progressBar").style.width = scrolled + "%";
 }
 
 function backToTopButtonUpdate() {
-    if (wrapper.scrollTop > 250) {
+    if (WRAPPER.scrollTop > 250) {
         document.getElementById("backToTopButton").style.animation = "fadeIn ease 0.3s"
     } else {
         document.getElementById("backToTopButton").style.animation = "fadeOut ease 0.3s forwards"
     }
 }
 
-wrapper.onscroll = function() {
+WRAPPER.onscroll = function() {
     backToTopButtonUpdate();
     navbarHide();
     scrollIndicatorUpdate();
