@@ -465,6 +465,18 @@ button#backToTopButton {
 }
 
 
+/* Main */
+
+main {
+    padding: 29px;
+}
+
+#main {
+    padding-top: 50px;
+    padding-bottom: 30vh;
+}
+
+
 /* Img */
 
 #bigHeader {
@@ -495,17 +507,6 @@ header p {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background-color: transparent;
-}
-
-
-/* Main */
-
-main {
-    padding: 29px;
-}
-
-#main {
-    padding-bottom: 30vh;
 }
 
 
