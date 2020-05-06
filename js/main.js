@@ -9,17 +9,21 @@ go visit: https://jordanhay.tk/
 
 "use strict";
 
-var WRAPPER = document.getElementById("wrapper");
-var PREVSCROLLPOS = window.pageYOffset;
+const WRAPPER = document.getElementById("wrapper");
+const NAVBAR = document.getElementById("navbar");
+const PROGRESSBAR = document.getElementById("progressBar");
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function exitLoadingScreen() {
-    document.getElementById("logo").style.animation = "fadeOut 0.5s 1s forwards ease";
-    document.getElementById("spinner").style.animation = "spin 1s infinite linear, fadeOut 2s forwards";
-    document.getElementById("loadingScreen").style.animation = "slideOutBottom 1.3s 1.5s forwards ease-out";
+    document.getElementById("logo").style.animation =
+        "fadeOut 0.5s 1s forwards ease";
+    document.getElementById("spinner").style.animation =
+        "spin 1s infinite linear, fadeOut 2s forwards";
+    document.getElementById("loadingScreen").style.animation =
+        "slideOutBottom 1.3s 1.5s forwards ease-out";
     await sleep(1200);
     WRAPPER.style.overflowY = "auto";
     /* This makes it so that the scrollbar doesn't show until the loading animation is near complete. */
@@ -38,36 +42,41 @@ function closeMenu() {
 /* Scroll functions */
 
 function goToTop() {
-    WRAPPER.scrollTop = 0; // For Safari
+    WRAPPER.scrollTop = 0;
 }
 
-function navbarHide() {
-    var currentScrollPos = WRAPPER.scrollTop;
+var navbarHide = (function() {
+    var PREVSCROLLPOS = WRAPPER.scrollTop;
 
-    if (currentScrollPos <= 0) {
-        document.getElementById("navbar").style.top = "0";
-        return;
+    return function() {
+        var currentScrollPos = WRAPPER.scrollTop;
+
+        if (currentScrollPos <= 0) {
+            NAVBAR.style.top = "0";
+            return;
+        }
+        if (PREVSCROLLPOS > currentScrollPos) {
+            NAVBAR.style.top = "0";
+        } else {
+            NAVBAR.style.top = "-50px";
+        }
+        PREVSCROLLPOS = currentScrollPos;
     }
-    if (PREVSCROLLPOS > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
-    } else {
-        document.getElementById("navbar").style.top = "-50px";
-    }
-    PREVSCROLLPOS = currentScrollPos;
-}
+})();
 
 function scrollIndicatorUpdate() {
-    var winScroll = WRAPPER.scrollTop;
-    var height = WRAPPER.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    document.getElementById("progressBar").style.width = scrolled + "%";
+    PROGRESSBAR.style.width =
+        ((WRAPPER.scrollTop / (WRAPPER.scrollHeight -
+            document.documentElement.clientHeight)) * 100) + "%";
 }
 
 function backToTopButtonUpdate() {
     if (WRAPPER.scrollTop > 250) {
-        document.getElementById("backToTopButton").style.animation = "fadeIn ease 0.3s"
+        document.getElementById("backToTopButton").style.animation =
+            "fadeIn ease 0.3s"
     } else {
-        document.getElementById("backToTopButton").style.animation = "fadeOut ease 0.3s forwards"
+        document.getElementById("backToTopButton").style.animation =
+            "fadeOut ease 0.3s forwards"
     }
 }
 
