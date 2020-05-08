@@ -49,8 +49,8 @@ html {
 }
 
 body {
-    overflow-x: hidden;
-    overflow-y: hidden;
+    font-size: 100%;
+    overflow: hidden;
     /* This is changed after the loading screen disappears. */
 }
 
@@ -328,7 +328,7 @@ body>#wrapper {
 #menu a {
     padding: 8px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25em;
     color: #f2f2f2;
     display: block;
     -webkit-transition: 0.3s;
@@ -347,7 +347,7 @@ body>#wrapper {
     position: absolute;
     top: 15px;
     right: 35px;
-    font-size: 35px;
+    font-size: 2.1875em;
 }
 
 a#menuClose {
@@ -368,9 +368,7 @@ a#menuClose {
 }
 
 #nav {
-    padding: 0px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0px 10px;
 }
 
 #nav a {
@@ -401,17 +399,13 @@ a#menuOpen i {
 
 #navbar button#navbarTux {
     float: left;
-    background-image: url(../img/100px-Tux.svg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background: transparent url(../img/100px-Tux.svg.png) center/contain no-repeat;
     height: 49px;
     min-width: 24px;
     width: 50px;
     padding: 8px;
     border: none;
     outline: none;
-    background-color: transparent;
     cursor: pointer;
 }
 
@@ -443,7 +437,7 @@ button#backToTopButton {
     border: none;
     outline: none;
     text-align: center;
-    font-size: 17pt;
+    font-size: 1.3334em;
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -480,10 +474,8 @@ main {
 /* Img */
 
 #bigHeader {
-    background-image: url(../img/100px-Tux-opaque.svg.png);
+    background: transparent url(../img/100px-Tux-opaque.svg.png) center space;
     height: 300px;
-    background-position: center;
-    background-repeat: space;
 }
 
 
@@ -494,7 +486,7 @@ header h2,
 header p {
     padding: 15px;
     border: 2px solid #242424;
-    font-size: 53px;
+    font-size: 3.3125em;
     margin: 0;
 }
 
@@ -520,8 +512,7 @@ footer {
 /* 404 */
 
 a.no {
-    font-family: 'Questrial', sans-serif;
-    font-size: 100px;
+    font: 33.33vw 'Questrial', sans-serif;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
