@@ -3,181 +3,181 @@
 
 <head>
 
-    <!-- Meta Tags -->
-    <meta charset="utf-8" />
-    <meta name="description" content="A page detailing the history of Linux" />
-    <meta name="keywords" content="The History of Linux, Linux History, Linux" />
-    <meta name="author" content="Justin Muirhead" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="google-site-verification" content="JOLcosuOM68l6v7u_2g9_koMr8iJA3G2Ybdgf6ci2HA" />
+  <!-- Meta Tags -->
+  <meta charset="utf-8" />
+  <meta name="description" content="A page detailing the history of Linux" />
+  <meta name="keywords" content="The History of Linux, Linux History, Linux" />
+  <meta name="author" content="Justin Muirhead" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-site-verification" content="JOLcosuOM68l6v7u_2g9_koMr8iJA3G2Ybdgf6ci2HA" />
 
-    <title>The History of Linux</title>
+  <title>The History of Linux</title>
 
-    <!-- Links -->
-    <link rel="icon" href="img/100px-Tux.svg.ico" />
-    <link rel="icon" href="img/100px-Tux.svg.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <!-- index.html © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
+  <!-- Links -->
+  <link rel="icon" href="img/100px-Tux.svg.ico" />
+  <link rel="icon" href="img/100px-Tux.svg.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <!-- index.html © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
     code snippets taken from: https://www.w3schools.com/
     and: https://github.com/jhay0112/jhay0112.github.io/
     go visit: https://jordanhay.tk/
     -->
 
-    <!-- SPDX-License-Identifier: BSD-3-Clause -->
+  <!-- SPDX-License-Identifier: BSD-3-Clause -->
 
 </head>
 
 <body onload="exitLoadingScreen();">
 
-    <div id="loadingScreen">
+  <div id="loadingScreen">
 
-        <img id="logo" src="img/869px-Tux.svg.png" alt="Loading page logo" />
-        <img id="spinner" src="img/Spinner.png" alt="Loading page spinner" />
+    <img id="logo" src="img/869px-Tux.svg.png" alt="Loading page logo" />
+    <img id="spinner" src="img/Spinner.png" alt="Loading page spinner" />
 
-    </div>
+  </div>
 
-    <div id="menu" onclick="closeMenu()">
+  <div id="menu" onclick="closeMenu()">
 
-        <a href="#" id="menuClose" onclick="event.preventDefault();closeMenu();">&times;</a>
+    <a href="#" id="menuClose" onclick="event.preventDefault();closeMenu();">&times;</a>
 
-        <div id="menuContent">
+    <div id="menuContent">
 
-            <a href="#unix" onclick="closeMenu();">Unix</a>
-            <a href="#gnuAndLinux" onclick="closeMenu();">GNU and Linux</a>
-            <a href="#shinyShinyDistros" onclick="closeMenu();">Shiny, Shiny Distros</a>
-
-        </div>
+      <a href="#unix" onclick="closeMenu();">Unix</a>
+      <a href="#gnuAndLinux" onclick="closeMenu();">GNU and Linux</a>
+      <a href="#shinyShinyDistros" onclick="closeMenu();">Shiny, Shiny Distros</a>
 
     </div>
 
-    <div id="navbar">
+  </div>
 
-        <div class="col-2 desktopOnly"></div>
+  <div id="navbar">
 
-        <div class="col-8" id="nav">
+    <div class="col-2 desktopOnly"></div>
 
-            <button onclick="goToTop();" class="tabletAbove" id="navbarTux"></button>
-            <a href="#unix">Unix</a>
-            <a href="#gnuAndLinux" class="tabletAbove">GNU and Linux</a>
-            <a href="#shinyShinyDistros" class="tabletAbove">Shiny, Shiny Distros</a>
-            <a href="#" onclick="event.preventDefault();openMenu();" id="menuOpen" class="mobileOnly">
-                <i class="fa fa-bars"></i>
-            </a>
+    <div class="col-8" id="nav">
 
-        </div>
-
-        <div class="col-2 desktopOnly"></div>
-
-        <div class="col-12" id="progressContainer">
-
-            <div id="progressBar"></div>
-
-        </div>
+      <button onclick="goToTop();" class="tabletAbove" id="navbarTux"></button>
+      <a href="#unix">Unix</a>
+      <a href="#gnuAndLinux" class="tabletAbove">GNU and Linux</a>
+      <a href="#shinyShinyDistros" class="tabletAbove">Shiny, Shiny Distros</a>
+      <a href="#" onclick="event.preventDefault();openMenu();" id="menuOpen" class="mobileOnly">
+        <i class="fa fa-bars"></i>
+      </a>
 
     </div>
 
-    <button onclick="goToTop();" class="fa fa-angle-double-up" id="backToTopButton" title="Go to the top of the page"></button>
+    <div class="col-2 desktopOnly"></div>
 
-    <div id="wrapper">
+    <div class="col-12" id="progressContainer">
 
-        <main>
-
-            <div class="col-2 desktopOnly"></div>
-
-            <div class="col-8" id="main">
-
-                <header id="bigHeader">
-
-                    <div class="wordContainer">
-
-                        <h1>The History of Linux</h1>
-
-                    </div>
-
-                </header>
-
-                <header id="unix">
-
-                    <div class="wordContainer">
-
-                        <h2>UNIX</h2>
-
-                    </div>
-
-                </header>
-
-                <hr />
-
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis nisi vel dignissim consectetur. Fusce ullamcorper nec sapien non varius. Quisque efficitur rutrum ante nec feugiat. Nulla erat tortor, hendrerit nec viverra sed, luctus tempor ex. Sed
-                    volutpat leo varius diam ornare imperdiet. Cras varius nulla ac tortor placerat bibendum. Suspendisse feugiat ante a nisi consequat, eu tincidunt elit gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                    cubilia curae; Etiam finibus orci sed lectus malesuada pellentesque. Mauris eleifend sit amet lectus a elementum. Duis et fringilla libero. Phasellus varius purus ac finibus congue. Curabitur ullamcorper libero vel sodales ultricies.
-                    Aliquam consequat dolor id ipsum consectetur pretium. Nunc viverra iaculis nisl. Mauris sed bibendum mauris.
-                </p>
-
-                <p>
-                    Nunc blandit <br />ligula nulla, id iaculis dolor cursus id. Etiam viverra eros porttitor, vehicula mauris id, consecte<br />tur leo. Nullam a tortor eu libero gravida hendrerit. Nulla blandit scelerisque sapien sed semper. Aliquam
-                    erat volutpat. Proin porta risus id iaculis rutrum. Ut sed eros quis m<br />etus gravida semp<br />er. Mauris nec arcu non odio volutpat<br /> auctor sit amet a massa. Vestibulum et finibus sapien. In pharetra, tortor vel sodales ultrices,
-                    augue dui tincidunt enim, ut suscipit urna leo quis null<br />a.
-                </p>
-
-                <header id="gnuAndLinux">
-
-                    <div class="wordContainer">
-
-                        <h2>GNU and Linux</h2>
-
-                    </div>
-
-                </header>
-
-                <hr />
-
-                <p>
-                    Vivamus eget <br />neque ipsum. Class aptent<br /> taciti sociosqu ad litora torquent per conubia nostra, per inceptos him<br />enaeos. Cras commodo lectus eros, ut ultricies sapien mollis viverra. Ut rhoncus vulputate orci sit amet
-                    feugiat. Donec consequat fringilla facilisis. Duis lacus ligula, vene<br />natis quis malesuada vel, varius id ne<br />que. Vivamus sed purus elit.
-                </p>
-
-                <p>
-                    Cras fer<br />mentum urna vestibulum blandit suscipit. Pellentesque ac tellus consequat, posuere metus in, condiment<br />um orci. Cras bibendum tristique arcu, id lacinia diam imperdiet ut. Duis tincidunt fringilla tellus et porta.
-                    Integer mattis purus et consectetur imperdiet. Etiam et feugia<br />t libero. Praesent se<br />d lorem eu nibh ornare mattis. Cras in aliquam tellus. Ut tellus arcu, porta nec convallis non, dignissim vel turpis. Pellentesque habitant
-                    morbi tristique senectus et netus et malesuada fames ac turpis eges<br />tas. Aenean molestie lorem nisl, ac fermentum <br />arcu faucibus at.
-                </p>
-
-                <header id="shinyShinyDistros">
-
-                    <div class="wordContainer">
-
-                        <h2>Shiny, Shiny Distros</h2>
-
-                    </div>
-
-                </header>
-
-                <hr />
-
-                <p>
-                    In nec vest<br />ibulum ex, nec ornare dui. Donec neque dui, porttitor eu pharetra sit amet, ma<br />ximus quis odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sit amet pretium turpis.
-                    Vestibulum volutpat nisl nunc, eu auctor nunc po<br />rta a. Cras rhoncus ef<br />ficitur mi blandit ultricies. Cras viverra au<br />gue sit amet facilisis ullamcorper. Quisque venenatis ligula et risus efficitur sodales. Curabitur
-                    sit amet lorem orci. Etiam ultricies sapien sit amet sem cursus faucibus. Curabitur<br /> molestie elit leo, consectetur l<br />obortis ex auctor nec. Sed viverra <br />aliquam turpis at maximus. Pellentesque consectetur velit sed
-                    tellus auctor vestibulum. Sed metus massa, elementum sodales arcu ac, sodales porta eros.<br />
-                </p>
-
-                <footer>
-
-                    <small>Page design and layout by <a href="https://www.hdert.tk/" target="_blank">Justin Muirhead</a>. &copy; Copyright 2020 Justin Muirhead under the BSD 3-Clause License</small>
-
-                </footer>
-
-            </div>
-
-            <div class="col-2 desktopOnly"></div>
-
-        </main>
+      <div id="progressBar"></div>
 
     </div>
-    <script src="js/main.js"></script>
+
+  </div>
+
+  <button onclick="goToTop();" class="fa fa-angle-double-up" id="backToTopButton" title="Go to the top of the page"></button>
+
+  <div id="wrapper">
+
+    <main>
+
+      <div class="col-2 desktopOnly"></div>
+
+      <div class="col-8" id="main">
+
+        <header id="bigHeader">
+
+          <div class="wordContainer">
+
+            <h1>The History of Linux</h1>
+
+          </div>
+
+        </header>
+
+        <header id="unix">
+
+          <div class="wordContainer">
+
+            <h2>UNIX</h2>
+
+          </div>
+
+        </header>
+
+        <hr />
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis nisi vel dignissim consectetur. Fusce ullamcorper nec sapien non varius. Quisque efficitur rutrum ante nec feugiat. Nulla erat tortor, hendrerit nec viverra sed, luctus tempor ex. Sed
+          volutpat leo varius diam ornare imperdiet. Cras varius nulla ac tortor placerat bibendum. Suspendisse feugiat ante a nisi consequat, eu tincidunt elit gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+          curae; Etiam finibus orci sed lectus malesuada pellentesque. Mauris eleifend sit amet lectus a elementum. Duis et fringilla libero. Phasellus varius purus ac finibus congue. Curabitur ullamcorper libero vel sodales ultricies. Aliquam consequat
+          dolor id ipsum consectetur pretium. Nunc viverra iaculis nisl. Mauris sed bibendum mauris.
+        </p>
+
+        <p>
+          Nunc blandit <br />ligula nulla, id iaculis dolor cursus id. Etiam viverra eros porttitor, vehicula mauris id, consecte<br />tur leo. Nullam a tortor eu libero gravida hendrerit. Nulla blandit scelerisque sapien sed semper. Aliquam erat volutpat.
+          Proin porta risus id iaculis rutrum. Ut sed eros quis m<br />etus gravida semp<br />er. Mauris nec arcu non odio volutpat<br /> auctor sit amet a massa. Vestibulum et finibus sapien. In pharetra, tortor vel sodales ultrices, augue dui tincidunt
+          enim, ut suscipit urna leo quis null<br />a.
+        </p>
+
+        <header id="gnuAndLinux">
+
+          <div class="wordContainer">
+
+            <h2>GNU and Linux</h2>
+
+          </div>
+
+        </header>
+
+        <hr />
+
+        <p>
+          Vivamus eget <br />neque ipsum. Class aptent<br /> taciti sociosqu ad litora torquent per conubia nostra, per inceptos him<br />enaeos. Cras commodo lectus eros, ut ultricies sapien mollis viverra. Ut rhoncus vulputate orci sit amet feugiat.
+          Donec consequat fringilla facilisis. Duis lacus ligula, vene<br />natis quis malesuada vel, varius id ne<br />que. Vivamus sed purus elit.
+        </p>
+
+        <p>
+          Cras fer<br />mentum urna vestibulum blandit suscipit. Pellentesque ac tellus consequat, posuere metus in, condiment<br />um orci. Cras bibendum tristique arcu, id lacinia diam imperdiet ut. Duis tincidunt fringilla tellus et porta. Integer
+          mattis purus et consectetur imperdiet. Etiam et feugia<br />t libero. Praesent se<br />d lorem eu nibh ornare mattis. Cras in aliquam tellus. Ut tellus arcu, porta nec convallis non, dignissim vel turpis. Pellentesque habitant morbi tristique
+          senectus et netus et malesuada fames ac turpis eges<br />tas. Aenean molestie lorem nisl, ac fermentum <br />arcu faucibus at.
+        </p>
+
+        <header id="shinyShinyDistros">
+
+          <div class="wordContainer">
+
+            <h2>Shiny, Shiny Distros</h2>
+
+          </div>
+
+        </header>
+
+        <hr />
+
+        <p>
+          In nec vest<br />ibulum ex, nec ornare dui. Donec neque dui, porttitor eu pharetra sit amet, ma<br />ximus quis odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sit amet pretium turpis. Vestibulum
+          volutpat nisl nunc, eu auctor nunc po<br />rta a. Cras rhoncus ef<br />ficitur mi blandit ultricies. Cras viverra au<br />gue sit amet facilisis ullamcorper. Quisque venenatis ligula et risus efficitur sodales. Curabitur sit amet lorem orci.
+          Etiam ultricies sapien sit amet sem cursus faucibus. Curabitur<br /> molestie elit leo, consectetur l<br />obortis ex auctor nec. Sed viverra <br />aliquam turpis at maximus. Pellentesque consectetur velit sed tellus auctor vestibulum. Sed metus
+          massa, elementum sodales arcu ac, sodales porta eros.<br />
+        </p>
+
+        <footer>
+
+          <small>Page design and layout by <a href="https://www.hdert.tk/" target="_blank">Justin Muirhead</a>. &copy; Copyright 2020 Justin Muirhead under the BSD 3-Clause License</small>
+
+        </footer>
+
+      </div>
+
+      <div class="col-2 desktopOnly"></div>
+
+    </main>
+
+  </div>
+  <script src="js/main.js"></script>
 
 </body>
 

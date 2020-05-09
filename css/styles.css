@@ -18,13 +18,13 @@ go visit: https://jordanhay.tk/
 
 @import url('https://fonts.googleapis.com/css2?family=Questrial&family=Ubuntu:wght@300&display=swap');
 * {
-    color: #242424;
-    background-color: #f2f2f2;
-    font-family: 'Ubuntu', sans-serif;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-weight: normal;
-    /* Makes header text look the same between gecko and blink */
+  color: #242424;
+  background-color: #f2f2f2;
+  font-family: 'Ubuntu', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: normal;
+  /* Makes header text look the same between gecko and blink */
 }
 
 h1,
@@ -33,131 +33,131 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Questrial', sans-serif;
+  font-family: 'Questrial', sans-serif;
 }
 
 body,
 html {
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  overflow: hidden;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-size: 100%;
-    overflow: hidden;
-    /* This is changed after the loading screen disappears. */
+  font-size: 100%;
+  overflow: hidden;
+  /* This is changed after the loading screen disappears. */
 }
 
 body>#wrapper {
-    scroll-behavior: smooth;
-    height: 100vh;
-    width: 100vw;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    /* Something, something momentum and smooth scrolling */
+  scroll-behavior: smooth;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  /* Something, something momentum and smooth scrolling */
 }
 
 
 /* Animations */
 
 @-webkit-keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 @-webkit-keyframes fadeIn {
-    from {
-        display: none;
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
-    from {
-        display: none;
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-        z-index: 1;
-        display: none;
-    }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: 1;
+    display: none;
+  }
 }
 
 @keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-        z-index: 1;
-        display: none;
-    }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: 1;
+    display: none;
+  }
 }
 
 @-webkit-keyframes slideOutBottom {
-    from {
-        position: fixed;
-        top: 0;
-        left: 0;
-        opacity: 1;
-    }
-    to {
-        position: fixed;
-        top: 100vh;
-        left: 0;
-        opacity: 0;
-    }
+  from {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+  to {
+    position: fixed;
+    top: 100vh;
+    left: 0;
+    opacity: 0;
+  }
 }
 
 @keyframes slideOutBottom {
-    from {
-        position: fixed;
-        top: 0;
-        left: 0;
-        opacity: 1;
-    }
-    to {
-        position: fixed;
-        top: 100vh;
-        left: 0;
-        opacity: 0;
-    }
+  from {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+  to {
+    position: fixed;
+    top: 100vh;
+    left: 0;
+    opacity: 0;
+  }
 }
 
 
@@ -167,315 +167,315 @@ body>#wrapper {
 /* Mobile */
 
 [class*="col-"] {
-    width: 100%;
-    float: left;
-    padding: 10px;
+  width: 100%;
+  float: left;
+  padding: 10px;
 }
 
 .mobileOnly {
-    display: inline-block;
+  display: inline-block;
 }
 
 .tabletAbove {
-    display: none;
+  display: none;
 }
 
 .desktopOnly {
-    display: none;
+  display: none;
 }
 
 #menuOpen {
-    display: block;
+  display: block;
 }
 
 
 /* Tablet */
 
 @media only screen and (min-width: 500px) {
-    .tabletAbove {
-        display: inline-block;
-    }
-    #menuOpen,
-    #menuOpen i {
-        display: none;
-    }
+  .tabletAbove {
+    display: inline-block;
+  }
+  #menuOpen,
+  #menuOpen i {
+    display: none;
+  }
 }
 
 
 /* Desktop */
 
 @media only screen and (min-width: 768px) {
-    .col-1 {
-        width: 8.33%;
-    }
-    .col-2 {
-        width: 16.66%;
-    }
-    .col-3 {
-        width: 25%;
-    }
-    .col-4 {
-        width: 33.33%;
-    }
-    .col-5 {
-        width: 41.66%;
-    }
-    .col-6 {
-        width: 50%;
-    }
-    .col-7 {
-        width: 58.33%;
-    }
-    .col-8 {
-        width: 66.66%;
-    }
-    .col-9 {
-        width: 75%;
-    }
-    .col-10 {
-        width: 83.33%;
-    }
-    .col-11 {
-        width: 91.66%;
-    }
-    .col-12 {
-        width: 100%;
-    }
-    .mobileOnly {
-        display: none;
-    }
-    .desktopOnly {
-        display: inline-block;
-    }
-    #main {
-        padding-top: 50px;
-    }
-    header {
-        padding-top: 30px;
-    }
-    #bigHeader {
-        padding-top: 0;
-    }
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+  .mobileOnly {
+    display: none;
+  }
+  .desktopOnly {
+    display: inline-block;
+  }
+  #main {
+    padding-top: 50px;
+  }
+  header {
+    padding-top: 30px;
+  }
+  #bigHeader {
+    padding-top: 0;
+  }
 }
 
 
 /* Loading Screen */
 
 #loadingScreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
 }
 
 #spinner {
-    background-color: transparent;
-    -webkit-animation: spin 1s infinite linear;
-    animation: spin 1s infinite linear;
-    position: relative;
-    top: 50vh;
-    left: 50vw;
-    height: 50px;
-    width: 50px;
-    padding: 0;
-    margin-top: -25px;
-    margin-left: -110px;
-    /* Negative margin for centering, equation: minus the width of the logo divided by two.
+  background-color: transparent;
+  -webkit-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+  position: relative;
+  top: 50vh;
+  left: 50vw;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  margin-top: -25px;
+  margin-left: -110px;
+  /* Negative margin for centering, equation: minus the width of the logo divided by two.
     This fixes a problem where the spinner is offset by half the width of the logo. */
 }
 
 #logo {
-    position: relative;
-    top: 40vh;
-    left: 50vw;
-    height: 200px;
-    width: 170px;
-    padding: 0;
-    margin-top: -100px;
-    margin-left: -85px;
+  position: relative;
+  top: 40vh;
+  left: 50vw;
+  height: 200px;
+  width: 170px;
+  padding: 0;
+  margin-top: -100px;
+  margin-left: -85px;
 }
 
 
 /* Menu */
 
 #menu {
-    height: 100vh;
-    width: 0;
-    position: fixed;
-    z-index: 5;
-    top: 0;
-    left: 0;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.9);
-    overflow-x: hidden;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    cursor: pointer;
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 #menuContent {
-    position: relative;
-    top: 25vh;
-    width: 100vw;
-    text-align: center;
-    margin-top: 30px;
-    background-color: transparent;
+  position: relative;
+  top: 25vh;
+  width: 100vw;
+  text-align: center;
+  margin-top: 30px;
+  background-color: transparent;
 }
 
 #menu a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 1.25em;
-    color: #f2f2f2;
-    display: block;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
-    background-color: transparent;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 1.25em;
+  color: #f2f2f2;
+  display: block;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  background-color: transparent;
 }
 
 #menu a:hover,
 #menu a:focus {
-    background-color: #f6e44a;
-    color: #242424;
+  background-color: #f6e44a;
+  color: #242424;
 }
 
 #menu #menuClose {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    font-size: 2.1875em;
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 2.1875em;
 }
 
 a#menuClose {
-    padding: 0px 10px;
+  padding: 0px 10px;
 }
 
 
 /* Navbar */
 
 #navbar {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    z-index: 4;
-    -webkit-transition: top 0.3s;
-    -o-transition: top 0.3s;
-    transition: top 0.3s;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 4;
+  -webkit-transition: top 0.3s;
+  -o-transition: top 0.3s;
+  transition: top 0.3s;
 }
 
 #nav {
-    padding: 0px 10px;
+  padding: 0px 10px;
 }
 
 #nav a {
-    float: left;
-    color: #242424;
-    text-align: center;
-    padding: 15px;
-    text-decoration: none;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
+  float: left;
+  color: #242424;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #nav a:hover,
 #nav a:focus {
-    background-color: #f6e44a;
-    color: #242424;
+  background-color: #f6e44a;
+  color: #242424;
 }
 
 a#menuOpen {
-    float: right;
+  float: right;
 }
 
 a#menuOpen i {
-    background-color: inherit;
-    color: inherit;
+  background-color: inherit;
+  color: inherit;
 }
 
 #navbar button#navbarTux {
-    float: left;
-    background: transparent url(../img/100px-Tux.svg.png) center/contain no-repeat;
-    height: 49px;
-    min-width: 24px;
-    width: 50px;
-    padding: 8px;
-    border: none;
-    outline: none;
-    cursor: pointer;
+  float: left;
+  background: transparent url(../img/100px-Tux.svg.png) center/contain no-repeat;
+  height: 49px;
+  min-width: 24px;
+  width: 50px;
+  padding: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 
 /* Progress Bar */
 
 #progressContainer {
-    width: 100vw;
-    height: 8px;
-    padding: 0;
-    background-color: #242424;
+  width: 100vw;
+  height: 8px;
+  padding: 0;
+  background-color: #242424;
 }
 
 #progressBar {
-    width: 0vw;
-    height: 8px;
-    background-color: #f6e44a;
+  width: 0vw;
+  height: 8px;
+  background-color: #f6e44a;
 }
 
 
 /* Back to Top Button */
 
 button#backToTopButton {
-    background-color: #242424;
-    color: #f2f2f2;
-    height: 40px;
-    width: 40px;
-    border-radius: 25px;
-    border: none;
-    outline: none;
-    text-align: center;
-    font-size: 1.3334em;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    margin: 0;
-    margin-left: -25px;
-    padding: 0;
-    z-index: 3;
-    -webkit-animation: fadeOut 0.5s forwards;
-    animation: fadeOut 0.5s forwards;
-    -webkit-transition: 0.3s ease all;
-    -o-transition: 0.3s ease all;
-    transition: 0.3s ease all;
-    cursor: pointer;
+  background-color: #242424;
+  color: #f2f2f2;
+  height: 40px;
+  width: 40px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 1.3334em;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  margin: 0;
+  margin-left: -25px;
+  padding: 0;
+  z-index: 3;
+  -webkit-animation: fadeOut 0.5s forwards;
+  animation: fadeOut 0.5s forwards;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 #backToTopButton:hover {
-    background-color: #f6e44a;
-    color: #242424;
+  background-color: #f6e44a;
+  color: #242424;
 }
 
 
 /* Main */
 
 main {
-    padding: 29px;
+  padding: 29px;
 }
 
 #main {
-    padding-top: 50px;
-    padding-bottom: 30vh;
+  padding-top: 50px;
+  padding-bottom: 30vh;
 }
 
 
 /* Img */
 
 #bigHeader {
-    background: transparent url(../img/100px-Tux-opaque.svg.png) center space;
-    height: 300px;
+  background: transparent url(../img/100px-Tux-opaque.svg.png) center space;
+  height: 300px;
 }
 
 
@@ -484,46 +484,46 @@ main {
 header h1,
 header h2,
 header p {
-    padding: 15px;
-    border: 2px solid #242424;
-    font-size: 3.3125em;
-    margin: 0;
+  padding: 15px;
+  border: 2px solid #242424;
+  font-size: 3.3125em;
+  margin: 0;
 }
 
 .wordContainer {
-    display: inline-block;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background-color: transparent;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: transparent;
 }
 
 
 /* Footer */
 
 footer {
-    text-align: center;
+  text-align: center;
 }
 
 
 /* 404 */
 
 a.no {
-    font: 33.33vw 'Questrial', sans-serif;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
+  font: 33.33vw 'Questrial', sans-serif;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 a.no:hover,
 a.no:focus {
-    background-color: #f6e44a;
+  background-color: #f6e44a;
 }
 
 div.no {
-    text-align: center;
-    padding-bottom: 30px;
+  text-align: center;
+  padding-bottom: 30px;
 }
