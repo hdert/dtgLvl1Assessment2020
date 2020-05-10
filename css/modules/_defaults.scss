@@ -1,9 +1,9 @@
-@use 'variables' as vars;
+@use 'variables' as *;
 @use 'prefixes' as *;
 @import url('https://fonts.googleapis.com/css2?family=Questrial&family=Ubuntu:wght@300&display=swap');
 * {
-  color: vars.$color;
-  background-color: vars.$bgcolor;
+  color: $color;
+  background-color: $bgcolor;
   font-family: 'Ubuntu', sans-serif;
   @include box-sizing(border-box);
   font-weight: normal;

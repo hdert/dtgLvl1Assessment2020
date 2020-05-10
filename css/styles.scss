@@ -5,7 +5,7 @@
 // go visit: https://jordanhay.tk/
 // Prefixed by https://autoprefixer.github.io (PostCSS: v7.0.29, autoprefixer: v9.7.6)
 // SPDX-License-Identifier: BSD-3-Clause
-@use 'modules/variables' as vars;
+@use 'modules/variables' as *;
 @use 'modules/prefixes' as *;
 @use 'modules/defaults';
 @use 'modules/animations';
@@ -18,32 +18,28 @@
   width: 100vw;
   height: 100vh;
   z-index: 10;
-}
-
-#spinner {
-  background-color: transparent;
-  @include animation(spin 1s infinite linear);
-  position: relative;
-  top: 50vh;
-  left: 50vw;
-  height: 50px;
-  width: 50px;
-  padding: 0;
-  margin-top: -25px;
-  margin-left: -110px;
-  //Negative margin for centering, equation: minus the width of the logo divided by two.
-  // This fixes a problem where the spinner is offset by half the width of the logo.
-}
-
-#logo {
-  position: relative;
-  top: 40vh;
-  left: 50vw;
-  height: 200px;
-  width: 170px;
-  padding: 0;
-  margin-top: -100px;
-  margin-left: -85px;
+  #logo {
+    position: relative;
+    top: 40vh;
+    left: 50vw;
+    max-height: 100%;
+    padding: 0;
+    margin-top: -100px;
+    margin-left: -85px;
+  }
+  #spinner {
+    background-color: transparent;
+    @include animation(spin 1s infinite linear);
+    position: relative;
+    top: 50vh;
+    left: 50vw;
+    max-height: 100%;
+    padding: 0;
+    margin-top: -25px;
+    margin-left: -110px;
+    //Negative margin for centering, equation: minus the width of the logo divided by two.
+    // This fixes a problem where the spinner is offset by half the width of the logo.
+  }
 }
 
 // Menu
@@ -59,42 +55,35 @@
   overflow-x: hidden;
   @include transition(0.5s);
   cursor: pointer;
-}
-
-#menuContent {
-  position: relative;
-  top: 25vh;
-  width: 100vw;
-  text-align: center;
-  margin-top: 30px;
-  background-color: transparent;
-}
-
-#menu a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 1.25em;
-  color: vars.$bgcolor;
-  display: block;
-  @include transition(0.3s);
-  background-color: transparent;
-}
-
-#menu a:hover,
-#menu a:focus {
-  background-color: vars.$highlight;
-  color: vars.$color;
-}
-
-#menu #menuClose {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  font-size: 2.1875em;
-}
-
-a#menuClose {
-  padding: 0px 10px;
+  #menuClose {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 2.1875em;
+    padding: 0px 10px;
+  }
+  a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 1.25em;
+    color: $bgcolor;
+    display: block;
+    @include transition(0.3s);
+    background-color: transparent;
+    &:hover,
+    &:focus {
+      background-color: $highlight;
+      color: $color;
+    }
+  }
+  #menuContent {
+    position: relative;
+    top: 25vh;
+    width: 100vw;
+    text-align: center;
+    margin-top: 30px;
+    background-color: transparent;
+  }
 }
 
 // Navbar
@@ -104,44 +93,38 @@ a#menuClose {
   width: 100vw;
   z-index: 4;
   @include transition(0.3s);
-}
-
-#nav {
-  padding: 0px 10px;
-}
-
-#nav a {
-  float: left;
-  text-align: center;
-  padding: 15px;
-  text-decoration: none;
-  @include transition(0.3s);
-}
-
-#nav a:hover,
-#nav a:focus {
-  background-color: vars.$highlight;
-}
-
-a#menuOpen {
-  float: right;
-}
-
-a#menuOpen i {
-  background-color: inherit;
-  color: inherit;
-}
-
-#navbar button#navbarTux {
-  float: left;
-  background: transparent url(../favicon.ico) center no-repeat;
-  height: 49px;
-  min-width: 24px;
-  width: 50px;
-  padding: 8px;
-  border: none;
-  outline: none;
-  cursor: pointer;
+  #nav {
+    padding: 0px 10px;
+    a {
+      float: left;
+      text-align: center;
+      padding: 15px;
+      text-decoration: none;
+      @include transition(0.3s);
+      &:hover,
+      &:focus {
+        background-color: $highlight;
+      }
+    }
+    #menuOpen {
+      float: right;
+      i {
+        background-color: inherit;
+        color: inherit;
+      }
+    }
+    #navbarTux {
+      float: left;
+      background: transparent url(../favicon.ico) center no-repeat;
+      height: 49px;
+      min-width: 24px;
+      width: 50px;
+      padding: 8px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
 }
 
 // Progress Bar
@@ -149,19 +132,18 @@ a#menuOpen i {
   width: 100vw;
   height: 8px;
   padding: 0;
-  background-color: vars.$color;
-}
-
-#progressBar {
-  width: 0vw;
-  height: 8px;
-  background-color: vars.$highlight;
+  background-color: $color;
+  #progressBar {
+    width: 0vw;
+    height: 8px;
+    background-color: $highlight;
+  }
 }
 
 // Back to Top Button
-button#backToTopButton {
-  background-color: vars.$color;
-  color: vars.$bgcolor;
+#backToTopButton {
+  background-color: $color;
+  color: $bgcolor;
   height: 40px;
   width: 40px;
   border-radius: 25px;
@@ -179,26 +161,24 @@ button#backToTopButton {
   @include animation(fadeOut 0.5s forwards);
   @include transition(0.3s);
   cursor: pointer;
-}
-
-#backToTopButton:hover {
-  background-color: vars.$highlight;
-  color: vars.$color;
+  &:hover {
+    background-color: $highlight;
+    color: $color;
+  }
 }
 
 // Main
 main {
   padding: 29px;
-}
-
-#main {
-  padding-top: 50px;
-  padding-bottom: 30vh;
+  #main {
+    padding-top: 50px;
+    padding-bottom: 30vh;
+  }
 }
 
 // Img
 #bigHeader {
-  background: transparent url(../img/100px-Tux-opaque.svg.png) center space;
+  background: transparent url(../img/100px-Tux-opaque.svg.webp) center space;
   height: 300px;
 }
 
@@ -207,7 +187,7 @@ header h1,
 header h2,
 header p {
   padding: 15px;
-  border: 2px solid vars.$color;
+  border: 2px solid $color;
   font-size: 3.3125em;
   margin: 0;
 }
@@ -227,17 +207,15 @@ footer {
 }
 
 // 404
-a.no {
-  font: 33.33vw 'Questrial', sans-serif;
-  @include transition(0.3s);
-}
-
-a.no:hover,
-a.no:focus {
-  background-color: vars.$highlight;
-}
-
 div.no {
   text-align: center;
   padding-bottom: 30px;
+  a.no {
+    font: 33.33vw 'Questrial', sans-serif;
+    @include transition(0.3s);
+    &:hover,
+    &:focus {
+      background-color: $highlight;
+    }
+  }
 }

@@ -34,7 +34,7 @@ body {
   overflow: hidden;
 }
 
-body > #wrapper {
+body>#wrapper {
   scroll-behavior: smooth;
   height: 100vh;
   width: 100vw;
@@ -52,6 +52,7 @@ body > #wrapper {
     transform: rotate(360deg);
   }
 }
+
 @keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -62,6 +63,7 @@ body > #wrapper {
     transform: rotate(360deg);
   }
 }
+
 @-webkit-keyframes fadeIn {
   from {
     display: none;
@@ -71,6 +73,7 @@ body > #wrapper {
     opacity: 1;
   }
 }
+
 @keyframes fadeIn {
   from {
     display: none;
@@ -80,6 +83,7 @@ body > #wrapper {
     opacity: 1;
   }
 }
+
 @-webkit-keyframes fadeOut {
   from {
     opacity: 1;
@@ -90,6 +94,7 @@ body > #wrapper {
     display: none;
   }
 }
+
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -100,6 +105,7 @@ body > #wrapper {
     display: none;
   }
 }
+
 @-webkit-keyframes slideOutBottom {
   from {
     position: fixed;
@@ -114,6 +120,7 @@ body > #wrapper {
     opacity: 0;
   }
 }
+
 @keyframes slideOutBottom {
   from {
     position: fixed;
@@ -128,6 +135,7 @@ body > #wrapper {
     opacity: 0;
   }
 }
+
 [class*=col-] {
   width: 100%;
   float: left;
@@ -154,81 +162,66 @@ body > #wrapper {
   .tabletAbove {
     display: inline-block;
   }
-
   #menuOpen,
-#menuOpen i {
+  #menuOpen i {
     display: none;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .col-1 {
     width: 8.33%;
   }
-
   .col-2 {
     width: 16.66%;
   }
-
   .col-3 {
     width: 25%;
   }
-
   .col-4 {
     width: 33.33%;
   }
-
   .col-5 {
     width: 41.66%;
   }
-
   .col-6 {
     width: 50%;
   }
-
   .col-7 {
     width: 58.33%;
   }
-
   .col-8 {
     width: 66.66%;
   }
-
   .col-9 {
     width: 75%;
   }
-
   .col-10 {
     width: 83.33%;
   }
-
   .col-11 {
     width: 91.66%;
   }
-
   .col-12 {
     width: 100%;
   }
-
   .mobileOnly {
     display: none;
   }
-
   .desktopOnly {
     display: inline-block;
   }
-
   #main {
     padding-top: 50px;
   }
-
   header {
     padding-top: 30px;
   }
-
   #bigHeader {
     padding-top: 0;
   }
 }
+
 #loadingScreen {
   position: fixed;
   top: 0;
@@ -238,29 +231,27 @@ body > #wrapper {
   z-index: 10;
 }
 
-#spinner {
+#loadingScreen #logo {
+  position: relative;
+  top: 40vh;
+  left: 50vw;
+  max-height: 100%;
+  padding: 0;
+  margin-top: -100px;
+  margin-left: -85px;
+}
+
+#loadingScreen #spinner {
   background-color: transparent;
   -webkit-animation: spin 1s infinite linear;
   animation: spin 1s infinite linear;
   position: relative;
   top: 50vh;
   left: 50vw;
-  height: 50px;
-  width: 50px;
+  max-height: 100%;
   padding: 0;
   margin-top: -25px;
   margin-left: -110px;
-}
-
-#logo {
-  position: relative;
-  top: 40vh;
-  left: 50vw;
-  height: 200px;
-  width: 170px;
-  padding: 0;
-  margin-top: -100px;
-  margin-left: -85px;
 }
 
 #menu {
@@ -279,13 +270,12 @@ body > #wrapper {
   cursor: pointer;
 }
 
-#menuContent {
-  position: relative;
-  top: 25vh;
-  width: 100vw;
-  text-align: center;
-  margin-top: 30px;
-  background-color: transparent;
+#menu #menuClose {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 2.1875em;
+  padding: 0px 10px;
 }
 
 #menu a {
@@ -306,15 +296,13 @@ body > #wrapper {
   color: #242424;
 }
 
-#menu #menuClose {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  font-size: 2.1875em;
-}
-
-a#menuClose {
-  padding: 0px 10px;
+#menu #menuContent {
+  position: relative;
+  top: 25vh;
+  width: 100vw;
+  text-align: center;
+  margin-top: 30px;
+  background-color: transparent;
 }
 
 #navbar {
@@ -327,11 +315,11 @@ a#menuClose {
   transition: 0.3s;
 }
 
-#nav {
+#navbar #nav {
   padding: 0px 10px;
 }
 
-#nav a {
+#navbar #nav a {
   float: left;
   text-align: center;
   padding: 15px;
@@ -341,21 +329,21 @@ a#menuClose {
   transition: 0.3s;
 }
 
-#nav a:hover,
-#nav a:focus {
+#navbar #nav a:hover,
+#navbar #nav a:focus {
   background-color: #f6e44a;
 }
 
-a#menuOpen {
+#navbar #nav #menuOpen {
   float: right;
 }
 
-a#menuOpen i {
+#navbar #nav #menuOpen i {
   background-color: inherit;
   color: inherit;
 }
 
-#navbar button#navbarTux {
+#navbar #nav #navbarTux {
   float: left;
   background: transparent url(../favicon.ico) center no-repeat;
   height: 49px;
@@ -374,13 +362,13 @@ a#menuOpen i {
   background-color: #242424;
 }
 
-#progressBar {
+#progressContainer #progressBar {
   width: 0vw;
   height: 8px;
   background-color: #f6e44a;
 }
 
-button#backToTopButton {
+#backToTopButton {
   background-color: #242424;
   color: #f2f2f2;
   height: 40px;
@@ -414,13 +402,13 @@ main {
   padding: 29px;
 }
 
-#main {
+main #main {
   padding-top: 50px;
   padding-bottom: 30vh;
 }
 
 #bigHeader {
-  background: transparent url(../img/100px-Tux-opaque.svg.png) center space;
+  background: transparent url(../img/100px-Tux-opaque.svg.webp) center space;
   height: 300px;
 }
 
@@ -448,21 +436,22 @@ footer {
   text-align: center;
 }
 
-a.no {
+div.no {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+div.no a.no {
   font: 33.33vw "Questrial", sans-serif;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
 }
 
-a.no:hover,
-a.no:focus {
+div.no a.no:hover,
+div.no a.no:focus {
   background-color: #f6e44a;
 }
 
-div.no {
-  text-align: center;
-  padding-bottom: 30px;
-}
 
 /*# sourceMappingURL=styles.css.map */
