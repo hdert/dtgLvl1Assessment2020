@@ -1,0 +1,91 @@
+// Animations
+@use 'prefixes' as *;
+@-webkit-keyframes spin {
+  from {
+    @include transform(rotate(0deg));
+  }
+  to {
+    @include transform(rotate(360deg));
+  }
+}
+
+@keyframes spin {
+  from {
+    @include transform(rotate(0deg));
+  }
+  to {
+    @include transform(rotate(360deg));
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: 1;
+    display: none;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: 1;
+    display: none;
+  }
+}
+
+@-webkit-keyframes slideOutBottom {
+  from {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+  to {
+    position: fixed;
+    top: 100vh;
+    left: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutBottom {
+  from {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+  to {
+    position: fixed;
+    top: 100vh;
+    left: 0;
+    opacity: 0;
+  }
+}
