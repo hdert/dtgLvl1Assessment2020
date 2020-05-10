@@ -1,30 +1,11 @@
-@charset "UTF-8";
-
-/* 
-styles.css © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
-code snippets taken from: https://www.w3schools.com/
-and: https://github.com/jhay0112/jhay0112.github.io/
-go visit: https://jordanhay.tk/
- */
-
-
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
-
-
-/* SPDX-License-Identifier: BSD-3-Clause */
-
-
-/* Defaults */
-
-@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Ubuntu:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Ubuntu:wght@300&display=swap");
 * {
   color: #242424;
   background-color: #f2f2f2;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-weight: normal;
-  /* Makes header text look the same between gecko and blink */
 }
 
 h1,
@@ -33,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Questrial', sans-serif;
+  font-family: "Questrial", sans-serif;
 }
 
 body,
@@ -51,20 +32,15 @@ html {
 body {
   font-size: 100%;
   overflow: hidden;
-  /* This is changed after the loading screen disappears. */
 }
 
-body>#wrapper {
+body > #wrapper {
   scroll-behavior: smooth;
   height: 100vh;
   width: 100vw;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  /* Something, something momentum and smooth scrolling */
 }
-
-
-/* Animations */
 
 @-webkit-keyframes spin {
   from {
@@ -76,7 +52,6 @@ body>#wrapper {
     transform: rotate(360deg);
   }
 }
-
 @keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -87,7 +62,6 @@ body>#wrapper {
     transform: rotate(360deg);
   }
 }
-
 @-webkit-keyframes fadeIn {
   from {
     display: none;
@@ -97,7 +71,6 @@ body>#wrapper {
     opacity: 1;
   }
 }
-
 @keyframes fadeIn {
   from {
     display: none;
@@ -107,7 +80,6 @@ body>#wrapper {
     opacity: 1;
   }
 }
-
 @-webkit-keyframes fadeOut {
   from {
     opacity: 1;
@@ -118,7 +90,6 @@ body>#wrapper {
     display: none;
   }
 }
-
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -129,7 +100,6 @@ body>#wrapper {
     display: none;
   }
 }
-
 @-webkit-keyframes slideOutBottom {
   from {
     position: fixed;
@@ -144,7 +114,6 @@ body>#wrapper {
     opacity: 0;
   }
 }
-
 @keyframes slideOutBottom {
   from {
     position: fixed;
@@ -159,14 +128,7 @@ body>#wrapper {
     opacity: 0;
   }
 }
-
-
-/* Responsive */
-
-
-/* Mobile */
-
-[class*="col-"] {
+[class*=col-] {
   width: 100%;
   float: left;
   padding: 10px;
@@ -188,79 +150,86 @@ body>#wrapper {
   display: block;
 }
 
-
-/* Tablet */
-
 @media only screen and (min-width: 500px) {
   .tabletAbove {
     display: inline-block;
   }
+
   #menuOpen,
-  #menuOpen i {
+#menuOpen i {
     display: none;
   }
 }
-
-
-/* Desktop */
-
 @media only screen and (min-width: 768px) {
   .col-1 {
     width: 8.33%;
   }
+
   .col-2 {
     width: 16.66%;
   }
+
   .col-3 {
     width: 25%;
   }
+
   .col-4 {
     width: 33.33%;
   }
+
   .col-5 {
     width: 41.66%;
   }
+
   .col-6 {
     width: 50%;
   }
+
   .col-7 {
     width: 58.33%;
   }
+
   .col-8 {
     width: 66.66%;
   }
+
   .col-9 {
     width: 75%;
   }
+
   .col-10 {
     width: 83.33%;
   }
+
   .col-11 {
     width: 91.66%;
   }
+
   .col-12 {
     width: 100%;
   }
+
   .mobileOnly {
     display: none;
   }
+
   .desktopOnly {
     display: inline-block;
   }
+
   #main {
     padding-top: 50px;
   }
+
   header {
     padding-top: 30px;
   }
+
   #bigHeader {
     padding-top: 0;
   }
 }
-
-
 /* Loading Screen */
-
 #loadingScreen {
   position: fixed;
   top: 0;
@@ -282,8 +251,6 @@ body>#wrapper {
   padding: 0;
   margin-top: -25px;
   margin-left: -110px;
-  /* Negative margin for centering, equation: minus the width of the logo divided by two.
-    This fixes a problem where the spinner is offset by half the width of the logo. */
 }
 
 #logo {
@@ -297,9 +264,6 @@ body>#wrapper {
   margin-left: -85px;
 }
 
-
-/* Menu */
-
 #menu {
   height: 100vh;
   width: 0;
@@ -307,7 +271,7 @@ body>#wrapper {
   z-index: 5;
   top: 0;
   left: 0;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   background-color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
   -webkit-transition: 0.5s;
@@ -354,17 +318,14 @@ a#menuClose {
   padding: 0px 10px;
 }
 
-
-/* Navbar */
-
 #navbar {
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 4;
-  -webkit-transition: top 0.3s;
-  -o-transition: top 0.3s;
-  transition: top 0.3s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #nav {
@@ -373,7 +334,6 @@ a#menuClose {
 
 #nav a {
   float: left;
-  color: #242424;
   text-align: center;
   padding: 15px;
   text-decoration: none;
@@ -385,7 +345,6 @@ a#menuClose {
 #nav a:hover,
 #nav a:focus {
   background-color: #f6e44a;
-  color: #242424;
 }
 
 a#menuOpen {
@@ -399,7 +358,7 @@ a#menuOpen i {
 
 #navbar button#navbarTux {
   float: left;
-  background: transparent url(../img/100px-Tux.svg.png) center/contain no-repeat;
+  background: transparent url(../favicon.ico) center no-repeat;
   height: 49px;
   min-width: 24px;
   width: 50px;
@@ -408,9 +367,6 @@ a#menuOpen i {
   outline: none;
   cursor: pointer;
 }
-
-
-/* Progress Bar */
 
 #progressContainer {
   width: 100vw;
@@ -424,9 +380,6 @@ a#menuOpen i {
   height: 8px;
   background-color: #f6e44a;
 }
-
-
-/* Back to Top Button */
 
 button#backToTopButton {
   background-color: #242424;
@@ -458,9 +411,6 @@ button#backToTopButton {
   color: #242424;
 }
 
-
-/* Main */
-
 main {
   padding: 29px;
 }
@@ -470,16 +420,10 @@ main {
   padding-bottom: 30vh;
 }
 
-
-/* Img */
-
 #bigHeader {
   background: transparent url(../img/100px-Tux-opaque.svg.png) center space;
   height: 300px;
 }
-
-
-/* Header */
 
 header h1,
 header h2,
@@ -501,18 +445,12 @@ header p {
   background-color: transparent;
 }
 
-
-/* Footer */
-
 footer {
   text-align: center;
 }
 
-
-/* 404 */
-
 a.no {
-  font: 33.33vw 'Questrial', sans-serif;
+  font: 33.33vw "Questrial", sans-serif;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -527,3 +465,5 @@ div.no {
   text-align: center;
   padding-bottom: 30px;
 }
+
+/*# sourceMappingURL=styles.css.map */

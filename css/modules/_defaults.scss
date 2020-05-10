@@ -1,0 +1,47 @@
+@use 'variables' as vars;
+@use 'prefixes' as *;
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Ubuntu:wght@300&display=swap');
+* {
+  color: vars.$color;
+  background-color: vars.$bgcolor;
+  font-family: 'Ubuntu', sans-serif;
+  @include box-sizing(border-box);
+  font-weight: normal;
+  // Makes header text look the same between gecko and blink
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Questrial', sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 100%;
+  overflow: hidden;
+}
+
+body>#wrapper {
+  scroll-behavior: smooth;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+  // This is changed after the loading screen disappears.
+  -webkit-overflow-scrolling: touch;
+  // Something, something momentum and smooth scrolling
+}

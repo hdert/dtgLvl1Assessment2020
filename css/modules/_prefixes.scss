@@ -1,0 +1,26 @@
+@mixin transform($param) {
+  -webkit-transform: $param;
+  transform: $param;
+}
+
+@mixin animation($param) {
+  -webkit-animation: $param;
+  animation: $param;
+}
+
+@mixin transition($param) {
+  -webkit-transition: $param;
+  -o-transition: $param;
+  transition: $param;
+}
+
+@mixin transformTranslate($param, $param2) {
+  -webkit-transform: translate($param, $param2);
+  -ms-transform: translate($param, $param2);
+  transform: translate($param, $param2);
+}
+
+@mixin box-sizing($param) {
+  -webkit-box-sizing: $param;
+  box-sizing: $param;
+}

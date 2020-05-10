@@ -1,0 +1,245 @@
+@charset "UTF-8";
+// styles.scss © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
+// code snippets taken from: https://www.w3schools.com/
+// and: https://github.com/jhay0112/jhay0112.github.io/
+// go visit: https://jordanhay.tk/
+// Prefixed by https://autoprefixer.github.io (PostCSS: v7.0.29, autoprefixer: v9.7.6)
+// SPDX-License-Identifier: BSD-3-Clause
+@use 'modules/variables' as vars;
+@use 'modules/prefixes' as *;
+@use 'modules/defaults';
+@use 'modules/animations';
+@use 'modules/responsive';
+
+/* Loading Screen */
+
+#loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+
+#spinner {
+  background-color: transparent;
+  @include animation(spin 1s infinite linear);
+  position: relative;
+  top: 50vh;
+  left: 50vw;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  margin-top: -25px;
+  margin-left: -110px;
+  //Negative margin for centering, equation: minus the width of the logo divided by two.
+  // This fixes a problem where the spinner is offset by half the width of the logo.
+}
+
+#logo {
+  position: relative;
+  top: 40vh;
+  left: 50vw;
+  height: 200px;
+  width: 170px;
+  padding: 0;
+  margin-top: -100px;
+  margin-left: -85px;
+}
+
+// Menu
+#menu {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  @include transition(0.5s);
+  cursor: pointer;
+}
+
+#menuContent {
+  position: relative;
+  top: 25vh;
+  width: 100vw;
+  text-align: center;
+  margin-top: 30px;
+  background-color: transparent;
+}
+
+#menu a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 1.25em;
+  color: vars.$bgcolor;
+  display: block;
+  @include transition(0.3s);
+  background-color: transparent;
+}
+
+#menu a:hover,
+#menu a:focus {
+  background-color: vars.$highlight;
+  color: vars.$color;
+}
+
+#menu #menuClose {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 2.1875em;
+}
+
+a#menuClose {
+  padding: 0px 10px;
+}
+
+// Navbar
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 4;
+  @include transition(0.3s);
+}
+
+#nav {
+  padding: 0px 10px;
+}
+
+#nav a {
+  float: left;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  @include transition(0.3s);
+}
+
+#nav a:hover,
+#nav a:focus {
+  background-color: vars.$highlight;
+}
+
+a#menuOpen {
+  float: right;
+}
+
+a#menuOpen i {
+  background-color: inherit;
+  color: inherit;
+}
+
+#navbar button#navbarTux {
+  float: left;
+  background: transparent url(../favicon.ico) center no-repeat;
+  height: 49px;
+  min-width: 24px;
+  width: 50px;
+  padding: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+// Progress Bar
+#progressContainer {
+  width: 100vw;
+  height: 8px;
+  padding: 0;
+  background-color: vars.$color;
+}
+
+#progressBar {
+  width: 0vw;
+  height: 8px;
+  background-color: vars.$highlight;
+}
+
+// Back to Top Button
+button#backToTopButton {
+  background-color: vars.$color;
+  color: vars.$bgcolor;
+  height: 40px;
+  width: 40px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 1.3334em;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  margin: 0;
+  margin-left: -25px;
+  padding: 0;
+  z-index: 3;
+  @include animation(fadeOut 0.5s forwards);
+  @include transition(0.3s);
+  cursor: pointer;
+}
+
+#backToTopButton:hover {
+  background-color: vars.$highlight;
+  color: vars.$color;
+}
+
+// Main
+main {
+  padding: 29px;
+}
+
+#main {
+  padding-top: 50px;
+  padding-bottom: 30vh;
+}
+
+// Img
+#bigHeader {
+  background: transparent url(../img/100px-Tux-opaque.svg.png) center space;
+  height: 300px;
+}
+
+// Header
+header h1,
+header h2,
+header p {
+  padding: 15px;
+  border: 2px solid vars.$color;
+  font-size: 3.3125em;
+  margin: 0;
+}
+
+.wordContainer {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  @include transformTranslate(-50%, -50%);
+  background-color: transparent;
+}
+
+// Footer
+footer {
+  text-align: center;
+}
+
+// 404
+a.no {
+  font: 33.33vw 'Questrial', sans-serif;
+  @include transition(0.3s);
+}
+
+a.no:hover,
+a.no:focus {
+  background-color: vars.$highlight;
+}
+
+div.no {
+  text-align: center;
+  padding-bottom: 30px;
+}
