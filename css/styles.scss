@@ -10,9 +10,7 @@
 @use 'modules/defaults';
 @use 'modules/animations';
 @use 'modules/responsive';
-
-/* Loading Screen */
-
+// Loading Screen
 #loadingScreen {
   position: fixed;
   top: 0;
