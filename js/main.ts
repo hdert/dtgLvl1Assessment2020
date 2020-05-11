@@ -1,5 +1,5 @@
 /*
-main.js © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
+main.ts © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
 code snippets taken from: https://www.w3schools.com/
 and: https://github.com/jhay0112/jhay0112.github.io/
 go visit: https://jordanhay.tk/

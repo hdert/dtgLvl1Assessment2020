@@ -1,10 +1,3 @@
-/*
-main.js © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
-code snippets taken from: https://www.w3schools.com/
-and: https://github.com/jhay0112/jhay0112.github.io/
-go visit: https://jordanhay.tk/
-*/
-// SPDX-License-Identifier: BSD-3-Clause
 "use strict";
 const WRAPPER = document.getElementById("wrapper");
 const NAVBAR = document.getElementById("navbar");
@@ -22,9 +15,8 @@ async function exitLoadingScreen() {
     "slideOutBottom 1.3s 1.5s forwards ease-out";
   await sleep(1200);
   WRAPPER.style.overflowY = "auto";
-  /* This makes it so that the scrollbar doesn't show until the loading animation is near complete. */
 }
-/* Menu */
+
 function openMenu() {
   document.getElementById("menu").style.width = "100vw";
 }
@@ -32,7 +24,7 @@ function openMenu() {
 function closeMenu() {
   document.getElementById("menu").style.width = "0vw";
 }
-/* Scroll functions */
+
 function goToTop() {
   WRAPPER.scrollTop = 0;
 }
