@@ -9,12 +9,12 @@ go visit: https://jordanhay.tk/
 
 "use strict";
 
-const WRAPPER = (document.getElementById("wrapper") as HTMLDivElement);
-const NAVBAR = (document.getElementById("navbar") as HTMLDivElement);
-const PROGRESSBAR = (document.getElementById("progressBar") as HTMLDivElement);
+const WRAPPER = document.getElementById("wrapper") as HTMLDivElement;
+const NAVBAR = document.getElementById("navbar") as HTMLDivElement;
+const PROGRESSBAR = document.getElementById("progressBar") as HTMLDivElement;
 
 function sleep(ms: number) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function exitLoadingScreen() {
@@ -57,8 +57,7 @@ var navbarHide = (function () {
     }
     if (PREVSCROLLPOS > currentScrollPos) {
       NAVBAR.style.top = "0";
-    }
-    else {
+    } else {
       NAVBAR.style.top = "-50px";
     }
     PREVSCROLLPOS = currentScrollPos;
@@ -67,18 +66,21 @@ var navbarHide = (function () {
 
 function scrollIndicatorUpdate() {
   PROGRESSBAR.style.width =
-    ((WRAPPER.scrollTop / (WRAPPER.scrollHeight -
-      document.documentElement.clientHeight)) * 100) + "%";
+    (WRAPPER.scrollTop /
+      (WRAPPER.scrollHeight - document.documentElement.clientHeight)) *
+      100 +
+    "%";
 }
 
 function backToTopButtonUpdate() {
   if (WRAPPER.scrollTop > 250) {
-    (document.getElementById("backToTopButton") as HTMLButtonElement).style.animation =
-      "fadeIn ease 0.3s";
-  }
-  else {
-    (document.getElementById("backToTopButton") as HTMLButtonElement).style.animation =
-      "fadeOut ease 0.3s forwards";
+    (document.getElementById(
+      "backToTopButton"
+    ) as HTMLButtonElement).style.animation = "fadeIn ease 0.3s";
+  } else {
+    (document.getElementById(
+      "backToTopButton"
+    ) as HTMLButtonElement).style.animation = "fadeOut ease 0.3s forwards";
   }
 }
 

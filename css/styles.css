@@ -34,7 +34,7 @@ body {
   overflow: hidden;
 }
 
-body>#wrapper {
+body > #wrapper {
   scroll-behavior: smooth;
   height: 100vh;
   width: 100vw;
@@ -52,7 +52,6 @@ body>#wrapper {
     transform: rotate(360deg);
   }
 }
-
 @keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -63,7 +62,6 @@ body>#wrapper {
     transform: rotate(360deg);
   }
 }
-
 @-webkit-keyframes fadeIn {
   from {
     display: none;
@@ -73,7 +71,6 @@ body>#wrapper {
     opacity: 1;
   }
 }
-
 @keyframes fadeIn {
   from {
     display: none;
@@ -83,7 +80,6 @@ body>#wrapper {
     opacity: 1;
   }
 }
-
 @-webkit-keyframes fadeOut {
   from {
     opacity: 1;
@@ -94,7 +90,6 @@ body>#wrapper {
     display: none;
   }
 }
-
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -105,7 +100,6 @@ body>#wrapper {
     display: none;
   }
 }
-
 @-webkit-keyframes slideOutBottom {
   from {
     position: fixed;
@@ -120,7 +114,6 @@ body>#wrapper {
     opacity: 0;
   }
 }
-
 @keyframes slideOutBottom {
   from {
     position: fixed;
@@ -135,7 +128,6 @@ body>#wrapper {
     opacity: 0;
   }
 }
-
 [class*=col-] {
   width: 100%;
   float: left;
@@ -162,66 +154,81 @@ body>#wrapper {
   .tabletAbove {
     display: inline-block;
   }
+
   #menuOpen,
-  #menuOpen i {
+#menuOpen i {
     display: none;
   }
 }
-
 @media only screen and (min-width: 768px) {
   .col-1 {
     width: 8.33%;
   }
+
   .col-2 {
     width: 16.66%;
   }
+
   .col-3 {
     width: 25%;
   }
+
   .col-4 {
     width: 33.33%;
   }
+
   .col-5 {
     width: 41.66%;
   }
+
   .col-6 {
     width: 50%;
   }
+
   .col-7 {
     width: 58.33%;
   }
+
   .col-8 {
     width: 66.66%;
   }
+
   .col-9 {
     width: 75%;
   }
+
   .col-10 {
     width: 83.33%;
   }
+
   .col-11 {
     width: 91.66%;
   }
+
   .col-12 {
     width: 100%;
   }
+
   .mobileOnly {
     display: none;
   }
+
   .desktopOnly {
     display: inline-block;
   }
+
   #main {
     padding-top: 50px;
   }
+
   header {
     padding-top: 30px;
   }
+
   #bigHeader {
     padding-top: 0;
   }
 }
-
 #loadingScreen {
   position: fixed;
   top: 0;
@@ -230,7 +237,6 @@ body>#wrapper {
   height: 100vh;
   z-index: 10;
 }
-
 #loadingScreen #logo {
   position: relative;
   top: 40vh;
@@ -240,7 +246,6 @@ body>#wrapper {
   margin-top: -100px;
   margin-left: -85px;
 }
-
 #loadingScreen #spinner {
   background-color: transparent;
   -webkit-animation: spin 1s infinite linear;
@@ -269,7 +274,6 @@ body>#wrapper {
   transition: 0.5s;
   cursor: pointer;
 }
-
 #menu #menuClose {
   position: absolute;
   top: 15px;
@@ -277,7 +281,6 @@ body>#wrapper {
   font-size: 2.1875em;
   padding: 0px 10px;
 }
-
 #menu a {
   padding: 8px;
   text-decoration: none;
@@ -289,13 +292,10 @@ body>#wrapper {
   transition: 0.3s;
   background-color: transparent;
 }
-
-#menu a:hover,
-#menu a:focus {
+#menu a:hover, #menu a:focus {
   background-color: #f6e44a;
   color: #242424;
 }
-
 #menu #menuContent {
   position: relative;
   top: 25vh;
@@ -314,11 +314,9 @@ body>#wrapper {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-
 #navbar #nav {
   padding: 0px 10px;
 }
-
 #navbar #nav a {
   float: left;
   text-align: center;
@@ -328,21 +326,16 @@ body>#wrapper {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-
-#navbar #nav a:hover,
-#navbar #nav a:focus {
+#navbar #nav a:hover, #navbar #nav a:focus {
   background-color: #f6e44a;
 }
-
 #navbar #nav #menuOpen {
   float: right;
 }
-
 #navbar #nav #menuOpen i {
   background-color: inherit;
   color: inherit;
 }
-
 #navbar #nav #navbarTux {
   float: left;
   background: transparent url(../favicon.ico) center no-repeat;
@@ -361,7 +354,6 @@ body>#wrapper {
   padding: 0;
   background-color: #242424;
 }
-
 #progressContainer #progressBar {
   width: 0vw;
   height: 8px;
@@ -392,7 +384,6 @@ body>#wrapper {
   transition: 0.3s;
   cursor: pointer;
 }
-
 #backToTopButton:hover {
   background-color: #f6e44a;
   color: #242424;
@@ -401,7 +392,6 @@ body>#wrapper {
 main {
   padding: 29px;
 }
-
 main #main {
   padding-top: 50px;
   padding-bottom: 30vh;
@@ -440,18 +430,14 @@ div.no {
   text-align: center;
   padding-bottom: 30px;
 }
-
 div.no a.no {
   font: 33.33vw "Questrial", sans-serif;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-
-div.no a.no:hover,
-div.no a.no:focus {
+div.no a.no:hover, div.no a.no:focus {
   background-color: #f6e44a;
 }
-
 
 /*# sourceMappingURL=styles.css.map */
