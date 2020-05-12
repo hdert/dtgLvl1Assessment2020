@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="noJs">
   <head>
     <!-- Meta Tags -->
     <meta charset="utf-8" />
@@ -45,12 +45,14 @@
   <body onload="exitLoadingScreen()">
     <div id="loadingScreen">
       <picture>
-        <source srcset="img/200px-Tux.svg.webp" />
+        <source srcset="img/200px-Tux.svg.webp" type="image/webp" />
+        <source srcset="img/200px-Tux.svg.png" type="image/png" />
         <img id="logo" src="img/200px-Tux.svg.png" alt="Loading page logo" />
       </picture>
 
       <picture>
-        <source srcset="img/50px-Spinner.webp" />
+        <source srcset="img/50px-Spinner.webp" type="image/webp" />
+        <source srcset="img/50px-Spinner.png" type="image/png" />
         <img
           id="spinner"
           src="img/50px-Spinner.png"
@@ -229,6 +231,10 @@
         <div class="col-2 desktopOnly"></div>
       </main>
     </div>
+    <script>
+      document.documentElement.classList.remove("noJs");
+    </script>
     <script src="js/main.js"></script>
+    <script src="js/modernizerWebP.js"></script>
   </body>
 </html>

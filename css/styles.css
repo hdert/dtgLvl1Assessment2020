@@ -398,8 +398,19 @@ main #main {
 }
 
 #bigHeader {
-  background: transparent url(../img/100px-Tux-opaque.svg.webp) center space;
   height: 300px;
+}
+
+.noJs #bigHeader {
+  background: transparent url(../img/100px-Tux-opaque.svg.png) center space;
+}
+
+.no-webp #bigHeader {
+  background: transparent url(../img/100px-Tux-opaque.svg.png) center space;
+}
+
+.webp #bigHeader {
+  background: transparent url(../img/100px-Tux-opaque.svg.webp) center space;
 }
 
 header h1,
