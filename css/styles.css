@@ -315,7 +315,7 @@ body > #wrapper {
   transition: 0.3s;
 }
 #navbar #nav {
-  padding: 0px 10px;
+  padding: 0;
 }
 #navbar #nav a {
   float: left;
@@ -331,18 +331,23 @@ body > #wrapper {
 }
 #navbar #nav #menuOpen {
   float: right;
+  height: 49px;
+  width: 49px;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
-#navbar #nav #menuOpen i {
-  background-color: inherit;
-  color: inherit;
+#navbar #nav #menuOpen:hover, #navbar #nav #menuOpen:focus {
+  background-color: #f6e44a;
 }
 #navbar #nav #navbarTux {
   float: left;
   background: transparent url(../favicon.ico) center no-repeat;
   height: 49px;
-  min-width: 24px;
-  width: 50px;
-  padding: 8px;
+  width: 49px;
+  max-height: 100%;
+  padding: 0;
   border: none;
   outline: none;
   cursor: pointer;

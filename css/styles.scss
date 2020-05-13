@@ -94,7 +94,7 @@
   z-index: 4;
   @include transition(0.3s);
   #nav {
-    padding: 0px 10px;
+    padding: 0;
     a {
       float: left;
       text-align: center;
@@ -108,18 +108,24 @@
     }
     #menuOpen {
       float: right;
-      i {
-        background-color: inherit;
-        color: inherit;
+      height: 49px;
+      width: 49px;
+      padding: 0;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        background-color: $highlight;
       }
     }
     #navbarTux {
       float: left;
       background: transparent url(../favicon.ico) center no-repeat;
       height: 49px;
-      min-width: 24px;
-      width: 50px;
-      padding: 8px;
+      width: 49px;
+      max-height: 100%;
+      padding: 0;
       border: none;
       outline: none;
       cursor: pointer;

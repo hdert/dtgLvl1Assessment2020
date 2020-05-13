@@ -83,20 +83,19 @@
           onclick="goToTop();"
           class="tabletAbove"
           id="navbarTux"
+          title="Go to the top of the page"
         ></button>
         <a href="#unix">Unix</a>
         <a href="#gnuAndLinux" class="tabletAbove">GNU and Linux</a>
         <a href="#shinyShinyDistros" class="tabletAbove"
           >Shiny, Shiny Distros</a
         >
-        <a
-          href="#"
-          onclick="event.preventDefault();openMenu();"
+        <button
+          onclick="openMenu();"
           id="menuOpen"
-          class="mobileOnly"
-        >
-          <i class="fa fa-bars"></i>
-        </a>
+          class="mobileOnly fa fa-bars"
+          title="Open mobile selection menu"
+        ></button>
       </div>
 
       <div class="col-2 desktopOnly"></div>
