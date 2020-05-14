@@ -1,5 +1,5 @@
 @use 'variables' as *;
-@use 'prefixes' as *;
+@use 'mixins' as *;
 @import url("https://fonts.googleapis.com/css2?family=Questrial&family=Ubuntu:wght@300&display=swap");
 * {
   color: $color;
@@ -44,4 +44,13 @@ body > #wrapper {
   // This is changed after the loading screen disappears.
   -webkit-overflow-scrolling: touch;
   // Something, something momentum and smooth scrolling
+}
+
+// Main
+main {
+  padding: 29px;
+  #main {
+    padding-top: 50px;
+    padding-bottom: 30vh;
+  }
 }

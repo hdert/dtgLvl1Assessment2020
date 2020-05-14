@@ -6,10 +6,11 @@
 // Prefixed by https://autoprefixer.github.io (PostCSS: v7.0.29, autoprefixer: v9.7.6)
 // SPDX-License-Identifier: BSD-3-Clause
 @use 'modules/variables' as *;
-@use 'modules/prefixes' as *;
+@use 'modules/mixins' as *;
 @use 'modules/defaults';
 @use 'modules/animations';
 @use 'modules/responsive';
+
 // Loading Screen
 #loadingScreen {
   position: fixed;
@@ -107,28 +108,18 @@
       }
     }
     #menuOpen {
+      @include button;
       float: right;
-      height: 49px;
-      width: 49px;
-      padding: 0;
-      border: none;
-      outline: none;
-      cursor: pointer;
       &:hover,
       &:focus {
         background-color: $highlight;
       }
     }
     #navbarTux {
+      @include button;
       float: left;
       background: transparent url(../favicon.ico) center no-repeat;
-      height: 49px;
-      width: 49px;
       max-height: 100%;
-      padding: 0;
-      border: none;
-      outline: none;
-      cursor: pointer;
     }
   }
 }
@@ -173,16 +164,7 @@
   }
 }
 
-// Main
-main {
-  padding: 29px;
-  #main {
-    padding-top: 50px;
-    padding-bottom: 30vh;
-  }
-}
-
-// Img
+// Big Header
 #bigHeader {
   height: 300px;
 }

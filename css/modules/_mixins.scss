@@ -24,3 +24,11 @@
   -webkit-box-sizing: $param;
   box-sizing: $param;
 }
+@mixin button {
+  height: 49px;
+  width: 49px;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

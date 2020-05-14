@@ -42,6 +42,14 @@ body > #wrapper {
   -webkit-overflow-scrolling: touch;
 }
 
+main {
+  padding: 29px;
+}
+main #main {
+  padding-top: 50px;
+  padding-bottom: 30vh;
+}
+
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -330,27 +338,27 @@ body > #wrapper {
   background-color: #f6e44a;
 }
 #navbar #nav #menuOpen {
-  float: right;
   height: 49px;
   width: 49px;
   padding: 0;
   border: none;
   outline: none;
   cursor: pointer;
+  float: right;
 }
 #navbar #nav #menuOpen:hover, #navbar #nav #menuOpen:focus {
   background-color: #f6e44a;
 }
 #navbar #nav #navbarTux {
-  float: left;
-  background: transparent url(../favicon.ico) center no-repeat;
   height: 49px;
   width: 49px;
-  max-height: 100%;
   padding: 0;
   border: none;
   outline: none;
   cursor: pointer;
+  float: left;
+  background: transparent url(../favicon.ico) center no-repeat;
+  max-height: 100%;
 }
 
 #progressContainer {
@@ -392,14 +400,6 @@ body > #wrapper {
 #backToTopButton:hover {
   background-color: #f6e44a;
   color: #242424;
-}
-
-main {
-  padding: 29px;
-}
-main #main {
-  padding-top: 50px;
-  padding-bottom: 30vh;
 }
 
 #bigHeader {
