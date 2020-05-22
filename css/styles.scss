@@ -166,7 +166,8 @@
 
 // Big Header
 #bigHeader {
-  height: 300px;
+  height: 90vh;
+  margin-top: 58px;
 }
 
 .noJs #bigHeader {
@@ -181,6 +182,24 @@
   background: transparent url(../img/100px-Tux-opaque.svg.webp) center space;
 }
 
+#unix {
+  width: 100%;
+  height: 100vh;
+  margin: 5px;
+}
+
+.noJs #unix {
+  background: transparent url(../img/PDP7.png) center/cover no-repeat;
+}
+
+.no-webp #unix {
+  background: transparent url(../img/PDP7.png) center/cover no-repeat;
+}
+
+.webp #unix {
+  background: transparent url(../img/PDP7.webp) center/cover no-repeat;
+}
+
 // Header
 header h1,
 header h2,
@@ -189,6 +208,7 @@ header p {
   border: 2px solid $color;
   font-size: 3.3125em;
   margin: 0;
+  text-align: center;
 }
 
 .wordContainer {
