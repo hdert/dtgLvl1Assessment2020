@@ -231,6 +231,24 @@ figure {
   figcaption {
     text-align: center;
   }
+  img {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    @include transformTranslate(-50%, 0%);
+  }
+}
+
+.picture {
+  margin: 0;
+}
+
+#thompsonAndRitchie {
+  max-width: 100%;
+}
+
+#PDP-11 {
+  max-width: 100%;
 }
 
 /* Page Switcher */

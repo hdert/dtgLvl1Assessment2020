@@ -157,14 +157,14 @@
         <div class="col-2 desktopOnly"></div>
 
         <div class="col-8 main">
-          <p>
+          <p class="col-12">
             From Wikipedia: “Unix is a family of multitasking, multiuser
             computer operating systems that derive from the original AT&T Unix,
             development starting in the 1970s at the Bell Labs research center
             by Ken Thompson, Dennis Ritchie, and others.”
           </p>
 
-          <p>
+          <p class="col-8">
             But what does this all mean, well in the late 1960’s development was
             underway on Multics (Multiplexed Information and Computing Service)
             an operating system with many new and novel ideas. One of these
@@ -176,22 +176,27 @@
             them being Ken Thompson.
           </p>
 
-          <figure>
-            <picture>
-              <source
-                srcset="img/Ken_Thompson_and_Dennis_Ritchie--1973.webp"
-                type="image/webp"
-              />
-              <source
-                srcset="img/Ken_Thompson_and_Dennis_Ritchie--1973.png"
-                type="image/png"
-              />
-              <img
-                id="logo"
-                src="img/Ken_Thompson_and_Dennis_Ritchie--1973.png"
-                alt="Ken Thompson and Dennis Ritchie standing side by side smiling into the camera"
-              />
-            </picture>
+          <figure class="col-4 picture">
+            <a
+              href="img/Ken_Thompson_and_Dennis_Ritchie--1973.png"
+              target="_blank"
+            >
+              <picture>
+                <source
+                  srcset="img/Ken_Thompson_and_Dennis_Ritchie--1973.webp"
+                  type="image/webp"
+                />
+                <source
+                  srcset="img/Ken_Thompson_and_Dennis_Ritchie--1973.png"
+                  type="image/png"
+                />
+                <img
+                  src="img/Ken_Thompson_and_Dennis_Ritchie--1973.png"
+                  alt="Ken Thompson and Dennis Ritchie standing side by side smiling into the camera"
+                  id="thompsonAndRitchie"
+                />
+              </picture>
+            </a>
 
             <figcaption>
               <small>
@@ -208,7 +213,7 @@
             </figcaption>
           </figure>
 
-          <p>
+          <p class="col-12">
             With Bell Labs withdrawing from Multics he decided to write his own
             operating system (OS) with some of the ideas from the Multics
             project. While he still had access to Multics he wrote various
@@ -218,7 +223,7 @@
             Corporation PDP-7 at Bell Labs.
           </p>
 
-          <p>
+          <p class="col-8">
             At this point there was a team of researchers working on Unix led by
             Ken Thompson and Dennis Ritchie and they implemented various
             features on Unix based on the improvements from Multics but
@@ -236,22 +241,24 @@
             process, but this problem gets solved later.
           </p>
 
-          <figure>
-            <picture>
-              <source
-                srcset="img/Digital_PDP11-IMG_1498_cropped.webp"
-                type="image/webp"
-              />
-              <source
-                srcset="img/Digital_PDP11-IMG_1498_cropped.png"
-                type="image/png"
-              />
-              <img
-                id="logo"
-                src="img/Digital_PDP11-IMG_1498_cropped.png"
-                alt="Ken Thompson and Dennis Ritchie standing side by side smiling into the camera"
-              />
-            </picture>
+          <figure class="col-4 picture">
+            <a href="img/Digital_PDP11-IMG_1498_cropped.png" target="_blank">
+              <picture>
+                <source
+                  srcset="img/Digital_PDP11-IMG_1498_cropped_scaled_500px.webp"
+                  type="image/webp"
+                />
+                <source
+                  srcset="img/Digital_PDP11-IMG_1498_cropped_scaled_500px.png"
+                  type="image/png"
+                />
+                <img
+                  src="img/Digital_PDP11-IMG_1498_cropped_scaled_500px.png"
+                  alt="Image of a green front panel from a PDP-11"
+                  id="PDP-11"
+                />
+              </picture>
+            </a>
 
             <figcaption>
               <small>
@@ -274,7 +281,7 @@
             </figcaption>
           </figure>
 
-          <p>
+          <p class="col-12">
             The system was getting more and more complex and the need for some
             sort of guide or manual to the OS grew, so one was made and dubbed
             the ‘UNIX Programmer’s Manual’. Each command or program in the
@@ -287,7 +294,7 @@
             man page.
           </p>
 
-          <p>
+          <p class="col-12">
             Cut to 1973, Unix is getting very popular at Bell Labs but the
             aforementioned problem of the whole OS being written in Assembly is
             still there, it was the widely accepted opinion at the time that due
@@ -299,7 +306,7 @@
             decision was made to port Unix to C.
           </p>
 
-          <p>
+          <p class="col-12">
             Cut to 1973, Unix is getting very popular at Bell Labs but the
             aforementioned problem of the whole OS being written in Assembly is
             still there, it was the widely accepted opinion at the time that due
@@ -311,9 +318,9 @@
             decision was made to port Unix to C.
           </p>
 
-          <h3>Where is it now?</h3>
+          <h3 class="col-12">Where is it now?</h3>
 
-          <p>
+          <p class="col-12">
             In the modern day Unix is split into a few different versions, Unix
             has been mostly taken over in popularity by Linux, more on that
             later and there are the BSD’s: FreeBSD, NetBSD, and OpenBSD. Each of
@@ -325,11 +332,13 @@
 
           <!-- todo: references, family image -->
 
-          <div id="switcher">
-            <a href="gnuAndLinux.html">Next &#5171;</a>
+          <div class="col-12">
+            <div id="switcher">
+              <a href="gnuAndLinux.html">Next &#5171;</a>
+            </div>
           </div>
 
-          <footer>
+          <footer class="col-12">
             <small
               >Page design and layout by
               <a
