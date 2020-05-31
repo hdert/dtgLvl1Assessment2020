@@ -6,6 +6,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-weight: normal;
+  /* Makes header text look the same between gecko and blink */
 }
 
 h1,
@@ -39,13 +40,18 @@ body > #wrapper {
   height: 100vh;
   width: 100vw;
   overflow-y: hidden;
+  /* This is changed after the loading screen disappears.
+  The purpose of this is to make the scroll bar appear only when it's ready*/
   -webkit-overflow-scrolling: touch;
+  /* Enable momentum and smooth scrolling for IOS users */
 }
 
+/* Main */
 main #bottomMain {
   padding-bottom: 30vh;
 }
 
+/* Animations */
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -132,6 +138,8 @@ main #bottomMain {
     opacity: 0;
   }
 }
+/* Responsive */
+/* Mobile */
 [class*=col-] {
   width: 100%;
   float: left;
@@ -154,6 +162,7 @@ main #bottomMain {
   display: block;
 }
 
+/* Tablet */
 @media only screen and (min-width: 500px) {
   .tabletAbove {
     display: inline-block;
@@ -164,6 +173,7 @@ main #bottomMain {
     display: none;
   }
 }
+/* Desktop */
 @media only screen and (min-width: 768px) {
   .col-1 {
     width: 8.33%;
@@ -229,6 +239,8 @@ main #bottomMain {
     padding-top: 0;
   }
 }
+/* SPDX-License-Identifier: BSD-3-Clause */
+/* Loading Screen */
 #loadingScreen {
   position: fixed;
   top: 0;
@@ -257,8 +269,11 @@ main #bottomMain {
   padding: 0;
   margin-top: -25px;
   margin-left: -110px;
+  /* Negative margin for centering, equation: minus the width of the logo divided by two. */
+  /* This fixes a problem where the spinner is offset by half the width of the logo. */
 }
 
+/* Menu */
 #menu {
   height: 100vh;
   width: 0;
@@ -305,6 +320,7 @@ main #bottomMain {
   background-color: transparent;
 }
 
+/* Navbar */
 #navbar {
   position: fixed;
   top: 0;
@@ -353,6 +369,7 @@ main #bottomMain {
   max-height: 100%;
 }
 
+/* Progress Bar */
 #progressContainer {
   width: 100vw;
   height: 8px;
@@ -365,6 +382,7 @@ main #bottomMain {
   background-color: #f6e44a;
 }
 
+/* Back to Top Button */
 #backToTopButton {
   background-color: #242424;
   color: #f2f2f2;
@@ -394,27 +412,28 @@ main #bottomMain {
   color: #242424;
 }
 
-#bigHeader {
+/* Big Header */
+.bigHeader {
   height: 90vh;
   margin-top: 58px;
 }
 
-.noJs #bigHeader {
+.noJs #title {
   background: transparent url(../img/100px-Tux-opaque.svg.png) center space;
 }
 
-.no-webp #bigHeader {
+.no-webp #title {
   background: transparent url(../img/100px-Tux-opaque.svg.png) center space;
 }
 
-.webp #bigHeader {
+.webp #title {
   background: transparent url(../img/100px-Tux-opaque.svg.webp) center space;
 }
 
+/* Unix Header */
 #unix {
   width: 100%;
   height: 100vh;
-  margin: 5px;
 }
 
 .noJs #unix {
@@ -429,6 +448,7 @@ main #bottomMain {
   background: transparent url(../img/PDP7.webp) center/cover no-repeat;
 }
 
+/* Header */
 header h1,
 header h2,
 header p {
@@ -450,10 +470,12 @@ header p {
   background-color: transparent;
 }
 
+/* Footer */
 footer {
   text-align: center;
 }
 
+/* 404 */
 div.no {
   text-align: center;
   padding-bottom: 30px;

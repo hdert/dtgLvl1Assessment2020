@@ -1,4 +1,5 @@
-// Mobile
+/* Responsive */
+/* Mobile */
 [class*="col-"] {
   width: 100%;
   float: left;
@@ -21,7 +22,7 @@
   display: block;
 }
 
-// Tablet
+/* Tablet */
 @media only screen and (min-width: 500px) {
   .tabletAbove {
     display: inline-block;
@@ -32,7 +33,7 @@
   }
 }
 
-// Desktop
+/* Desktop */
 @media only screen and (min-width: 768px) {
   .col-1 {
     width: 8.33%;
