@@ -51,6 +51,10 @@ main #bottomMain {
   padding-bottom: 30vh;
 }
 
+hr {
+  margin: 0;
+}
+
 /* Animations */
 @-webkit-keyframes spin {
   from {
@@ -229,14 +233,6 @@ main #bottomMain {
 
   .desktopOnly {
     display: inline-block;
-  }
-
-  header {
-    padding-top: 30px;
-  }
-
-  #bigHeader {
-    padding-top: 0;
   }
 }
 /* SPDX-License-Identifier: BSD-3-Clause */
@@ -456,6 +452,10 @@ header p {
   border: 2px solid #242424;
   font-size: 3.3125em;
   margin: 0;
+  text-align: center;
+}
+
+.caption {
   text-align: center;
 }
 
