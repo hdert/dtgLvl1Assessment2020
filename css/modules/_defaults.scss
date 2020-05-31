@@ -17,6 +17,7 @@ h4,
 h5,
 h6 {
   font-family: "Questrial", sans-serif;
+  text-align: center;
 }
 
 body,
@@ -49,7 +50,7 @@ body > #wrapper {
 
 /* Main */
 main {
-  #bottomMain {
+  .main {
     padding-bottom: 30vh;
   }
 }

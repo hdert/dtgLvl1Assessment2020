@@ -16,6 +16,7 @@ h4,
 h5,
 h6 {
   font-family: "Questrial", sans-serif;
+  text-align: center;
 }
 
 body,
@@ -47,7 +48,7 @@ body > #wrapper {
 }
 
 /* Main */
-main #bottomMain {
+main .main {
   padding-bottom: 30vh;
 }
 
@@ -468,6 +469,34 @@ header p {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-color: transparent;
+}
+
+/* Figure and Images */
+figure figcaption {
+  text-align: center;
+}
+
+/* Page Switcher */
+#switcher {
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+#switcher a {
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+#switcher a:hover, #switcher a:focus {
+  background-color: #f6e44a;
 }
 
 /* Footer */

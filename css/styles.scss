@@ -225,6 +225,35 @@ header p {
   background-color: transparent;
 }
 
+/* Figure and Images */
+
+figure {
+  figcaption {
+    text-align: center;
+  }
+}
+
+/* Page Switcher */
+
+#switcher {
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  @include transformTranslate(-50%, 0%);
+  a {
+    display: inline-block;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    @include transition(0.3s);
+    &:hover,
+    &:focus {
+      background-color: $highlight;
+    }
+  }
+}
+
 /* Footer */
 footer {
   text-align: center;

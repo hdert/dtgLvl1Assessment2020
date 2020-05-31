@@ -158,32 +158,176 @@
 
         <div class="col-8 main">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            mollis nisi vel dignissim consectetur. Fusce ullamcorper nec sapien
-            non varius. Quisque efficitur rutrum ante nec feugiat. Nulla erat
-            tortor, hendrerit nec viverra sed, luctus tempor ex. Sed volutpat
-            leo varius diam ornare imperdiet. Cras varius nulla ac tortor
-            placerat bibendum. Suspendisse feugiat ante a nisi consequat, eu
-            tincidunt elit gravida. Vestibulum ante ipsum primis in faucibus
-            orci luctus et ultrices posuere cubilia curae; Etiam finibus orci
-            sed lectus malesuada pellentesque. Mauris eleifend sit amet lectus a
-            elementum. Duis et fringilla libero. Phasellus varius purus ac
-            finibus congue. Curabitur ullamcorper libero vel sodales ultricies.
-            Aliquam consequat dolor id ipsum consectetur pretium. Nunc viverra
-            iaculis nisl. Mauris sed bibendum mauris.
+            From Wikipedia: “Unix is a family of multitasking, multiuser
+            computer operating systems that derive from the original AT&T Unix,
+            development starting in the 1970s at the Bell Labs research center
+            by Ken Thompson, Dennis Ritchie, and others.”
           </p>
 
           <p>
-            Nunc blandit <br />ligula nulla, id iaculis dolor cursus id. Etiam
-            viverra eros porttitor, vehicula mauris id, consecte<br />tur leo.
-            Nullam a tortor eu libero gravida hendrerit. Nulla blandit
-            scelerisque sapien sed semper. Aliquam erat volutpat. Proin porta
-            risus id iaculis rutrum. Ut sed eros quis m<br />etus gravida
-            semp<br />er. Mauris nec arcu non odio volutpat<br />
-            auctor sit amet a massa. Vestibulum et finibus sapien. In pharetra,
-            tortor vel sodales ultrices, augue dui tincidunt enim, ut suscipit
-            urna leo quis null<br />a.
+            But what does this all mean, well in the late 1960’s development was
+            underway on Multics (Multiplexed Information and Computing Service)
+            an operating system with many new and novel ideas. One of these
+            ideas was time-sharing, the ability to share computer resources
+            amongst many users at the same time. Bell Labs, MIT, and General
+            Electric were all involved in the project but Bell Labs dissatisfied
+            with the progress of the project started withdrawing from it. This
+            left just a few researchers from Bell Labs working on Multics one of
+            them being Ken Thompson.
           </p>
+
+          <figure>
+            <picture>
+              <source
+                srcset="img/Ken_Thompson_and_Dennis_Ritchie--1973.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="img/Ken_Thompson_and_Dennis_Ritchie--1973.png"
+                type="image/png"
+              />
+              <img
+                id="logo"
+                src="img/Ken_Thompson_and_Dennis_Ritchie--1973.png"
+                alt="Ken Thompson and Dennis Ritchie standing side by side smiling into the camera"
+              />
+            </picture>
+
+            <figcaption>
+              <small>
+                Ken Thompson and Dennis Ritchie respectively<br />
+                Image retrieved from
+                <a
+                  href="https://commons.wikimedia.org/wiki/File:Ken_Thompson_and_Dennis_Ritchie--1973.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Wikimedia</a
+                >
+                where it was uploaded from the public domain
+              </small>
+            </figcaption>
+          </figure>
+
+          <p>
+            With Bell Labs withdrawing from Multics he decided to write his own
+            operating system (OS) with some of the ideas from the Multics
+            project. While he still had access to Multics he wrote various
+            things for his OS including a game called Space Travel. But writing
+            Space Travel made him realize that he needed a better computer for
+            his purposes and he found a little-used Digital Equipment
+            Corporation PDP-7 at Bell Labs.
+          </p>
+
+          <p>
+            At this point there was a team of researchers working on Unix led by
+            Ken Thompson and Dennis Ritchie and they implemented various
+            features on Unix based on the improvements from Multics but
+            simplified. It was around this time that Thompson created the B
+            programming language and the first version of the name was thought
+            up, Uniplexed Information and Computing Service (Unics). A few
+            different departments of Bell Labs were interested in the OS but
+            they wanted to run it on a larger computer and another department
+            wanted to do text processing on it so the team added text processing
+            features to the OS and received funding to get a PDP-11/20. It was
+            also around then that the OS was officially named Unix. Most
+            programs in Unix were at the time written in a programming language
+            called Assembly, the problem with Assembly was that it was very low
+            level meaning that the code was complex and hard for a human to
+            process, but this problem gets solved later.
+          </p>
+
+          <figure>
+            <picture>
+              <source
+                srcset="img/Digital_PDP11-IMG_1498_cropped.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="img/Digital_PDP11-IMG_1498_cropped.png"
+                type="image/png"
+              />
+              <img
+                id="logo"
+                src="img/Digital_PDP11-IMG_1498_cropped.png"
+                alt="Ken Thompson and Dennis Ritchie standing side by side smiling into the camera"
+              />
+            </picture>
+
+            <figcaption>
+              <small>
+                Image of a green front panel from a PDP-11<br />
+                Image retrieved from
+                <a
+                  href="https://en.wikipedia.org/wiki/File:Digital_PDP11-IMG_1498_cropped.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Wikimedia</a
+                >
+                where it was uploaded under the
+                <a
+                  href="https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Creative Commons Attribution-Share Alike 2.0 France</a
+                >
+              </small>
+            </figcaption>
+          </figure>
+
+          <p>
+            The system was getting more and more complex and the need for some
+            sort of guide or manual to the OS grew, so one was made and dubbed
+            the ‘UNIX Programmer’s Manual’. Each command or program in the
+            system was documented in a ‘man page’ a format that to this day is
+            widely used on Linux to document commands/programs. Each man page
+            offered a terse reference of information about the usage of the
+            program as well as listing known bugs and giving contact details for
+            the maintainer/maker of the command/program so further questions
+            could be asked and the answers could be delivered and added to the
+            man page.
+          </p>
+
+          <p>
+            Cut to 1973, Unix is getting very popular at Bell Labs but the
+            aforementioned problem of the whole OS being written in Assembly is
+            still there, it was the widely accepted opinion at the time that due
+            to an OS being so complex it had to be written in a low-level
+            language like Assembly. The aforementioned B programming language
+            isn’t the ideal contender as it is slow and not very powerful, but
+            in the meantime Ritchie had been working on and improving B which
+            resulted in the successor C which was faster and more powerful. The
+            decision was made to port Unix to C.
+          </p>
+
+          <p>
+            Cut to 1973, Unix is getting very popular at Bell Labs but the
+            aforementioned problem of the whole OS being written in Assembly is
+            still there, it was the widely accepted opinion at the time that due
+            to an OS being so complex it had to be written in a low-level
+            language like Assembly. The aforementioned B programming language
+            isn’t the ideal contender as it is slow and not very powerful, but
+            in the meantime Ritchie had been working on and improving B which
+            resulted in the successor C which was faster and more powerful. The
+            decision was made to port Unix to C.
+          </p>
+
+          <h3>Where is it now?</h3>
+
+          <p>
+            In the modern day Unix is split into a few different versions, Unix
+            has been mostly taken over in popularity by Linux, more on that
+            later and there are the BSD’s: FreeBSD, NetBSD, and OpenBSD. Each of
+            these BSDs have their own strengths and weaknesses but by far the
+            most popular Unix derivative is an operating system you might’ve
+            heard of, MacOS. Apart from MacOS Unix derivative systems have a
+            negligible market share.
+          </p>
+
+          <!-- todo: references, family image -->
+
+          <div id="switcher">
+            <a href="gnuAndLinux.html">Next &#5171;</a>
+          </div>
 
           <footer>
             <small
