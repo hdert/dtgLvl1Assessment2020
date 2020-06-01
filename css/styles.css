@@ -476,8 +476,14 @@ header p {
 }
 
 /* Figure and Images */
+figure {
+  margin: 0;
+}
 figure figcaption {
   text-align: center;
+}
+figure figcaption p {
+  margin: 0;
 }
 figure img {
   display: inline-block;
@@ -486,17 +492,6 @@ figure img {
   -webkit-transform: translate(-50%, 0%);
   -ms-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%);
-}
-
-.picture {
-  margin: 0;
-}
-
-#thompsonAndRitchie {
-  max-width: 100%;
-}
-
-#PDP-11 {
   max-width: 100%;
 }
 

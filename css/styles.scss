@@ -228,27 +228,20 @@ header p {
 /* Figure and Images */
 
 figure {
+  margin: 0;
   figcaption {
     text-align: center;
+    p {
+      margin: 0;
+    }
   }
   img {
     display: inline-block;
     position: relative;
     left: 50%;
     @include transformTranslate(-50%, 0%);
+    max-width: 100%;
   }
-}
-
-.picture {
-  margin: 0;
-}
-
-#thompsonAndRitchie {
-  max-width: 100%;
-}
-
-#PDP-11 {
-  max-width: 100%;
 }
 
 /* Page Switcher */
