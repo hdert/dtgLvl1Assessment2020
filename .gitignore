@@ -1,3 +1,6 @@
 .~lock.*
 favicon_package_v*.zip
 .vscode/
+node_modules/
+package.json
+yarn.lock
