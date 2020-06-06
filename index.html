@@ -43,6 +43,8 @@
   </head>
 
   <body onload="exitLoadingScreen()">
+    <!-- Overlays in the order: Loading screen, Mobile navigation overlay,
+      top navigation bar, and back to top buton -->
     <div id="loadingScreen">
       <picture>
         <source srcset="img/200px-Tux.svg.webp" type="image/webp" />
@@ -112,6 +114,8 @@
       title="Go to the top of the page"
     ></button>
 
+    <!-- Scroll wrapper for rubber banding on safari and centering divs -->
+
     <div id="wrapper">
       <main>
         <header id="title" class="bigHeader">
@@ -158,12 +162,21 @@
 
         <div class="col-2 desktopOnly"></div>
 
+        <!-- Start of main centered content -->
+
         <div class="col-8 main">
           <p class="col-12">
-            From Wikipedia: “Unix is a family of multitasking, multiuser
-            computer operating systems that derive from the original AT&T Unix,
-            development starting in the 1970s at the Bell Labs research center
-            by Ken Thompson, Dennis Ritchie, and others.”
+            From
+            <a
+              href="https://en.wikipedia.org/wiki/Unix"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Wikipedia</a
+            >
+            “Unix is a family of multitasking, multiuser computer operating
+            systems that derive from the original AT&T Unix, development
+            starting in the 1970s at the Bell Labs research center by Ken
+            Thompson, Dennis Ritchie, and others.”
           </p>
 
           <p class="col-8">
@@ -194,8 +207,7 @@
                 />
                 <img
                   src="img/Ken_Thompson_and_Dennis_Ritchie--1973.png"
-                  alt="Ken Thompson and Dennis Ritchie standing side by side smiling into the camera"
-                  id="thompsonAndRitchie"
+                  alt="Ken Thompson and Dennis Ritchie, respectively standing side by side smiling into the camera"
                 />
               </picture>
             </a>
@@ -203,7 +215,8 @@
             <figcaption>
               <p>
                 <small>
-                  Ken Thompson and Dennis Ritchie respectively<br />
+                  Ken Thompson and Dennis Ritchie, respectively standing side by
+                  side smiling into the camera<br />
                   Image retrieved from
                   <a
                     href="https://commons.wikimedia.org/wiki/File:Ken_Thompson_and_Dennis_Ritchie--1973.jpg"
@@ -259,7 +272,6 @@
                 <img
                   src="img/Digital_PDP11-IMG_1498_cropped_scaled_500px.png"
                   alt="Image of a green front panel from a PDP-11"
-                  id="PDP-11"
                 />
               </picture>
             </a>
@@ -313,30 +325,163 @@
           </p>
 
           <p class="col-12">
-            Cut to 1973, Unix is getting very popular at Bell Labs but the
-            aforementioned problem of the whole OS being written in Assembly is
-            still there, it was the widely accepted opinion at the time that due
-            to an OS being so complex it had to be written in a low-level
-            language like Assembly. The aforementioned B programming language
-            isn’t the ideal contender as it is slow and not very powerful, but
-            in the meantime Ritchie had been working on and improving B which
-            resulted in the successor C which was faster and more powerful. The
-            decision was made to port Unix to C.
+            Up until this point the use and distribution of Unix had been
+            entirely internal to Bell Labs but this was to change. At the 1973
+            Symposium on Operating System Principles Unix was presented formally
+            to the outside world. This led to requests for the system and from
+            then on the fate of the system was sealed.
           </p>
 
           <h3 class="col-12">Where is it now?</h3>
 
-          <p class="col-12">
+          <p class="col-7">
             In the modern day Unix is split into a few different versions, Unix
             has been mostly taken over in popularity by Linux, more on that
-            later and there are the BSD’s: FreeBSD, NetBSD, and OpenBSD. Each of
+            later and there are the BSDs: FreeBSD, NetBSD, and OpenBSD. Each of
             these BSDs have their own strengths and weaknesses but by far the
             most popular Unix derivative is an operating system you might’ve
             heard of, MacOS. Apart from MacOS Unix derivative systems have a
             negligible market share.
           </p>
 
-          <!-- todo: references, family image -->
+          <figure class="col-5 picture">
+            <a href="img/2132px-Unix_history-simple.svg.png" target="_blank">
+              <picture>
+                <source
+                  srcset="img/2132px-Unix_history-simple-cropped.svg.webp"
+                  type="image/webp"
+                />
+                <source
+                  srcset="img/2132px-Unix_history-simple-cropped.svg.png"
+                  type="image/png"
+                />
+                <img
+                  src="img/2132px-Unix_history-simple-cropped.svg.png"
+                  alt="Diagram showing the connections between Unix, MacOS, and the BSDs"
+                />
+              </picture>
+            </a>
+
+            <figcaption>
+              <p>
+                <small>
+                  Diagram showing the connections between Unix, MacOS, and the
+                  BSDs<br />
+                  Image retrieved from
+                  <a
+                    href="https://en.wikipedia.org/wiki/File:Unix_history-simple.svg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Wikimedia</a
+                  >
+                  where it was uploaded under the
+                  <a
+                    href="https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Creative Commons Attribution-Share Alike 3.0 Unported</a
+                  >
+                  and cropped to show the relevant information by
+                  <a
+                    href="https://www.hdert.tk/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Justin Muirhead</a
+                  >
+                </small>
+              </p>
+            </figcaption>
+          </figure>
+
+          <h3 class="col-12">References</h3>
+
+          <!-- References -->
+
+          <figure class="col-12 picture">
+            <a href="img/869px-Tux.svg.png" target="_blank">
+              <picture>
+                <source srcset="img/200px-Tux.svg.webp" type="image/webp" />
+                <source srcset="img/200px-Tux.svg.png" type="image/png" />
+                <img src="img/200px-Tux.svg.png" alt="Tux, Linux's Mascot" />
+              </picture>
+            </a>
+
+            <figcaption>
+              <p>
+                <small>
+                  Tux, Linux's Mascot<br />
+                  Image was made by
+                  <a
+                    href="mailo:lewing@isc.tamu.edu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >lewing@isc.tamu.edu Larry Ewing</a
+                  >
+                  and
+                  <a
+                    href="https://en.wikipedia.org/wiki/GIMP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >The GIMP</a
+                  >
+                  <br />
+                  Image retrieved from
+                  <a
+                    href="https://commons.wikimedia.org/wiki/File:Tux.svg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Wikimedia</a
+                  >
+                  where the updated version was uploaded under this
+                  <a
+                    href="http://www.home.unix-ag.org/simon/penguin/README"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >README</a
+                  >
+                  by Simon Budig
+                  <br />
+                  And a futher updated version which is the one used in this
+                  website was uploaded under the
+                  <a
+                    href="https://creativecommons.org/publicdomain/zero/1.0/deed.en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Creative Commons CC0 1.0 Universal Public Domain
+                    Dedication</a
+                  >
+                  by Garret LeSage.
+                  <br />
+                  This work includes material that may be protected as a
+                  trademark in some jurisdictions.
+                </small>
+              </p>
+            </figcaption>
+          </figure>
+
+          <a
+            class="col-12"
+            href="https://en.wikipedia.org/wiki/History_of_Unix"
+            target="_blank"
+            rel="noopener noreferrer"
+            >https://en.wikipedia.org/wiki/History_of_Unix</a
+          >
+
+          <a
+            class="col-12"
+            href="https://en.wikipedia.org/wiki/Unix"
+            target="_blank"
+            rel="noopener noreferrer"
+            >https://en.wikipedia.org/wiki/Unix</a
+          >
+
+          <a
+            class="col-12"
+            href="https://web.archive.org/web/20140402194704/http://www.bell-labs.com/history/unix/pdp7.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >https://web.archive.org/web/20140402194704/http://www.bell-labs.com/history/unix/pdp7.html</a
+          >
 
           <div class="col-12">
             <div id="switcher">
@@ -361,6 +506,8 @@
         </div>
       </main>
     </div>
+
+    <!-- Javascript -->
     <script>
       document.documentElement.classList.remove("noJs");
     </script>

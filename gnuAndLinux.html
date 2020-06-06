@@ -46,6 +46,8 @@
   </head>
 
   <body onload="exitLoadingScreen()">
+    <!-- Overlays in the order: Loading screen, Mobile navigation overlay,
+      top navigation bar, and back to top buton -->
     <div id="loadingScreen">
       <picture>
         <source srcset="img/200px-Tux.svg.webp" type="image/webp" />
@@ -115,6 +117,8 @@
       title="Go to the top of the page"
     ></button>
 
+    <!-- Scroll wrapper for rubber banding on safari and centering divs -->
+
     <div id="wrapper">
       <main>
         <header id="gnuAndLinux" class="bigHeader">
@@ -126,6 +130,8 @@
         <hr />
 
         <div class="col-2 desktopOnly"></div>
+
+        <!-- Start of main centered content -->
 
         <div class="col-8 main">
           <p class="col-12">
@@ -156,6 +162,72 @@
             urna leo quis null<br />a.
           </p>
 
+          <h3 class="col-12">References</h3>
+
+          <!-- References -->
+
+          <figure class="col-12 picture">
+            <a href="img/869px-Tux.svg.png" target="_blank">
+              <picture>
+                <source srcset="img/200px-Tux.svg.webp" type="image/webp" />
+                <source srcset="img/200px-Tux.svg.png" type="image/png" />
+                <img src="img/200px-Tux.svg.png" alt="Tux, Linux's Mascot" />
+              </picture>
+            </a>
+
+            <figcaption>
+              <p>
+                <small>
+                  Tux, Linux's Mascot<br />
+                  Image was made by
+                  <a
+                    href="mailo:lewing@isc.tamu.edu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >lewing@isc.tamu.edu Larry Ewing</a
+                  >
+                  and
+                  <a
+                    href="https://en.wikipedia.org/wiki/GIMP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >The GIMP</a
+                  >
+                  <br />
+                  Image retrieved from
+                  <a
+                    href="https://commons.wikimedia.org/wiki/File:Tux.svg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Wikimedia</a
+                  >
+                  where the updated version was uploaded under this
+                  <a
+                    href="http://www.home.unix-ag.org/simon/penguin/README"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >README</a
+                  >
+                  by Simon Budig
+                  <br />
+                  And a futher updated version which is the one used in this
+                  website was uploaded under the
+                  <a
+                    href="https://creativecommons.org/publicdomain/zero/1.0/deed.en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Creative Commons CC0 1.0 Universal Public Domain
+                    Dedication</a
+                  >
+                  by Garret LeSage.
+                  <br />
+                  This work includes material that may be protected as a
+                  trademark in some jurisdictions.
+                </small>
+              </p>
+            </figcaption>
+          </figure>
+
           <div class="col-12">
             <div id="switcher">
               <a href="index.html">&#5176; Previous</a>
@@ -180,6 +252,8 @@
         </div>
       </main>
     </div>
+
+    <!-- Javascript -->
     <script>
       document.documentElement.classList.remove("noJs");
     </script>

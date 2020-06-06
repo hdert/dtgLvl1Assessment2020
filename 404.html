@@ -10,6 +10,10 @@
 
     <title>Error 404 - The History of Linux</title>
     <!-- Links -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="/css/styles.css" />
 
     <!-- Favicon -->
@@ -31,6 +35,8 @@
   </head>
 
   <body onload="exitLoadingScreen()">
+    <!-- Overlays in the order: Loading screen, Mobile navigation overlay,
+      top navigation bar, and back to top buton -->
     <div id="loadingScreen">
       <picture>
         <source srcset="/img/200px-Tux.svg.webp" type="image/webp" />
@@ -49,14 +55,129 @@
       </picture>
     </div>
 
+    <div id="menu" onclick="closeMenu()">
+      <a href="#" id="menuClose" onclick="event.preventDefault();closeMenu();"
+        >&times;</a
+      >
+
+      <div id="menuContent">
+        <a href="index.html" onclick="closeMenu();">Unix</a>
+        <a href="gnuAndLinux.html" onclick="closeMenu();">GNU and Linux</a>
+        <a href="shinyShinyDistros.html" onclick="closeMenu();"
+          >Shiny, Shiny Distros</a
+        >
+      </div>
+    </div>
+
+    <div id="navbar">
+      <div class="col-2 desktopOnly"></div>
+
+      <div class="col-8" id="nav">
+        <button
+          onclick="goToTop();"
+          class="tabletAbove"
+          id="navbarTux"
+          title="Go to the top of the page"
+        ></button>
+        <a href="index.html">Unix</a>
+        <a href="gnuAndLinux.html" class="tabletAbove">GNU and Linux</a>
+        <a href="shinyShinyDistros.html" class="tabletAbove"
+          >Shiny, Shiny Distros</a
+        >
+        <button
+          onclick="openMenu();"
+          id="menuOpen"
+          class="mobileOnly fa fa-bars"
+          title="Open mobile selection menu"
+        ></button>
+      </div>
+    </div>
+
+    <button
+      onclick="goToTop();"
+      class="fa fa-angle-double-up"
+      id="backToTopButton"
+      title="Go to the top of the page"
+    ></button>
+
+    <!-- Scroll wrapper for rubber banding on safari and centering divs -->
+
     <div id="wrapper">
       <main>
         <div class="col-2 desktopOnly"></div>
+
+        <!-- Start of main centered content -->
 
         <div class="col-8" id="main">
           <div class="no">
             <h1><a href="/index.html" class="no">no</a></h1>
           </div>
+
+          <h3 class="col-12">References</h3>
+
+          <!-- References -->
+
+          <figure class="col-12 picture">
+            <a href="img/869px-Tux.svg.png" target="_blank">
+              <picture>
+                <source srcset="img/200px-Tux.svg.webp" type="image/webp" />
+                <source srcset="img/200px-Tux.svg.png" type="image/png" />
+                <img src="img/200px-Tux.svg.png" alt="Tux, Linux's Mascot" />
+              </picture>
+            </a>
+
+            <figcaption>
+              <p>
+                <small>
+                  Tux, Linux's Mascot<br />
+                  Image was made by
+                  <a
+                    href="mailo:lewing@isc.tamu.edu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >lewing@isc.tamu.edu Larry Ewing</a
+                  >
+                  and
+                  <a
+                    href="https://en.wikipedia.org/wiki/GIMP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >The GIMP</a
+                  >
+                  <br />
+                  Image retrieved from
+                  <a
+                    href="https://commons.wikimedia.org/wiki/File:Tux.svg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Wikimedia</a
+                  >
+                  where the updated version was uploaded under this
+                  <a
+                    href="http://www.home.unix-ag.org/simon/penguin/README"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >README</a
+                  >
+                  by Simon Budig
+                  <br />
+                  And a futher updated version which is the one used in this
+                  website was uploaded under the
+                  <a
+                    href="https://creativecommons.org/publicdomain/zero/1.0/deed.en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Creative Commons CC0 1.0 Universal Public Domain
+                    Dedication</a
+                  >
+                  by Garret LeSage.
+                  <br />
+                  This work includes material that may be protected as a
+                  trademark in some jurisdictions.
+                </small>
+              </p>
+            </figcaption>
+          </figure>
 
           <footer>
             <p>
@@ -77,6 +198,8 @@
         <div class="col-2 desktopOnly"></div>
       </main>
     </div>
+
+    <!-- Javascript -->
     <script>
       document.documentElement.classList.remove("noJs");
     </script>
