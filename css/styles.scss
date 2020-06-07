@@ -165,42 +165,35 @@
   }
 }
 
-/* Big Header */
+/* Big Headers */
 .bigHeader {
   height: 90vh;
   margin-top: 58px;
 }
 
-.noJs #title {
-  background: transparent url(../img/100px-Tux-opaque.svg.png) center space;
-}
+/* Title Image */
 
-.no-webp #title {
-  background: transparent url(../img/100px-Tux-opaque.svg.png) center space;
-}
-
-.webp #title {
-  background: transparent url(../img/100px-Tux-opaque.svg.webp) center space;
-}
+@include background-image(
+  "#title",
+  "../img/100px-Tux-opaque.svg",
+  center space
+);
 
 /* Unix Header */
 
 #unix {
-  width: 100%;
   height: 100vh;
 }
 
-.noJs #unix {
-  background: transparent url(../img/PDP7.png) center/cover no-repeat;
-}
+@include background-image("#unix", "../img/PDP7", center/cover no-repeat);
 
-.no-webp #unix {
-  background: transparent url(../img/PDP7.png) center/cover no-repeat;
-}
+/* GNU and Linux Header */
 
-.webp #unix {
-  background: transparent url(../img/PDP7.webp) center/cover no-repeat;
-}
+@include background-image(
+  "#gnuAndLinux",
+  "../img/X-Window-System-opaque",
+  center/cover no-repeat
+);
 
 /* Header */
 header h1,

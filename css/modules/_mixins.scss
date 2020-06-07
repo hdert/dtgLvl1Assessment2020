@@ -32,3 +32,14 @@
   outline: none;
   cursor: pointer;
 }
+@mixin background-image($id, $url, $param...) {
+  .noJs #{$id} {
+    background: transparent url(#{$url}.png) $param;
+  }
+  .no-webp #{$id} {
+    background: transparent url(#{$url}.png) $param;
+  }
+  .webp #{$id} {
+    background: transparent url(#{$url}.webp) $param;
+  }
+}
