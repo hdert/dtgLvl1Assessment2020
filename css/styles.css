@@ -475,6 +475,16 @@ header p {
   background-color: transparent;
 }
 
+/* Quotes */
+blockquote.quote {
+  border-left: 3px solid #8b8b8b;
+  margin: 1em 0;
+  padding-left: 40px;
+}
+blockquote.quote .indent {
+  padding-left: 1.6em;
+}
+
 /* Figure and Images */
 figure {
   margin: 0;

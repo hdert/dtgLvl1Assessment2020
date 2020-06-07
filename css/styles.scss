@@ -10,6 +10,7 @@
 @use 'modules/defaults';
 @use 'modules/animations';
 @use 'modules/responsive';
+@use 'sass:color';
 
 /* Loading Screen */
 #loadingScreen {
@@ -223,6 +224,17 @@ header p {
   left: 50%;
   @include transformTranslate(-50%, -50%);
   background-color: transparent;
+}
+
+/* Quotes */
+
+blockquote.quote {
+  border-left: 3px solid color.mix($color, $bgcolor);
+  margin: 1em 0;
+  padding-left: 40px;
+  .indent {
+    padding-left: 1.6em;
+  }
 }
 
 /* Figure and Images */
