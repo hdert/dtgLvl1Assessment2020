@@ -168,10 +168,10 @@
 /* Big Headers */
 .bigHeader {
   height: 90vh;
-  margin-top: 58px;
+  margin-top: 57px;
 }
 
-/* Title Image */
+/* Page Headers and Images */
 
 @include background-image(
   "#title",
@@ -179,19 +179,21 @@
   center space
 );
 
-/* Unix Header */
-
 #unix {
   height: 100vh;
 }
 
 @include background-image("#unix", "../img/PDP7", center/cover no-repeat);
 
-/* GNU and Linux Header */
-
 @include background-image(
   "#gnuAndLinux",
   "../img/X-Window-System-opaque",
+  center/cover no-repeat
+);
+
+@include background-image(
+  "#shinyShinyDistros",
+  "../img/sele_linuxmint_center-opaque",
   center/cover no-repeat
 );
 

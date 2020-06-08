@@ -420,10 +420,10 @@ hr {
 /* Big Headers */
 .bigHeader {
   height: 90vh;
-  margin-top: 58px;
+  margin-top: 57px;
 }
 
-/* Title Image */
+/* Page Headers and Images */
 .noJs #title {
   background: transparent url(../img/100px-Tux-opaque.svg.png) center space;
 }
@@ -436,7 +436,6 @@ hr {
   background: transparent url(../img/100px-Tux-opaque.svg.webp) center space;
 }
 
-/* Unix Header */
 #unix {
   height: 100vh;
 }
@@ -453,7 +452,6 @@ hr {
   background: transparent url(../img/PDP7.webp) center/cover no-repeat;
 }
 
-/* GNU and Linux Header */
 .noJs #gnuAndLinux {
   background: transparent url(../img/X-Window-System-opaque.png) center/cover no-repeat;
 }
@@ -464,6 +462,18 @@ hr {
 
 .webp #gnuAndLinux {
   background: transparent url(../img/X-Window-System-opaque.webp) center/cover no-repeat;
+}
+
+.noJs #shinyShinyDistros {
+  background: transparent url(../img/sele_linuxmint_center-opaque.png) center/cover no-repeat;
+}
+
+.no-webp #shinyShinyDistros {
+  background: transparent url(../img/sele_linuxmint_center-opaque.png) center/cover no-repeat;
+}
+
+.webp #shinyShinyDistros {
+  background: transparent url(../img/sele_linuxmint_center-opaque.webp) center/cover no-repeat;
 }
 
 /* Header */
