@@ -166,9 +166,8 @@
 }
 
 /* Big Headers */
-.bigHeader {
+header {
   height: 100vh;
-  // margin-top: 57px;
 }
 
 /* Page Headers and Images */
@@ -178,10 +177,6 @@
   "../img/200px-Tux.svg-opaque",
   center space
 );
-
-#unix {
-  height: 100vh;
-}
 
 @include background-image("#unix", "../img/PDP7", center/cover no-repeat);
 

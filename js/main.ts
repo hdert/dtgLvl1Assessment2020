@@ -24,8 +24,8 @@ async function exitLoadingScreen() {
   (document.getElementById("spinner") as HTMLImageElement).style.animation =
     "spin 1s infinite linear, fadeOut 2s forwards";
   (document.getElementById("loadingScreen") as HTMLDivElement).style.animation =
-    "slideOutBottom 1.3s 1.5s forwards ease-out";
-  await sleep(1200);
+    "slideOutBottom 0.9s 1.5s forwards ease-out";
+  await sleep(1450);
   WRAPPER.style.overflowY = "auto";
   /* This makes it so that the scrollbar doesn't show until the loading animation is near complete. */
 }

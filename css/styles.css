@@ -418,7 +418,7 @@ hr {
 }
 
 /* Big Headers */
-.bigHeader {
+header {
   height: 100vh;
 }
 
@@ -433,10 +433,6 @@ hr {
 
 .webp #title {
   background: transparent url(../img/200px-Tux.svg-opaque.webp) center space;
-}
-
-#unix {
-  height: 100vh;
 }
 
 .noJs #unix {
