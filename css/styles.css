@@ -48,7 +48,7 @@ body > #wrapper {
 }
 
 /* Main */
-main .main {
+footer.col-12 {
   padding-bottom: 30vh;
 }
 
@@ -419,21 +419,20 @@ hr {
 
 /* Big Headers */
 .bigHeader {
-  height: 90vh;
-  margin-top: 57px;
+  height: 100vh;
 }
 
 /* Page Headers and Images */
 .noJs #title {
-  background: transparent url(../img/100px-Tux-opaque.svg.png) center space;
+  background: transparent url(../img/200px-Tux.svg-opaque.png) center space;
 }
 
 .no-webp #title {
-  background: transparent url(../img/100px-Tux-opaque.svg.png) center space;
+  background: transparent url(../img/200px-Tux.svg-opaque.png) center space;
 }
 
 .webp #title {
-  background: transparent url(../img/100px-Tux-opaque.svg.webp) center space;
+  background: transparent url(../img/200px-Tux.svg-opaque.webp) center space;
 }
 
 #unix {

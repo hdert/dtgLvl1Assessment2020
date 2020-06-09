@@ -167,15 +167,15 @@
 
 /* Big Headers */
 .bigHeader {
-  height: 90vh;
-  margin-top: 57px;
+  height: 100vh;
+  // margin-top: 57px;
 }
 
 /* Page Headers and Images */
 
 @include background-image(
   "#title",
-  "../img/100px-Tux-opaque.svg",
+  "../img/200px-Tux.svg-opaque",
   center space
 );
 
