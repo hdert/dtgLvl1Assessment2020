@@ -165,11 +165,6 @@
   }
 }
 
-/* Big Headers */
-header {
-  height: 100vh;
-}
-
 /* Page Headers and Images */
 
 @include background-image(
@@ -193,18 +188,16 @@ header {
 );
 
 /* Header */
-header h1,
-header h2,
-header p {
-  padding: 15px;
-  border: 2px solid $color;
-  font-size: 3.3125em;
-  margin: 0;
-  text-align: center;
-}
 
-.caption {
-  text-align: center;
+header {
+  height: 100vh;
+  h1 {
+    padding: 15px;
+    border: 2px solid $color;
+    font-size: 3.3125em;
+    margin: 0;
+    text-align: center;
+  }
 }
 
 .wordContainer {
@@ -217,6 +210,8 @@ header p {
 }
 
 /* Quotes */
+
+/* Adding an unnecessary class makes it more specific and overrules other rules */
 
 blockquote.quote {
   border-left: 3px solid color.mix($color, $bgcolor);

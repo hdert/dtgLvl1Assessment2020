@@ -17,8 +17,15 @@ h4,
 h5,
 h6 {
   font-family: "Questrial", sans-serif;
+}
+
+/* For <h[1-7]> tags that need to be centered */
+
+.center {
   text-align: center;
 }
+
+/* Body and html don't scroll */
 
 body,
 html {
@@ -26,15 +33,13 @@ html {
   padding: 0;
   position: fixed;
   overflow: hidden;
+  font-size: 100%;
 }
+
+/* For making in page navigation smooth */
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  font-size: 100%;
-  overflow: hidden;
 }
 
 body > #wrapper {
@@ -57,6 +62,15 @@ hr {
   margin: 0;
 }
 
+/* Breakup long urls on safari */
+
 .reference {
   word-wrap: break-word;
+}
+
+/* Make everything inside the 'document' */
+
+ul {
+  list-style-position: inside;
+  margin: 0;
 }

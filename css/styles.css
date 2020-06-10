@@ -16,24 +16,26 @@ h4,
 h5,
 h6 {
   font-family: "Questrial", sans-serif;
+}
+
+/* For <h[1-7]> tags that need to be centered */
+.center {
   text-align: center;
 }
 
+/* Body and html don't scroll */
 body,
 html {
   margin: 0;
   padding: 0;
   position: fixed;
   overflow: hidden;
+  font-size: 100%;
 }
 
+/* For making in page navigation smooth */
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  font-size: 100%;
-  overflow: hidden;
 }
 
 body > #wrapper {
@@ -56,8 +58,15 @@ hr {
   margin: 0;
 }
 
+/* Breakup long urls on safari */
 .reference {
   word-wrap: break-word;
+}
+
+/* Make everything inside the 'document' */
+ul {
+  list-style-position: inside;
+  margin: 0;
 }
 
 /* Animations */
@@ -417,11 +426,6 @@ hr {
   color: #242424;
 }
 
-/* Big Headers */
-header {
-  height: 100vh;
-}
-
 /* Page Headers and Images */
 .noJs #title {
   background: transparent url(../img/200px-Tux.svg-opaque.png) center space;
@@ -472,17 +476,14 @@ header {
 }
 
 /* Header */
-header h1,
-header h2,
-header p {
+header {
+  height: 100vh;
+}
+header h1 {
   padding: 15px;
   border: 2px solid #242424;
   font-size: 3.3125em;
   margin: 0;
-  text-align: center;
-}
-
-.caption {
   text-align: center;
 }
 
@@ -498,6 +499,7 @@ header p {
 }
 
 /* Quotes */
+/* Adding an unnecessary class makes it more specific and overrules other rules */
 blockquote.quote {
   border-left: 3px solid #8b8b8b;
   margin: 1em 0;
