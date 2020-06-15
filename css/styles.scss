@@ -1,9 +1,9 @@
 @charset "UTF-8";
-// styles.scss © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
-// code snippets taken from: https://www.w3schools.com/
-// and: https://github.com/jhay0112/jhay0112.github.io/
-// go visit: https://jordanhay.tk/
-// Prefixed by https://autoprefixer.github.io (PostCSS: v7.0.29, autoprefixer: v9.7.6)
+/* styles.scss © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
+code snippets taken from: https://www.w3schools.com/
+and: https://github.com/jhay0112/jhay0112.github.io/
+go visit: https://jordanhay.tk/
+Prefixed by https://autoprefixer.github.io (PostCSS: v7.0.29, autoprefixer: v9.7.6) */
 /* SPDX-License-Identifier: BSD-3-Clause */
 @use 'modules/variables' as *;
 @use 'modules/mixins' as *;
@@ -43,6 +43,9 @@
     /* This fixes a problem where the spinner is offset by half the width of the logo. */
   }
 }
+
+/* Makes the loading screen the size of the viewport
+ and centers images horizontally and animates the loading spinner */
 
 /* Menu */
 #menu {
@@ -88,6 +91,9 @@
   }
 }
 
+/* Sets the size of the menu overlay, positions the <a> tags,
+ and positions the overlay close button, as well as styling all overlay items */
+
 /* Navbar */
 #navbar {
   position: fixed;
@@ -125,6 +131,8 @@
   }
 }
 
+/* Sets the location and size of the navbar and it's children */
+
 /* Progress Bar */
 #progressContainer {
   width: 100vw;
@@ -137,6 +145,8 @@
     background-color: $highlight;
   }
 }
+
+/* Sets the size and location of the progress bar under the navbar */
 
 /* Back to Top Button */
 #backToTopButton {
@@ -165,6 +175,8 @@
   }
 }
 
+/* Sets the size and location of the back to top button */
+
 /* Page Headers and Images */
 
 @include background-image(
@@ -187,10 +199,17 @@
   center/cover no-repeat
 );
 
+/* Sets the sources for the background images as well as styling information */
+
 /* Header */
 
 header {
-  height: 100vh;
+  margin-top: 57px;
+  height: calc(100vh - 57px);
+  &#unix {
+    margin-top: unset;
+    height: 100vh;
+  }
   h1 {
     padding: 15px;
     border: 2px solid $color;
@@ -200,6 +219,8 @@ header {
   }
 }
 
+/* Sets the positioning of the header and the styling of the header text */
+
 .wordContainer {
   display: inline-block;
   position: relative;
@@ -208,6 +229,8 @@ header {
   @include transformTranslate(-50%, -50%);
   background-color: transparent;
 }
+
+/* Sets the positioning of the header text */
 
 /* Quotes */
 
@@ -221,6 +244,9 @@ blockquote.quote {
     padding-left: 1.6em;
   }
 }
+
+/* Sets the indent of the quote and the extra indent of the indent
+class for indents in quotes, also sets the border-left */
 
 /* Figure and Images */
 
@@ -240,6 +266,9 @@ figure {
     max-width: 100%;
   }
 }
+
+/* Sets styling and positioning for the imagine, the figure,
+ and the image caption and it's text */
 
 /* Page Switcher */
 
@@ -262,15 +291,20 @@ figure {
   }
 }
 
+/* Sets the positioning and styling for the page switcher */
+
 /* Footer */
 footer {
   text-align: center;
 }
 
+/* Positioning for the footer text */
+
 /* 404 */
 div.no {
   text-align: center;
   padding-bottom: 30px;
+  margin-top: 57px;
   a.no {
     font: 33.33vw "Questrial", sans-serif;
     @include transition(0.3s);
@@ -280,3 +314,6 @@ div.no {
     }
   }
 }
+
+/* Sets the styling and positioning for the 404
+page button that takes you back to the index.html page */

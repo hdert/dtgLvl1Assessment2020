@@ -9,6 +9,7 @@
   font-weight: normal;
   /* Makes header text look the same between gecko and blink */
 }
+/* Sets default styling */
 
 h1,
 h2,
@@ -18,8 +19,9 @@ h5,
 h6 {
   font-family: "Questrial", sans-serif;
 }
+/* Set default font for h[1-6] tags */
 
-/* For <h[1-7]> tags that need to be centered */
+/* For <h[1-6]> tags that need to be centered */
 
 .center {
   text-align: center;
@@ -53,14 +55,21 @@ body > #wrapper {
   /* Enable momentum and smooth scrolling for IOS users */
 }
 
+/* Setup scrolling on the scroll wrapper */
+
 /* Main */
 footer.col-12 {
   padding-bottom: 30vh;
 }
 
+/* Let users scroll past the content to center the content vertically so that
+ they don't have to strain their eyes or move thier necks */
+
 hr {
   margin: 0;
 }
+
+/* Make the hr tag look cleaner */
 
 /* Breakup long urls on safari */
 
@@ -68,7 +77,7 @@ hr {
   word-wrap: break-word;
 }
 
-/* Make everything inside the 'document' */
+/* Make everything inside the 'document' including list bullet points */
 
 ul {
   list-style-position: inside;

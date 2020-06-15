@@ -48,6 +48,9 @@
   <body onload="exitLoadingScreen()">
     <!-- Overlays in the order: Loading screen, Mobile navigation overlay,
       top navigation bar, and back to top buton -->
+
+    <!-- The loading screen overlay that has a loading spinner
+      and the tux on it centered -->
     <div id="loadingScreen">
       <picture>
         <source srcset="img/200px-Tux.svg.webp" type="image/webp" />
@@ -66,6 +69,8 @@
       </picture>
     </div>
 
+    <!-- The div for the mobile overlay menu that slides out from the
+      left side once the menu overlay button has been pressed -->
     <div id="menu" onclick="closeMenu()">
       <a href="#" id="menuClose" onclick="event.preventDefault();closeMenu();"
         >&times;</a
@@ -80,7 +85,10 @@
       </div>
     </div>
 
+    <!-- Navbar as an overlay on top of the screen -->
+
     <div id="navbar">
+      <!-- Centers the navbar content on desktop -->
       <div class="col-2 desktopOnly"></div>
 
       <div class="col-8" id="nav">
@@ -103,12 +111,13 @@
         ></button>
       </div>
 
-      <div class="col-2 desktopOnly"></div>
-
       <div class="col-12" id="progressContainer">
         <div id="progressBar"></div>
       </div>
     </div>
+
+    <!-- Button on bottom right of page, when clicked
+      takes the user to the top of the page -->
 
     <button
       onclick="goToTop();"
@@ -153,11 +162,13 @@
 
         <hr />
 
+        <!-- Centers the content on desktop -->
         <div class="col-2 desktopOnly"></div>
 
         <!-- Start of main centered content -->
 
         <div class="col-8 main">
+          <!-- Quote -->
           <blockquote class="col-12 quote">
             <p>
               From
@@ -193,6 +204,7 @@
             newsgroup ‘comp.os.minix’.
           </p>
 
+          <!-- Quote -->
           <blockquote class="col-8 quote">
             <p>"Hello everybody out there using minix -</p>
             <p>
@@ -220,17 +232,24 @@
             <p class="indent">— Linus Torvalds"</p>
           </blockquote>
 
+          <!-- Image and caption -->
+
           <figure class="col-4 picture">
+            <!-- Link to image -->
             <a href="img/Linus_Torvalds.jpeg" target="_blank">
               <picture>
+                <!-- alternative image sources -->
                 <source srcset="img/Linus_Torvalds.webp" type="image/webp" />
                 <source srcset="img/Linus_Torvalds.png" type="image/png" />
+                <!-- fallback image -->
                 <img
                   src="img/Linus_Torvalds.png"
                   alt="Image of Linus Torvalds, creator of the Linux kernel"
                 />
               </picture>
             </a>
+
+            <!-- caption -->
 
             <figcaption>
               <p>
@@ -294,12 +313,16 @@
             behind the rest of GNU.
           </p>
 
+          <!-- Image and caption -->
+
           <figure class="col-4 picture">
+            <!-- Link to image -->
             <a
               href="img/Richard_Stallman_-_Fête_de_l'Humanité_2014_-_010.jpg"
               target="_blank"
             >
               <picture>
+                <!-- alternative image sources -->
                 <source
                   srcset="
                     img/500px-Richard_Stallman_-_Fête_de_l'Humanité_2014_-_010.webp
@@ -312,12 +335,15 @@
                   "
                   type="image/png"
                 />
+                <!-- fallback image -->
                 <img
                   src="img/500px-Richard_Stallman_-_Fête_de_l'Humanité_2014_-_010.png"
                   alt="Image of Richard Stallman, founder of the GNU project"
                 />
               </picture>
             </a>
+
+            <!-- caption -->
 
             <figcaption>
               <p>
@@ -376,14 +402,21 @@
 
           <!-- References -->
 
+          <!-- Image and caption -->
+
           <figure class="col-12 picture">
+            <!-- Link to image -->
             <a href="img/869px-Tux.svg.png" target="_blank">
               <picture>
+                <!-- alternative image sources -->
                 <source srcset="img/200px-Tux.svg.webp" type="image/webp" />
                 <source srcset="img/200px-Tux.svg.png" type="image/png" />
+                <!-- fallback image -->
                 <img src="img/200px-Tux.svg.png" alt="Tux, Linux's Mascot" />
               </picture>
             </a>
+
+            <!-- caption -->
 
             <figcaption>
               <p>
@@ -496,6 +529,8 @@
         </div>
 
         <div class="col-12"><hr /></div>
+
+        <!-- Page switcher -->
 
         <div class="col-12">
           <div id="switcher">

@@ -9,6 +9,8 @@
   }
 }
 
+/* Spin an element clockwise */
+
 @keyframes spin {
   from {
     @include transform(rotate(0deg));
@@ -27,6 +29,8 @@
     opacity: 1;
   }
 }
+
+/* Fade in an element */
 
 @keyframes fadeIn {
   from {
@@ -48,6 +52,8 @@
     display: none;
   }
 }
+
+/* Fade out an element */
 
 @keyframes fadeOut {
   from {
@@ -74,6 +80,8 @@
     opacity: 0;
   }
 }
+
+/* Slide an element to the bottom of the screen whilst making it transparent */
 
 @keyframes slideOutBottom {
   from {

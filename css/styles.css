@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Questrial&family=Ubuntu:wght@300&display=swap");
 * {
   color: #242424;
@@ -9,6 +10,7 @@
   /* Makes header text look the same between gecko and blink */
 }
 
+/* Sets default styling */
 h1,
 h2,
 h3,
@@ -18,7 +20,8 @@ h6 {
   font-family: "Questrial", sans-serif;
 }
 
-/* For <h[1-7]> tags that need to be centered */
+/* Set default font for h[1-6] tags */
+/* For <h[1-6]> tags that need to be centered */
 .center {
   text-align: center;
 }
@@ -49,21 +52,25 @@ body > #wrapper {
   /* Enable momentum and smooth scrolling for IOS users */
 }
 
+/* Setup scrolling on the scroll wrapper */
 /* Main */
 footer.col-12 {
   padding-bottom: 30vh;
 }
 
+/* Let users scroll past the content to center the content vertically so that
+ they don't have to strain their eyes or move thier necks */
 hr {
   margin: 0;
 }
 
+/* Make the hr tag look cleaner */
 /* Breakup long urls on safari */
 .reference {
   word-wrap: break-word;
 }
 
-/* Make everything inside the 'document' */
+/* Make everything inside the 'document' including list bullet points */
 ul {
   list-style-position: inside;
   margin: 0;
@@ -80,6 +87,7 @@ ul {
     transform: rotate(360deg);
   }
 }
+/* Spin an element clockwise */
 @keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -99,6 +107,7 @@ ul {
     opacity: 1;
   }
 }
+/* Fade in an element */
 @keyframes fadeIn {
   from {
     display: none;
@@ -118,6 +127,7 @@ ul {
     display: none;
   }
 }
+/* Fade out an element */
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -142,6 +152,7 @@ ul {
     opacity: 0;
   }
 }
+/* Slide an element to the bottom of the screen whilst making it transparent */
 @keyframes slideOutBottom {
   from {
     position: fixed;
@@ -168,32 +179,34 @@ ul {
   display: inline-block;
 }
 
+/* Make mobile only elements appear */
 .tabletAbove {
   display: none;
 }
 
+/* disappear tablet only elements */
 .desktopOnly {
   display: none;
 }
 
+/* disappear desktop only elements */
 .picture {
   width: unset;
 }
 
-#menuOpen {
-  display: block;
-}
-
+/* let pictures be reactive */
 /* Tablet */
 @media only screen and (min-width: 500px) {
   .tabletAbove {
     display: inline-block;
   }
 
-  #menuOpen,
-#menuOpen i {
+  /* Make tablet elements appear */
+  .mobileOnly {
     display: none;
   }
+
+  /* disappear mobile only elements */
 }
 /* Desktop */
 @media only screen and (min-width: 768px) {
@@ -245,14 +258,18 @@ ul {
     width: 100%;
   }
 
-  .mobileOnly {
-    display: none;
-  }
-
+  /* Set column width for desktop */
   .desktopOnly {
     display: inline-block;
   }
+
+  /* Make desktop only elements appear */
 }
+/* styles.scss © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
+code snippets taken from: https://www.w3schools.com/
+and: https://github.com/jhay0112/jhay0112.github.io/
+go visit: https://jordanhay.tk/
+Prefixed by https://autoprefixer.github.io (PostCSS: v7.0.29, autoprefixer: v9.7.6) */
 /* SPDX-License-Identifier: BSD-3-Clause */
 /* Loading Screen */
 #loadingScreen {
@@ -287,6 +304,8 @@ ul {
   /* This fixes a problem where the spinner is offset by half the width of the logo. */
 }
 
+/* Makes the loading screen the size of the viewport
+ and centers images horizontally and animates the loading spinner */
 /* Menu */
 #menu {
   height: 100vh;
@@ -334,6 +353,8 @@ ul {
   background-color: transparent;
 }
 
+/* Sets the size of the menu overlay, positions the <a> tags,
+ and positions the overlay close button, as well as styling all overlay items */
 /* Navbar */
 #navbar {
   position: fixed;
@@ -383,6 +404,7 @@ ul {
   max-height: 100%;
 }
 
+/* Sets the location and size of the navbar and it's children */
 /* Progress Bar */
 #progressContainer {
   width: 100vw;
@@ -396,6 +418,7 @@ ul {
   background-color: #f6e44a;
 }
 
+/* Sets the size and location of the progress bar under the navbar */
 /* Back to Top Button */
 #backToTopButton {
   background-color: #242424;
@@ -426,7 +449,9 @@ ul {
   color: #242424;
 }
 
+/* Sets the size and location of the back to top button */
 /* Page Headers and Images */
+/* Set different image sources for the header #title */
 .noJs #title {
   background: transparent url(../img/200px-Tux.svg-opaque.png) center space;
 }
@@ -439,6 +464,7 @@ ul {
   background: transparent url(../img/200px-Tux.svg-opaque.webp) center space;
 }
 
+/* Set different image sources for the header #unix */
 .noJs #unix {
   background: transparent url(../img/PDP7.png) center/cover no-repeat;
 }
@@ -451,6 +477,7 @@ ul {
   background: transparent url(../img/PDP7.webp) center/cover no-repeat;
 }
 
+/* Set different image sources for the header #gnuAndLinux */
 .noJs #gnuAndLinux {
   background: transparent url(../img/X-Window-System-opaque.png) center/cover no-repeat;
 }
@@ -463,6 +490,7 @@ ul {
   background: transparent url(../img/X-Window-System-opaque.webp) center/cover no-repeat;
 }
 
+/* Set different image sources for the header #shinyShinyDistros */
 .noJs #shinyShinyDistros {
   background: transparent url(../img/sele_linuxmint_center-opaque.png) center/cover no-repeat;
 }
@@ -475,8 +503,14 @@ ul {
   background: transparent url(../img/sele_linuxmint_center-opaque.webp) center/cover no-repeat;
 }
 
+/* Sets the sources for the background images as well as styling information */
 /* Header */
 header {
+  margin-top: 57px;
+  height: calc(100vh - 57px);
+}
+header#unix {
+  margin-top: unset;
   height: 100vh;
 }
 header h1 {
@@ -487,6 +521,7 @@ header h1 {
   text-align: center;
 }
 
+/* Sets the positioning of the header and the styling of the header text */
 .wordContainer {
   display: inline-block;
   position: relative;
@@ -498,6 +533,7 @@ header h1 {
   background-color: transparent;
 }
 
+/* Sets the positioning of the header text */
 /* Quotes */
 /* Adding an unnecessary class makes it more specific and overrules other rules */
 blockquote.quote {
@@ -509,6 +545,8 @@ blockquote.quote .indent {
   padding-left: 1.6em;
 }
 
+/* Sets the indent of the quote and the extra indent of the indent
+class for indents in quotes, also sets the border-left */
 /* Figure and Images */
 figure {
   margin: 0;
@@ -529,6 +567,8 @@ figure img {
   max-width: 100%;
 }
 
+/* Sets styling and positioning for the imagine, the figure,
+ and the image caption and it's text */
 /* Page Switcher */
 #switcher {
   padding: 0;
@@ -552,15 +592,18 @@ figure img {
   background-color: #f6e44a;
 }
 
+/* Sets the positioning and styling for the page switcher */
 /* Footer */
 footer {
   text-align: center;
 }
 
+/* Positioning for the footer text */
 /* 404 */
 div.no {
   text-align: center;
   padding-bottom: 30px;
+  margin-top: 57px;
 }
 div.no a.no {
   font: 33.33vw "Questrial", sans-serif;
@@ -571,5 +614,8 @@ div.no a.no {
 div.no a.no:hover, div.no a.no:focus {
   background-color: #f6e44a;
 }
+
+/* Sets the styling and positioning for the 404
+page button that takes you back to the index.html page */
 
 /*# sourceMappingURL=styles.css.map */

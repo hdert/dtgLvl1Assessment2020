@@ -33,6 +33,7 @@
   cursor: pointer;
 }
 @mixin background-image($id, $url, $param...) {
+  /* Set different image sources for the header #{$id} */
   .noJs #{$id} {
     background: transparent url(#{$url}.png) $param;
   }

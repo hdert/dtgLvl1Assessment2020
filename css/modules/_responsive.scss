@@ -10,31 +10,36 @@
   display: inline-block;
 }
 
+/* Make mobile only elements appear */
+
 .tabletAbove {
   display: none;
 }
+
+/* disappear tablet only elements */
 
 .desktopOnly {
   display: none;
 }
 
+/* disappear desktop only elements */
+
 .picture {
   width: unset;
 }
 
-#menuOpen {
-  display: block;
-}
+/* let pictures be reactive */
 
 /* Tablet */
 @media only screen and (min-width: 500px) {
   .tabletAbove {
     display: inline-block;
   }
-  #menuOpen,
-  #menuOpen i {
+  /* Make tablet elements appear */
+  .mobileOnly {
     display: none;
   }
+  /* disappear mobile only elements */
 }
 
 /* Desktop */
@@ -75,10 +80,9 @@
   .col-12 {
     width: 100%;
   }
-  .mobileOnly {
-    display: none;
-  }
+  /* Set column width for desktop */
   .desktopOnly {
     display: inline-block;
   }
+  /* Make desktop only elements appear */
 }

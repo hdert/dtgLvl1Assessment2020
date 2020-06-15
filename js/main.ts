@@ -9,6 +9,8 @@ go visit: https://jordanhay.tk/
 
 "use strict";
 
+/* Declare frequently used HTML DOM elements so as to not slow down the DOM element finder */
+
 const WRAPPER = document.getElementById("wrapper") as HTMLDivElement;
 const NAVBAR = document.getElementById("navbar") as HTMLDivElement;
 const PROGRESSBAR = document.getElementById("progressBar") as HTMLDivElement;
@@ -28,6 +30,8 @@ async function exitLoadingScreen() {
   await sleep(1450);
   WRAPPER.style.overflowY = "auto";
   /* This makes it so that the scrollbar doesn't show until the loading animation is near complete. */
+  /* A function that exits the loading screen by making each element transparent then making 
+  the background transparent whilst moving it down to allow the user to interact with the page */
 }
 
 /* Menu */
@@ -47,6 +51,7 @@ setting a transition time in the css. */
 
 function goToTop() {
   WRAPPER.scrollTop = 0;
+  /* Takes user to the top of the page */
 }
 
 var navbarHide = (function () {
