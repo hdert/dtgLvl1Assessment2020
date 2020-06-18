@@ -35,6 +35,14 @@
   </head>
 
   <body onload="exitLoadingScreen()">
+    <!-- Javascript -->
+    <!-- Make sure the client supports javascript -->
+    <script>
+      document.documentElement.classList.remove("noJs");
+    </script>
+    <!-- Make sure the client supports WebP -->
+    <script src="js/modernizerWebP.js"></script>
+
     <!-- Overlays in the order: Loading screen, Mobile navigation overlay,
       top navigation bar, and back to top buton -->
 
@@ -221,12 +229,6 @@
     </div>
 
     <!-- Javascript -->
-    <!-- Make sure the client supports javascript -->
-    <script>
-      document.documentElement.classList.remove("noJs");
-    </script>
-    <script src="/js/main.js"></script>
-    <!-- Make sure the client supports WebP -->
-    <script src="/js/modernizerWebP.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
