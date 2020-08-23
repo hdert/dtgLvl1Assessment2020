@@ -4,3 +4,5 @@
 node_modules/
 package.json
 yarn.lock
+rootCA.pem
+yarn-error.log
