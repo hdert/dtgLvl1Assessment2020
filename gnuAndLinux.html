@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" class="noJs">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="A page detailing the history of GNU and Linux">
+    <meta name="keywords" content="The History of Linux, Linux History, Linux">
+    <meta name="author" content="Justin Muirhead">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="JOLcosuOM68l6v7u_2g9_koMr8iJA3G2Ybdgf6ci2HA">
+
+    <title>GNU and Linux - The History of Linux</title>
+
+    <!-- Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/404.0433c01d.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.70bff33a.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.502ffba6.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.e9217f7d.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.03911aa3.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- gnuAndLinux.html © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
+    code snippets taken from: https://www.w3schools.com/
+    and: https://github.com/jhay0112/jhay0112.github.io/
+    go visit: https://jordanhay.tk/
+    -->
+
+    <!-- SPDX-License-Identifier: BSD-3-Clause -->
+  </head>
+
+  <body onload="exitLoadingScreen()">
+    <!-- Javascript -->
+    <!-- Make sure the client supports javascript -->
+    <script>document.documentElement.classList.remove("noJs");
+
+</script>
+    <!-- Make sure the client supports WebP -->
+    <script src="/404.0640844e.js"></script>
+
+    <!-- Overlays in the order: Loading screen, Mobile navigation overlay,
+      top navigation bar, and back to top buton -->
+
+    <!-- The loading screen overlay that has a loading spinner
+      and the tux on it centered -->
+    <div id="loadingScreen">
+      <picture>
+        <source srcset="/200px-Tux.svg.c662a86f.webp" type="image/webp">
+        <source srcset="/200px-Tux.svg.a7c8cd72.png" type="image/png">
+        <img id="logo" src="/200px-Tux.svg.a7c8cd72.png" alt="Loading page logo">
+      </picture>
+
+      <picture>
+        <source srcset="/50px-Spinner.c1485907.webp" type="image/webp">
+        <source srcset="/50px-Spinner.e0f18827.png" type="image/png">
+        <img id="spinner" src="/50px-Spinner.e0f18827.png" alt="Loading page spinner">
+      </picture>
+    </div>
+
+    <!-- The div for the mobile overlay menu that slides out from the
+      left side once the menu overlay button has been pressed -->
+    <div id="menu" onclick="closeMenu()">
+      <a href="#" id="menuClose" onclick="event.preventDefault();closeMenu();">&times;</a>
+
+      <div id="menuContent">
+        <a href="/index.html" onclick="closeMenu();">Unix</a>
+        <a href="/gnuAndLinux.html" onclick="closeMenu();">GNU and Linux</a>
+        <a href="/shinyShinyDistros.html" onclick="closeMenu();">Shiny, Shiny Distros</a>
+      </div>
+    </div>
+
+    <!-- Navbar as an overlay on top of the screen -->
+
+    <div id="navbar">
+      <!-- Centers the navbar content on desktop -->
+      <div class="col-2 desktopOnly"></div>
+
+      <div class="col-8" id="nav">
+        <button onclick="goToTop();" class="tabletAbove" id="navbarTux" title="Go to the top of the page"></button>
+        <a href="/index.html">Unix</a>
+        <a href="/gnuAndLinux.html" class="tabletAbove">GNU and Linux</a>
+        <a href="/shinyShinyDistros.html" class="tabletAbove">Shiny, Shiny Distros</a>
+        <button onclick="openMenu();" id="menuOpen" class="mobileOnly fa fa-bars" title="Open mobile selection menu"></button>
+      </div>
+
+      <div class="col-12" id="progressContainer">
+        <div id="progressBar"></div>
+      </div>
+    </div>
+
+    <!-- Button on bottom right of page, when clicked
+      takes the user to the top of the page -->
+
+    <button onclick="goToTop();" class="fa fa-angle-double-up" id="backToTopButton" title="Go to the top of the page"></button>
+
+    <!-- Scroll wrapper for rubber banding on safari and centering divs -->
+
+    <div id="wrapper">
+      <main>
+        <header id="gnuAndLinux">
+          <div class="wordContainer">
+            <h1 class="center">GNU and Linux</h1>
+          </div>
+        </header>
+
+        <!-- Caption for the header -->
+
+        <p class="center">
+          <small>
+            <a href="/img/X-Window-System.png" target="_blank">Screenshot</a>
+            of an approximation of a Unix graphical desktop and applications
+            from the late 1980's to the early 1990's<br>
+            Image retrieved from
+            <a href="https://commons.wikimedia.org/wiki/File:X-Window-System.png" target="_blank" rel="noopener noreferrer">Wikimedia</a>
+            where it was uploaded under the
+            <a href="/X-Window-System.png-license.txt" target="_blank" rel="noopener noreferrer">X11 License</a>
+          </small>
+        </p>
+
+        <hr>
+
+        <!-- Centers the content on desktop -->
+        <div class="col-2 desktopOnly"></div>
+
+        <!-- Start of main centered content -->
+
+        <div class="col-8 main">
+          <!-- Quote -->
+          <blockquote class="col-12 quote">
+            <p>
+              From
+              <a href="https://en.wikipedia.org/wiki/Linux" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+              “Linux is a family of open source Unix-like operating systems
+              based on the Linux kernel, an operating system kernel first
+              released on September 17, 1991, by Linus Torvalds. Linux is
+              typically packaged in a Linux distribution.”
+            </p>
+          </blockquote>
+
+          <p class="col-12">
+            In 1991 Linus Torvalds, a computer science student at the University
+            of Helsinki purchased a computer for his personal use that came with
+            a copy of MS-DOS the precursor to the Windows operating system made
+            by Microsoft. Torvalds wasn’t satisfied with MS-DOS and wanted to
+            use a Unix operating system like he was accustomed to at the
+            university. But when Torvalds tried to obtain a copy and license of
+            Unix he found that the cheapest version of Unix cost $5000USD. And
+            so he started a project that eventually turned into a full kernel,
+            the Linux kernel.
+          </p>
+
+          <p class="col-12">
+            Later the same year on the 25th of August he announced the system on
+            Usenet a precursor of sorts to the bulletin board system and
+            internet forums or message boards, posting his message to the
+            newsgroup ‘comp.os.minix’.
+          </p>
+
+          <!-- Quote -->
+          <blockquote class="col-8 quote">
+            <p>"Hello everybody out there using minix -</p>
+            <p>
+              I'm doing a (free) operating system (just a hobby, won't be big
+              and professional like gnu) for 386(486) AT clones. This has been
+              brewing since april, and is starting to get ready. I'd like any
+              feedback on things people like/dislike in minix, as my OS
+              resembles it somewhat (same physical layout of the file-system
+              (due to practical reasons) among other things).
+            </p>
+            <p>
+              I've currently ported bash(1.08) and gcc(1.40), and things seem to
+              work. This implies that I'll get something practical within a few
+              months, and I'd like to know what features most people would want.
+              Any suggestions are welcome, but I won't promise I'll implement
+              them :-)
+            </p>
+            <p>Linus (torvalds@kruuna.helsinki.fi)</p>
+            <p>
+              PS. Yes - it's free of any minix code, and it has a multi-threaded
+              fs. It is NOT portable (uses 386 task switching etc), and it
+              probably never will support anything other than AT-harddisks, as
+              that's all I have :-(.
+            </p>
+            <p class="indent">— Linus Torvalds"</p>
+          </blockquote>
+
+          <!-- Image and caption -->
+
+          <figure class="col-4 picture">
+            <!-- Link to image -->
+            <a href="/img/Linus_Torvalds.jpeg" target="_blank">
+              <picture>
+                <!-- alternative image sources -->
+                <source srcset="/Linus_Torvalds.26edf39a.webp" type="image/webp">
+                <source srcset="/Linus_Torvalds.1ad3319c.png" type="image/png">
+                <!-- fallback image -->
+                <img src="/Linus_Torvalds.1ad3319c.png" alt="Image of Linus Torvalds, creator of the Linux kernel">
+              </picture>
+            </a>
+
+            <!-- caption -->
+
+            <figcaption>
+              <p>
+                <small>
+                  Image of Linus Torvalds, creator of the Linux kernel<br>
+                  Image retrieved from
+                  <a href="https://en.wikipedia.org/wiki/File:Linus_Torvalds.jpeg" target="_blank" rel="noopener noreferrer">Wikimedia</a>
+                  where it was uploaded under the
+                  <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-Share Alike 3.0 Unported</a>
+                </small>
+              </p>
+            </figcaption>
+          </figure>
+
+          <p class="col-12">
+            But if Torvalds couldn’t attain a copy of Unix and he wasn’t running
+            MS-DOS on his computer, then what was he running and what OS did he
+            use to write Linux and why didn’t he just use this OS for his own
+            personal use? The answer to this is MINIX, an OS made by Andrew
+            Tanenbaum in 1987 for educational use. This meant that the source
+            code was available for seeing how certain things work in the OS, say
+            for example a class on OS fundamentals. But this also meant that you
+            weren’t allowed to change and redistribute the OS. In addition the
+            OS didn’t quite take advantage of the features of Torvald’s
+            computer. But the biggest problem with MINIX was that in being
+            educational Tanenbaum didn’t actively develop the OS and didn’t want
+            to do anything further with the OS.
+          </p>
+
+          <p class="col-12">
+            But that still doesn’t fully answer the question, why didn’t he just
+            use MINIX for his own personal use? To answer this we have go back
+            to 1983, the start of the development of GNU’s not Unix! (GNU). The
+            GNU Project was started by Richard Stallman and he announced the
+            project in 1983 on September the 27th to the newsgroups
+            net.unix-wizards and net.usoft. Development on the project began on
+            January the 5th, 1984 after Stallman had quit his job to allow him
+            to be free of any ownership disputes from his employer.
+          </p>
+
+          <p class="col-8">
+            Even though the fact that GNU’s not Unix is highlighted by the
+            recursive acronym of the project one of it’s goals is to be a
+            Unix-like system because of its popularity and because Unix was
+            modular so each piece could be worked on individually. This along
+            with GNU being partly written in C meant that certain utilities like
+            the TeX typesetting system and the X Window System could be ported
+            to GNU and wouldn’t have to be written from scratch. As time
+            progressed GNU’s development was getting more and more complete,
+            apart from the kernel called GNU Hurd whose development had lagged
+            behind the rest of GNU.
+          </p>
+
+          <!-- Image and caption -->
+
+          <figure class="col-4 picture">
+            <!-- Link to image -->
+            <a href="/img/Richard_Stallman_-_Fête_de_l'Humanité_2014_-_010.jpg" target="_blank">
+              <picture>
+                <!-- alternative image sources -->
+                <source srcset="/500px-Richard_Stallman_-_Fête_de_l'Humanité_2014_-_010.2ea88927.webp" type="image/webp">
+                <source srcset="/500px-Richard_Stallman_-_Fête_de_l'Humanité_2014_-_010.d057068e.png" type="image/png">
+                <!-- fallback image -->
+                <img src="/500px-Richard_Stallman_-_Fête_de_l'Humanité_2014_-_010.d057068e.png" alt="Image of Richard Stallman, founder of the GNU project">
+              </picture>
+            </a>
+
+            <!-- caption -->
+
+            <figcaption>
+              <p>
+                <small>
+                  Image of Richard Stallman, founder of the GNU project<br>
+                  Image retrieved from
+                  <a href="https://en.wikipedia.org/wiki/File:Richard_Stallman_-_F%C3%AAte_de_l%27Humanit%C3%A9_2014_-_010.jpg" target="_blank" rel="noopener noreferrer">Wikimedia</a>
+                  where it was uploaded under the
+                  <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-Share Alike 3.0 Unported</a>
+                </small>
+              </p>
+            </figcaption>
+          </figure>
+
+          <p class="col-12">
+            This is where Linux stepped in, originally Linux was distributed
+            with a restriction on commercial activity but that changed in the
+            middle of December 1992 when he published version 0.99 under the GNU
+            General Public License, a license that Stallman had made to fit the
+            GNU Project. From here Torvalds and GNU developers worked to make
+            Linux compatible with the other GNU software and GNU and Linux
+            started to get released together in one software package as an
+            entire OS.
+          </p>
+
+          <p class="col-12">
+            This is where Linux stepped in, originally Linux was distributed
+            with a restriction on commercial activity but that changed in the
+            middle of December 1992 when he published version 0.99 under the GNU
+            General Public License, a license that Stallman had made to fit the
+            GNU Project. From here Torvalds and GNU developers worked to make
+            Linux compatible with the other GNU software and GNU and Linux
+            started to get released together in one software package as an
+            entire OS.
+          </p>
+
+          <p class="col-12">
+            From there as Linux got more popular companies, users, and
+            developers started to contribute to the development of the software
+            until we reach today where Linux is the most popular web server
+            operating system and Android, a Linux based smartphone OS is the
+            most popular smartphone OS.
+          </p>
+
+          <h3 class="col-12 center">References</h3>
+
+          <!-- References -->
+
+          <!-- Image and caption -->
+
+          <figure class="col-12 picture">
+            <!-- Link to image -->
+            <a href="/img/869px-Tux.svg.png" target="_blank">
+              <picture>
+                <!-- alternative image sources -->
+                <source srcset="/200px-Tux.svg.c662a86f.webp" type="image/webp">
+                <source srcset="/200px-Tux.svg.a7c8cd72.png" type="image/png">
+                <!-- fallback image -->
+                <img src="/200px-Tux.svg.a7c8cd72.png" alt="Tux, Linux's Mascot">
+              </picture>
+            </a>
+
+            <!-- caption -->
+
+            <figcaption>
+              <p>
+                <small>
+                  Tux, Linux's Mascot<br>
+                  Image was made by
+                  <a href="mailo:lewing@isc.tamu.edu" target="_blank" rel="noopener noreferrer">lewing@isc.tamu.edu Larry Ewing</a>
+                  and
+                  <a href="https://en.wikipedia.org/wiki/GIMP" target="_blank" rel="noopener noreferrer">The GIMP</a>
+                  <br>
+                  Image retrieved from
+                  <a href="https://commons.wikimedia.org/wiki/File:Tux.svg" target="_blank" rel="noopener noreferrer">Wikimedia</a>
+                  where the updated version was uploaded under this
+                  <a href="http://www.home.unix-ag.org/simon/penguin/README" target="_blank" rel="noopener noreferrer">README</a>
+                  by Simon Budig
+                  <br>
+                  And a futher updated version which is the one used in this
+                  website was uploaded under the
+                  <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener noreferrer">Creative Commons CC0 1.0 Universal Public Domain
+                    Dedication</a>
+                  by Garret LeSage.
+                  <br>
+                  This work includes material that may be protected as a
+                  trademark in some jurisdictions.
+                </small>
+              </p>
+            </figcaption>
+          </figure>
+
+          <a class="col-12 reference" href="https://en.wikipedia.org/wiki/GNU" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/GNU</a>
+
+          <a class="col-12 reference" href="https://en.wikipedia.org/wiki/History_of_Linux" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/History_of_Linux</a>
+
+          <a class="col-12 reference" href="https://en.wikipedia.org/wiki/Linux" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Linux</a>
+
+          <a class="col-12 reference" href="https://en.wikipedia.org/wiki/Usenet" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Usenet</a>
+
+          <a class="col-12 reference" href="https://en.wikipedia.org/wiki/Usage_share_of_operating_systems" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Usage_share_of_operating_systems</a>
+
+          <a class="col-12 reference" href="https://www.linuxtrainingacademy.com/what-is-linux/" target="_blank" rel="noopener noreferrer">https://www.linuxtrainingacademy.com/what-is-linux/</a>
+
+          <a class="col-12 reference" href="https://www.quora.com/Would-Linus-Torvalds-write-Linux-if-the-Minix-didnt-exist" target="_blank" rel="noopener noreferrer">https://www.quora.com/Would-Linus-Torvalds-write-Linux-if-the-Minix-didnt-exist</a>
+        </div>
+
+        <div class="col-12"><hr></div>
+
+        <!-- Page switcher -->
+
+        <div class="col-12">
+          <div id="switcher">
+            <a href="/index.html">&#5176; Previous</a>
+            <a href="/shinyShinyDistros.html">Next &#5171;</a>
+          </div>
+        </div>
+
+        <footer class="col-12">
+          <p>
+            <small>Page design and layout by
+              <a href="https://www.hdert.tk/" target="_blank" rel="noopener noreferrer">Justin Muirhead</a>. &copy; Copyright 2020 Justin Muirhead under the BSD 3-Clause
+              License</small>
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <!-- Javascript -->
+    <script src="/shinyShinyDistros.c3942fc7.js"></script>
+  </body>
+</html>

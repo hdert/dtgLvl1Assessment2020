@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" class="noJs">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="A page detailing the history of Linux">
+    <meta name="keywords" content="The History of Linux, Linux History, Linux">
+    <meta name="author" content="Justin Muirhead">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="JOLcosuOM68l6v7u_2g9_koMr8iJA3G2Ybdgf6ci2HA">
+
+    <title>Unix - The History of Linux</title>
+
+    <!-- Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/404.0433c01d.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.70bff33a.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.502ffba6.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.e9217f7d.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.03911aa3.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- index.html © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
+    code snippets taken from: https://www.w3schools.com/
+    and: https://github.com/jhay0112/jhay0112.github.io/
+    go visit: https://jordanhay.tk/
+    -->
+
+    <!-- SPDX-License-Identifier: BSD-3-Clause -->
+  </head>
+
+  <body onload="exitLoadingScreen()">
+    <!-- Javascript -->
+    <!-- Make sure the client supports javascript -->
+    <script>document.documentElement.classList.remove("noJs");
+
+</script>
+    <!-- Make sure the client supports WebP -->
+    <script src="/404.0640844e.js"></script>
+
+    <!-- Overlays in the order: Loading screen, Mobile navigation overlay,
+      top navigation bar, and back to top buton -->
+
+    <!-- The loading screen overlay that has a loading spinner
+      and the tux on it centered -->
+    <div id="loadingScreen">
+      <picture>
+        <source srcset="/200px-Tux.svg.c662a86f.webp" type="image/webp">
+        <source srcset="/200px-Tux.svg.a7c8cd72.png" type="image/png">
+        <img id="logo" src="/200px-Tux.svg.a7c8cd72.png" alt="Loading page logo">
+      </picture>
+
+      <picture>
+        <source srcset="/50px-Spinner.c1485907.webp" type="image/webp">
+        <source srcset="/50px-Spinner.e0f18827.png" type="image/png">
+        <img id="spinner" src="/50px-Spinner.e0f18827.png" alt="Loading page spinner">
+      </picture>
+    </div>
+
+    <!-- The div for the mobile overlay menu that slides out from the
+      left side once the menu overlay button has been pressed -->
+    <div id="menu" onclick="closeMenu()">
+      <a href="#" id="menuClose" onclick="event.preventDefault();closeMenu();">&times;</a>
+
+      <div id="menuContent">
+        <a href="/index.html" onclick="closeMenu();">Unix</a>
+        <a href="/gnuAndLinux.html" onclick="closeMenu();">GNU and Linux</a>
+        <a href="/shinyShinyDistros.html" onclick="closeMenu();">Shiny, Shiny Distros</a>
+      </div>
+    </div>
+
+    <!-- Navbar as an overlay on top of the screen -->
+
+    <div id="navbar">
+      <!-- Centers the navbar content on desktop -->
+      <div class="col-2 desktopOnly"></div>
+
+      <div class="col-8" id="nav">
+        <button onclick="goToTop();" class="tabletAbove" id="navbarTux" title="Go to the top of the page"></button>
+        <a href="/index.html">Unix</a>
+        <a href="/gnuAndLinux.html" class="tabletAbove">GNU and Linux</a>
+        <a href="/shinyShinyDistros.html" class="tabletAbove">Shiny, Shiny Distros</a>
+        <button onclick="openMenu();" id="menuOpen" class="mobileOnly fa fa-bars" title="Open mobile selection menu"></button>
+      </div>
+
+      <div class="col-12" id="progressContainer">
+        <div id="progressBar"></div>
+      </div>
+    </div>
+
+    <!-- Button on bottom right of page, when clicked
+      takes the user to the top of the page -->
+
+    <button onclick="goToTop();" class="fa fa-angle-double-up" id="backToTopButton" title="Go to the top of the page"></button>
+
+    <!-- Scroll wrapper for rubber banding on safari and centering divs -->
+
+    <div id="wrapper">
+      <main>
+        <header id="title">
+          <div class="wordContainer">
+            <h1 class="center">The History of Linux</h1>
+          </div>
+        </header>
+
+        <hr>
+
+        <header id="unix">
+          <div class="wordContainer">
+            <h1 class="center">UNIX</h1>
+          </div>
+        </header>
+
+        <!-- Caption for the header -->
+
+        <p class="center">
+          <small>
+            <a href="/img/PDP7.jpeg" target="_blank">Image</a>
+            of the front of a PDP-7<br>
+            Image was taken by
+            <a href="https://en.wikipedia.org/wiki/User:Toresbe" target="_blank" rel="noopener noreferrer">Toresbe</a>
+            and retrieved from
+            <a href="https://commons.wikimedia.org/wiki/File:Pdp7-oslo-2005.jpeg" target="_blank" rel="noopener noreferrer">Wikimedia</a>
+            where it was uploaded under the
+            <a href="https://creativecommons.org/licenses/sa/1.0/" target="_blank" rel="noopener noreferrer">Creative Commons ShareAlike 1.0 License</a>
+          </small>
+        </p>
+
+        <hr>
+
+        <!-- Centers the content on desktop -->
+        <div class="col-2 desktopOnly"></div>
+
+        <!-- Start of main centered content -->
+
+        <div class="col-8 main">
+          <!-- Quote -->
+          <blockquote class="col-12 quote">
+            <p>
+              From
+              <a href="https://en.wikipedia.org/wiki/Unix" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+              “Unix is a family of multitasking, multiuser computer operating
+              systems that derive from the original AT&T Unix, development
+              starting in the 1970s at the Bell Labs research center by Ken
+              Thompson, Dennis Ritchie, and others.”
+            </p>
+          </blockquote>
+
+          <p class="col-8">
+            But what does this all mean, well in the late 1960’s development was
+            underway on Multics (Multiplexed Information and Computing Service)
+            an operating system with many new and novel ideas. One of these
+            ideas was time-sharing, the ability to share computer resources
+            amongst many users at the same time. Bell Labs, MIT, and General
+            Electric were all involved in the project but Bell Labs dissatisfied
+            with the progress of the project started withdrawing from it. This
+            left just a few researchers from Bell Labs working on Multics one of
+            them being Ken Thompson.
+          </p>
+
+          <!-- Image and caption -->
+
+          <figure class="col-4 picture">
+            <!-- Link to image -->
+            <a href="/img/Ken_Thompson_and_Dennis_Ritchie--1973.jpg" target="_blank">
+              <picture>
+                <!-- alternative image sources -->
+                <source srcset="/Ken_Thompson_and_Dennis_Ritchie--1973.6b227a0e.webp" type="image/webp">
+                <source srcset="/Ken_Thompson_and_Dennis_Ritchie--1973.3b27f144.png" type="image/png">
+                <!-- fallback image -->
+                <img src="/Ken_Thompson_and_Dennis_Ritchie--1973.3b27f144.png" alt="Ken Thompson and Dennis Ritchie, respectively standing side by side smiling into the camera">
+              </picture>
+            </a>
+
+            <!-- caption -->
+
+            <figcaption>
+              <p>
+                <small>
+                  Ken Thompson and Dennis Ritchie, respectively standing side by
+                  side smiling into the camera<br>
+                  Image retrieved from
+                  <a href="https://commons.wikimedia.org/wiki/File:Ken_Thompson_and_Dennis_Ritchie--1973.jpg" target="_blank" rel="noopener noreferrer">Wikimedia</a>
+                  where it was uploaded from the public domain
+                </small>
+              </p>
+            </figcaption>
+          </figure>
+
+          <p class="col-12">
+            With Bell Labs withdrawing from Multics he decided to write his own
+            operating system (OS) with some of the ideas from the Multics
+            project. While he still had access to Multics he wrote various
+            things for his OS including a game called Space Travel. But writing
+            Space Travel made him realize that he needed a better computer for
+            his purposes and he found a little-used Digital Equipment
+            Corporation PDP-7 at Bell Labs.
+          </p>
+
+          <p class="col-8">
+            At this point there was a team of researchers working on Unix led by
+            Ken Thompson and Dennis Ritchie and they implemented various
+            features on Unix based on the improvements from Multics but
+            simplified. It was around this time that Thompson created the B
+            programming language and the first version of the name was thought
+            up, Uniplexed Information and Computing Service (Unics). A few
+            different departments of Bell Labs were interested in the OS but
+            they wanted to run it on a larger computer and another department
+            wanted to do text processing on it so the team added text processing
+            features to the OS and received funding to get a PDP-11/20. It was
+            also around then that the OS was officially named Unix. Most
+            programs in Unix were at the time written in a programming language
+            called Assembly, the problem with Assembly was that it was very low
+            level meaning that the code was complex and hard for a human to
+            process, but this problem gets solved later.
+          </p>
+
+          <!-- Image and caption -->
+
+          <figure class="col-4 picture">
+            <!-- Link to image -->
+            <a href="/img/Digital_PDP11-IMG_1498_cropped.jpg" target="_blank">
+              <picture>
+                <!-- alternative image sources -->
+                <source srcset="/Digital_PDP11-IMG_1498_cropped_scaled_500px.438a5a7c.webp" type="image/webp">
+                <source srcset="/Digital_PDP11-IMG_1498_cropped_scaled_500px.bf685175.png" type="image/png">
+                <!-- fallback image -->
+                <img src="/Digital_PDP11-IMG_1498_cropped_scaled_500px.bf685175.png" alt="Image of a green front panel from a PDP-11">
+              </picture>
+            </a>
+
+            <!-- caption -->
+
+            <figcaption>
+              <p>
+                <small>
+                  Image of a green front panel from a PDP-11<br>
+                  Image retrieved from
+                  <a href="https://en.wikipedia.org/wiki/File:Digital_PDP11-IMG_1498_cropped.jpg" target="_blank" rel="noopener noreferrer">Wikimedia</a>
+                  where it was uploaded under the
+                  <a href="https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-Share Alike 2.0 France</a>
+                </small>
+              </p>
+            </figcaption>
+          </figure>
+
+          <p class="col-12">
+            The system was getting more and more complex and the need for some
+            sort of guide or manual to the OS grew, so one was made and dubbed
+            the ‘UNIX Programmer’s Manual’. Each command or program in the
+            system was documented in a ‘man page’ a format that to this day is
+            widely used on Linux to document commands/programs. Each man page
+            offered a terse reference of information about the usage of the
+            program as well as listing known bugs and giving contact details for
+            the maintainer/maker of the command/program so further questions
+            could be asked and the answers could be delivered and added to the
+            man page.
+          </p>
+
+          <p class="col-12">
+            Cut to 1973, Unix is getting very popular at Bell Labs but the
+            aforementioned problem of the whole OS being written in Assembly is
+            still there, it was the widely accepted opinion at the time that due
+            to an OS being so complex it had to be written in a low-level
+            language like Assembly. The aforementioned B programming language
+            isn’t the ideal contender as it is slow and not very powerful, but
+            in the meantime Ritchie had been working on and improving B which
+            resulted in the successor C which was faster and more powerful. The
+            decision was made to port Unix to C.
+          </p>
+
+          <p class="col-12">
+            Up until this point the use and distribution of Unix had been
+            entirely internal to Bell Labs but this was to change. At the 1973
+            Symposium on Operating System Principles Unix was presented formally
+            to the outside world. This led to requests for the system and from
+            then on the fate of the system was sealed.
+          </p>
+
+          <h3 class="col-12 center">Where is it now?</h3>
+
+          <p class="col-7">
+            In the modern day Unix is split into a few different versions, Unix
+            has been mostly taken over in popularity by Linux, more on that
+            later and there are the BSDs: FreeBSD, NetBSD, and OpenBSD. Each of
+            these BSDs have their own strengths and weaknesses but by far the
+            most popular Unix derivative is an operating system you might’ve
+            heard of, MacOS. Apart from MacOS Unix derivative systems have a
+            negligible market share.
+          </p>
+
+          <!-- Image and caption -->
+
+          <figure class="col-5 picture">
+            <!-- Link to image -->
+            <a href="/img/2132px-Unix_history-simple.svg.png" target="_blank">
+              <picture>
+                <!-- alternative image sources -->
+                <source srcset="/2132px-Unix_history-simple-cropped.svg.b709d80b.webp" type="image/webp">
+                <source srcset="/2132px-Unix_history-simple-cropped.svg.3641fbea.png" type="image/png">
+                <!-- fallback image -->
+                <img src="/2132px-Unix_history-simple-cropped.svg.3641fbea.png" alt="Diagram showing the connections between Unix, MacOS, and the BSDs">
+              </picture>
+            </a>
+
+            <!-- caption -->
+
+            <figcaption>
+              <p>
+                <small>
+                  Diagram showing the connections between Unix, MacOS, and the
+                  BSDs<br>
+                  Image retrieved from
+                  <a href="https://en.wikipedia.org/wiki/File:Unix_history-simple.svg" target="_blank" rel="noopener noreferrer">Wikimedia</a>
+                  where it was uploaded under the
+                  <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-Share Alike 3.0 Unported</a>
+                  and cropped to show the relevant information by
+                  <a href="https://www.hdert.tk/" target="_blank" rel="noopener noreferrer">Justin Muirhead</a>
+                </small>
+              </p>
+            </figcaption>
+          </figure>
+
+          <h3 class="col-12 center">References</h3>
+
+          <!-- References -->
+
+          <!-- Image and caption -->
+
+          <figure class="col-12 picture">
+            <!-- Link to image -->
+            <a href="/img/869px-Tux.svg.png" target="_blank">
+              <picture>
+                <!-- alternative image sources -->
+                <source srcset="/200px-Tux.svg.c662a86f.webp" type="image/webp">
+                <source srcset="/200px-Tux.svg.a7c8cd72.png" type="image/png">
+                <!-- fallback image -->
+                <img src="/200px-Tux.svg.a7c8cd72.png" alt="Tux, Linux's Mascot">
+              </picture>
+            </a>
+
+            <!-- caption -->
+
+            <figcaption>
+              <p>
+                <small>
+                  Tux, Linux's Mascot<br>
+                  Image was made by
+                  <a href="mailo:lewing@isc.tamu.edu" target="_blank" rel="noopener noreferrer">lewing@isc.tamu.edu Larry Ewing</a>
+                  and
+                  <a href="https://en.wikipedia.org/wiki/GIMP" target="_blank" rel="noopener noreferrer">The GIMP</a>
+                  <br>
+                  Image retrieved from
+                  <a href="https://commons.wikimedia.org/wiki/File:Tux.svg" target="_blank" rel="noopener noreferrer">Wikimedia</a>
+                  where the updated version was uploaded under this
+                  <a href="http://www.home.unix-ag.org/simon/penguin/README" target="_blank" rel="noopener noreferrer">README</a>
+                  by Simon Budig
+                  <br>
+                  And a futher updated version which is the one used in this
+                  website was uploaded under the
+                  <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener noreferrer">Creative Commons CC0 1.0 Universal Public Domain
+                    Dedication</a>
+                  by Garret LeSage.
+                  <br>
+                  This work includes material that may be protected as a
+                  trademark in some jurisdictions.
+                </small>
+              </p>
+            </figcaption>
+          </figure>
+
+          <a class="col-12 reference" href="https://en.wikipedia.org/wiki/History_of_Unix" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/History_of_Unix</a>
+
+          <a class="col-12 reference" href="https://en.wikipedia.org/wiki/Unix" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Unix</a>
+
+          <a class="col-12 reference" href="https://web.archive.org/web/20140402194704/http://www.bell-labs.com/history/unix/pdp7.html" target="_blank" rel="noopener noreferrer">https://web.archive.org/web/20140402194704/http://www.bell-labs.com/history/unix/pdp7.html</a>
+        </div>
+
+        <div class="col-12"><hr></div>
+
+        <!-- Page switcher -->
+
+        <div class="col-12">
+          <div id="switcher">
+            <a href="/gnuAndLinux.html">Next &#5171;</a>
+          </div>
+        </div>
+
+        <footer class="col-12">
+          <p>
+            <small>Page design and layout by
+              <a href="https://www.hdert.tk/" target="_blank" rel="noopener noreferrer">Justin Muirhead</a>. &copy; Copyright 2020 Justin Muirhead under the BSD 3-Clause
+              License</small>
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <!-- Javascript -->
+    <script src="/shinyShinyDistros.c3942fc7.js"></script>
+  </body>
+</html>

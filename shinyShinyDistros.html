@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" class="noJs">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="A page detailing the history of Linux">
+    <meta name="keywords" content="The History of Linux, Linux History, Linux">
+    <meta name="author" content="Justin Muirhead">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="JOLcosuOM68l6v7u_2g9_koMr8iJA3G2Ybdgf6ci2HA">
+
+    <title>Shiny, Shiny Distros - The History of Linux</title>
+
+    <!-- Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/404.0433c01d.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.70bff33a.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.502ffba6.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.e9217f7d.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.03911aa3.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- shinyShinyDistros.html © Copyright 2020 Justin Muirhead under the BSD 3-Clause License
+    code snippets taken from: https://www.w3schools.com/
+    and: https://github.com/jhay0112/jhay0112.github.io/
+    go visit: https://jordanhay.tk/
+    -->
+
+    <!-- SPDX-License-Identifier: BSD-3-Clause -->
+  </head>
+
+  <body onload="exitLoadingScreen()">
+    <!-- Javascript -->
+    <!-- Make sure the client supports javascript -->
+    <script>document.documentElement.classList.remove("noJs");
+
+</script>
+    <!-- Make sure the client supports WebP -->
+    <script src="/404.0640844e.js"></script>
+
+    <!-- Overlays in the order: Loading screen, Mobile navigation overlay,
+      top navigation bar, and back to top buton -->
+
+    <!-- The loading screen overlay that has a loading spinner
+      and the tux on it centered -->
+    <div id="loadingScreen">
+      <picture>
+        <source srcset="/200px-Tux.svg.c662a86f.webp" type="image/webp">
+        <source srcset="/200px-Tux.svg.a7c8cd72.png" type="image/png">
+        <img id="logo" src="/200px-Tux.svg.a7c8cd72.png" alt="Loading page logo">
+      </picture>
+
+      <picture>
+        <source srcset="/50px-Spinner.c1485907.webp" type="image/webp">
+        <source srcset="/50px-Spinner.e0f18827.png" type="image/png">
+        <img id="spinner" src="/50px-Spinner.e0f18827.png" alt="Loading page spinner">
+      </picture>
+    </div>
+
+    <!-- The div for the mobile overlay menu that slides out from the
+      left side once the menu overlay button has been pressed -->
+    <div id="menu" onclick="closeMenu()">
+      <a href="#" id="menuClose" onclick="event.preventDefault();closeMenu();">&times;</a>
+
+      <div id="menuContent">
+        <a href="/index.html" onclick="closeMenu();">Unix</a>
+        <a href="/gnuAndLinux.html" onclick="closeMenu();">GNU and Linux</a>
+        <a href="/shinyShinyDistros.html" onclick="closeMenu();">Shiny, Shiny Distros</a>
+      </div>
+    </div>
+
+    <!-- Navbar as an overlay on top of the screen -->
+
+    <div id="navbar">
+      <!-- Centers the navbar content on desktop -->
+      <div class="col-2 desktopOnly"></div>
+
+      <div class="col-8" id="nav">
+        <button onclick="goToTop();" class="tabletAbove" id="navbarTux" title="Go to the top of the page"></button>
+        <a href="/index.html">Unix</a>
+        <a href="/gnuAndLinux.html" class="tabletAbove">GNU and Linux</a>
+        <a href="/shinyShinyDistros.html" class="tabletAbove">Shiny, Shiny Distros</a>
+        <button onclick="openMenu();" id="menuOpen" class="mobileOnly fa fa-bars" title="Open mobile selection menu"></button>
+      </div>
+
+      <div class="col-12" id="progressContainer">
+        <div id="progressBar"></div>
+      </div>
+    </div>
+
+    <!-- Button on bottom right of page, when clicked
+      takes the user to the top of the page -->
+
+    <button onclick="goToTop();" class="fa fa-angle-double-up" id="backToTopButton" title="Go to the top of the page"></button>
+
+    <!-- Scroll wrapper for rubber banding on safari and centering divs -->
+
+    <div id="wrapper">
+      <main>
+        <header id="shinyShinyDistros">
+          <div class="wordContainer">
+            <h1 class="center">Shiny, Shiny Distros</h1>
+          </div>
+        </header>
+
+        <!-- Caption for the header -->
+
+        <p class="center">
+          <small>
+            <a href="/img/sele_linuxmint_center.jpg" target="_blank">Image</a>
+            of the default Linux Mint desktop background<br>
+            Image was made by Sele and retrieved from a Linux Mint installation
+          </small>
+        </p>
+
+        <hr>
+
+        <!-- Centers the content on desktop -->
+        <div class="col-2 desktopOnly"></div>
+
+        <!-- Start of main centered content -->
+
+        <div class="col-8 main">
+          <p class="col-12">
+            So now that you’ve read about the fantastic history of Linux, I’m
+            going to give you the spiel on why you should switch to it, if you
+            haven’t already.
+          </p>
+
+          <p class="col-12">
+            First of all it’s free, that in itself doesn’t mean you should
+            switch to it, it just means that if you want to it doesn’t cost
+            anything. So how does Linux make money then you ask. Linux doesn’t
+            exactly make money, the continued development of Linux is possible
+            thanks to the multitude of developers who work on it in their free
+            time or the developers who are paid to work on Linux full or part
+            time.
+          </p>
+
+          <p class="col-12">
+            This brings up the question of how a company like Red Hat would be
+            based around Linux. This is possible because the company makes money
+            off of support contracts for their version of Linux called Red Hat
+            Enterprise Linux or RHEL. RHEL is the type of Linux distribution
+            that you would run on a server or on something mission critical.
+          </p>
+
+          <p class="col-12">
+            The support ensures that if something breaks you can ring up Red Hat
+            and since they are the one of the largest contributors to open
+            source they probably employ the person who wrote that part of the
+            code, and if not they have someone who was at least partially
+            involved in that project who can help you. This is what makes it
+            possible for Linux to be free. But why should you switch?
+          </p>
+
+          <p class="col-12">
+            One of the convenience parts of Linux is the software workflow.
+            Imagine this, you’re on Windows and the one piece of software that
+            you use every few months is all you need to finish off the task
+            you’ve been hacking at for the past while. But when you launch the
+            software it tells you that it needs to update, then restart. You
+            have to go and bookmark and close all of your browser tabs, save any
+            documents you were working on close all of those windows, and then
+            wait for the update to download, install then for your computer to
+            restart. Finally you can after restarting, log back into your
+            computer, open the documents and browser tabs again, then use the
+            application that just updated. And you have to complete that process
+            for every application, not to mention system updates and the similar
+            experience you go through if you want to download a new application.
+          </p>
+
+          <p class="col-12">
+            In Linux this is solved, all system updates and application updates
+            are managed by the OS’ software management center. The software
+            management center ensures that your computer is kept up to date and
+            prompts you to restart your computer occasionally. I say
+            occasionally as when you update in Linux chances are that you don’t
+            need to restart after the update to keep your system functional.
+          </p>
+
+          <p class="col-12">
+            Another reason you should switch to Linux is how most of the drivers
+            are preinstalled and if you need any other driver they’re just a
+            click away in the software center or the driver manager.
+          </p>
+
+          <p class="col-12">
+            That brings us to the ease of use of Linux, it’s easier than you
+            think possibly even easier than Windows is to use! This is
+            especially true if you’re talking about how many times a day Windows
+            gets in your way and nags you to do this or try that. But what If
+            you have a problem with Linux?
+          </p>
+
+          <p class="col-12">
+            This is easily solvable with a quick post to one of the many
+            community forums who are just waiting to help you solve your
+            problem. You mightn’t even have to post there if you know how to
+            google, there’s plenty of documentation on how to do things and
+            solve problems and chances are someone’s already had that problem
+            and it’s been answered already.
+          </p>
+
+          <h3 class="col-12 center">
+            Where should I start with switching to Linux?
+          </h3>
+
+          <p class="col-12">
+            The first thing you need to do when switching to Linux is to pick a
+            distribution. Sometimes this can be quite hard with the variety of
+            distros out there. Which is why I would recommend Linux Mint, a
+            distro specifically tailored towards users switching from Windows,
+            in particular the deceased Windows seven. Linux Mint has a few
+            different versions with different desktop software, here’s a
+            comparison.
+          </p>
+
+          <h3 class="col-12">Linux Mint Cinnamon Edition</h3>
+
+          <!-- Image and caption -->
+
+          <figure class="col-12 picture">
+            <!-- Link to image -->
+            <a href="/img/linuxMintCinnamon.png" target="_blank">
+              <picture>
+                <!-- alternative image sources -->
+                <source srcset="/linuxMintCinnamon.9b3b1962.webp" type="image/webp">
+                <source srcset="/img/linuxMintCinnamon.png" type="image/png">
+                <!-- fallback image -->
+                <img src="/img/linuxMintCinnamon.png" alt="Image of the Linux Mint Cinnamon desktop">
+              </picture>
+            </a>
+
+            <!-- caption -->
+
+            <figcaption>
+              <p>
+                <small>
+                  Image of the Linux Mint Cinnamon desktop<br>
+                  Image retrieved from
+                  <a href="https://www.linuxmint.com/pictures/screenshots/tricia/cinnamon.png" target="_blank" rel="noopener noreferrer">The Linux Mint official website</a>
+                </small>
+              </p>
+            </figcaption>
+          </figure>
+
+          <p class="col-12">
+            Linux Mint Cinnamon Edition is known for its fresh look, new
+            features and being the overall ‘Shiniest’ of the three. Cinnamon is
+            more taxing in general than XFCE but this can be improved by
+            pressing the super (Windows) key, searching for “effects” opening
+            the result with the same name, and disabling the various effects in
+            the window that pops up. I would recommend this version of Linux
+            Mint for most modern and not-so modern PC’s.
+          </p>
+
+          <h4 class="col-12">Pros</h4>
+
+          <ul class="col-12">
+            <li>Looks Nice</li>
+            <li>Works on more systems than you’d expect</li>
+          </ul>
+
+          <h4 class="col-12">Cons</h4>
+
+          <ul class="col-12">
+            <li>Sometimes not the fastest</li>
+          </ul>
+
+          <h3 class="col-12">Linux Mint Mate Edition</h3>
+
+          <!-- Image and caption -->
+
+          <figure class="col-12 picture">
+            <!-- Link to image -->
+            <a href="/img/linuxMintMate.png" target="_blank">
+              <picture>
+                <!-- alternative image sources -->
+                <source srcset="/linuxMintMate.14227c4e.webp" type="image/webp">
+                <source srcset="/img/linuxMintMate.png" type="image/png">
+                <!-- fallback image -->
+                <img src="/img/linuxMintMate.png" alt="Image of the Linux Mint Cinnamon desktop">
+              </picture>
+            </a>
+
+            <!-- caption -->
+
+            <figcaption>
+              <p>
+                <small>
+                  Image of the Linux Mint Mate desktop<br>
+                  Image retrieved from
+                  <a href="https://www.linuxmint.com/pictures/screenshots/tricia/mate.png" target="_blank" rel="noopener noreferrer">The Linux Mint official website</a>
+                </small>
+              </p>
+            </figcaption>
+          </figure>
+
+          <p class="col-12">
+            Linux Mint Mate Edition is the least recommendable out of the three.
+            It’s a compromise between the beauty of Cinnamon and the speed of
+            Xfce.
+          </p>
+
+          <h4 class="col-12">Pros</h4>
+
+          <ul class="col-12">
+            <li>Stable</li>
+          </ul>
+
+          <h4 class="col-12">Cons</h4>
+
+          <ul class="col-12">
+            <li>Not many people use it</li>
+            <li>Going for Xfce or Cinnamon is a better bet</li>
+          </ul>
+
+          <h3 class="col-12">Linux Mint Xfce Edition</h3>
+
+          <!-- Image and caption -->
+
+          <figure class="col-12 picture">
+            <!-- Link to image -->
+            <a href="/img/linuxMintXfce.png" target="_blank">
+              <picture>
+                <!-- alternative image sources -->
+                <source srcset="/linuxMintXfce.259d556b.webp" type="image/webp">
+                <source srcset="/img/linuxMintXfce.png" type="image/png">
+                <!-- fallback image -->
+                <img src="/img/linuxMintXfce.png" alt="Image of the Linux Mint Cinnamon desktop">
+              </picture>
+            </a>
+
+            <!-- caption -->
+
+            <figcaption>
+              <p>
+                <small>
+                  Image of the Linux Mint Xfce desktop<br>
+                  Image retrieved from
+                  <a href="https://www.linuxmint.com/pictures/screenshots/tricia/xfce.png" target="_blank" rel="noopener noreferrer">The Linux Mint official website</a>
+                </small>
+              </p>
+            </figcaption>
+          </figure>
+
+          <p class="col-12">
+            Linux Mint Xfce Edition is the Edition you want if you have a slower
+            or older computer. It’s less intensive on resources, but it’s also
+            not as beautiful as Cinnamon Edition.
+          </p>
+
+          <h4 class="col-12">Pros</h4>
+
+          <ul class="col-12">
+            <li>Fast</li>
+            <li>Customizable</li>
+            <li>Good for low-end and old computers</li>
+          </ul>
+
+          <h4 class="col-12">Cons</h4>
+
+          <ul class="col-12">
+            <li>Doesn’t look very good</li>
+          </ul>
+
+          <h3 class="col-12">References</h3>
+
+          <!-- References -->
+
+          <!-- Image and caption -->
+
+          <figure class="col-12 picture">
+            <!-- Link to image -->
+            <a href="/img/869px-Tux.svg.png" target="_blank">
+              <picture>
+                <!-- alternative image sources -->
+                <source srcset="/200px-Tux.svg.c662a86f.webp" type="image/webp">
+                <source srcset="/200px-Tux.svg.a7c8cd72.png" type="image/png">
+                <!-- fallback image -->
+                <img src="/200px-Tux.svg.a7c8cd72.png" alt="Tux, Linux's Mascot">
+              </picture>
+            </a>
+
+            <!-- caption -->
+
+            <figcaption>
+              <p>
+                <small>
+                  Tux, Linux's Mascot<br>
+                  Image was made by
+                  <a href="mailo:lewing@isc.tamu.edu" target="_blank" rel="noopener noreferrer">lewing@isc.tamu.edu Larry Ewing</a>
+                  and
+                  <a href="https://en.wikipedia.org/wiki/GIMP" target="_blank" rel="noopener noreferrer">The GIMP</a>
+                  <br>
+                  Image retrieved from
+                  <a href="https://commons.wikimedia.org/wiki/File:Tux.svg" target="_blank" rel="noopener noreferrer">Wikimedia</a>
+                  where the updated version was uploaded under this
+                  <a href="http://www.home.unix-ag.org/simon/penguin/README" target="_blank" rel="noopener noreferrer">README</a>
+                  by Simon Budig
+                  <br>
+                  And a futher updated version which is the one used in this
+                  website was uploaded under the
+                  <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener noreferrer">Creative Commons CC0 1.0 Universal Public Domain
+                    Dedication</a>
+                  by Garret LeSage.
+                  <br>
+                  This work includes material that may be protected as a
+                  trademark in some jurisdictions.
+                </small>
+              </p>
+            </figcaption>
+          </figure>
+
+          <a class="col-12 reference" href="https://itsfoss.com/reasons-switch-linux-windows-xp/" target="_blank" rel="noopener noreferrer">https://itsfoss.com/reasons-switch-linux-windows-xp/</a>
+
+          <a class="col-12 reference" href="https://www.forbes.com/sites/jasonevangelho/2018/07/23/5-reasons-you-should-switch-from-windows-to-linux-right-now/#4615550c777b" target="_blank" rel="noopener noreferrer">https://www.forbes.com/sites/jasonevangelho/2018/07/23/5-reasons-you-should-switch-from-windows-to-linux-right-now/#4615550c777b</a>
+
+          <a class="col-12 reference" href="https://www.infoworld.com/article/3121792/whos-no-1-in-open-source-microsoft.html" target="_blank" rel="noopener noreferrer">https://www.infoworld.com/article/3121792/whos-no-1-in-open-source-microsoft.html</a>
+
+          <a class="col-12 reference" href="https://www.popsci.com/switch-to-linux-operating-system/" target="_blank" rel="noopener noreferrer">https://www.popsci.com/switch-to-linux-operating-system/</a>
+
+          <a class="col-12 reference" href="https://www.reddit.com/r/linuxmint/comments/8m1y93/cinnamon_vs_mate_vs_xfce/" target="_blank" rel="noopener noreferrer">https://www.reddit.com/r/linuxmint/comments/8m1y93/cinnamon_vs_mate_vs_xfce/</a>
+
+          <a class="col-12 reference" href="https://forums.linuxmint.com/viewtopic.php?t=267830" target="_blank" rel="noopener noreferrer">https://forums.linuxmint.com/viewtopic.php?t=267830</a>
+        </div>
+
+        <div class="col-12"><hr></div>
+
+        <!-- Page switcher -->
+
+        <div class="col-12">
+          <div id="switcher">
+            <a href="/gnuAndLinux.html">&#5176; Previous</a>
+          </div>
+        </div>
+
+        <footer class="col-12">
+          <p>
+            <small>Page design and layout by
+              <a href="https://www.hdert.tk/" target="_blank" rel="noopener noreferrer">Justin Muirhead</a>. &copy; Copyright 2020 Justin Muirhead under the BSD 3-Clause
+              License</small>
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <!-- Javascript -->
+    <script src="/shinyShinyDistros.c3942fc7.js"></script>
+  </body>
+</html>
